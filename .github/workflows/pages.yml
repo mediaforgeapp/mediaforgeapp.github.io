@@ -32,9 +32,11 @@ jobs:
           bundler-cache: true
 
       - name: Build with Jekyll
+        # Liquid 4 (via github-pages) still calls Object#tainted?, removed in Ruby 3.2+.
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+          RUBYOPT: "-r${{ github.workspace }}/.ruby4_boot.rb"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
