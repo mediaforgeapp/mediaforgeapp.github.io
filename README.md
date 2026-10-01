@@ -30,6 +30,12 @@ python3 script/extract_i18n.py
 python3 script/generate_locale_pages.py
 ```
 
+## Deploy
+
+Push to `main` runs `.github/workflows/pages.yml`: build Jekyll and publish to GitHub Pages.
+
+In the repo **Settings → Pages**, set **Source** to **GitHub Actions** (not “Deploy from a branch”).
+
 ## Custom domain
 
 This repo is configured for **www.mediaforgeapp.com** (`CNAME` + `_config.yml` `url`).

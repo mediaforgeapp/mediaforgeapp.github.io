@@ -24,6 +24,9 @@ exclude:
   - Gemfile.lock
   - vendor
   - .gitignore
+  - .ruby4_boot.rb
+  - script
+  - .github
 
 # Disable the default github-pages Primer theme; this site is fully custom.
 theme: null
