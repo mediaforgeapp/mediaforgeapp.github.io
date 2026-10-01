@@ -1,0 +1,65 @@
+{% comment %}
+  type: icon | button
+  open: down | up  (default: icon→down, button→up)
+{% endcomment %}
+{% assign selector_type = include.type | default: 'button' %}
+{% if include.open %}
+  {% assign menu_open = include.open %}
+{% elsif selector_type == 'icon' %}
+  {% assign menu_open = 'down' %}
+{% else %}
+  {% assign menu_open = 'up' %}
+{% endif %}
+{% assign current_lang = lang | default: page.lang | default: site.data.locales.default %}
+{% assign current_page_id = page_id | default: page.page_id | default: 'home' %}
+
+<div class="locale-selector relative" data-locale-selector>
+  <button
+    type="button"
+    class="locale-trigger inline-flex items-center justify-center gap-1.5 whitespace-nowrap text-sm font-medium transition-all border bg-background shadow-xs hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 {% if selector_type == 'icon' %}size-9 h-auto w-auto border-0 bg-transparent p-0 shadow-none hover:bg-accent hover:text-accent-foreground{% else %}h-8 rounded-md px-3 hover:bg-primary/10{% endif %}"
+    aria-haspopup="listbox"
+    aria-expanded="false"
+    aria-label="Language"
+  >
+    {% if selector_type == 'icon' %}
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"></path><path d="m4 14 6-6 2-3"></path><path d="M2 5h12"></path><path d="M7 2h1"></path><path d="m22 22-5-10-5 10"></path><path d="M14 18h6"></path></svg>
+    {% else %}
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+      <span>{{ site.data.i18n[current_lang].name }}</span>
+    {% endif %}
+  </button>
+
+  <div class="locale-menu locale-menu--{{ menu_open }} absolute right-0 z-50 hidden overflow-hidden rounded-md border border-white/10 bg-[#1a1a1a] p-1 text-white shadow-lg" role="listbox">
+    {% for item in site.data.locales.items %}
+      {% if item.id == site.data.locales.default %}
+        {% assign item_prefix = '' %}
+      {% else %}
+        {% assign item_prefix = '/' | append: item.id %}
+      {% endif %}
+      {% case current_page_id %}
+        {% when 'gallery' %}
+          {% assign item_path = item_prefix | append: '/gallery/' %}
+        {% when 'download' %}
+          {% assign item_path = item_prefix | append: '/download/' %}
+        {% when 'privacy-policy' %}
+          {% assign item_path = item_prefix | append: '/privacy-policy/' %}
+        {% when 'terms-of-service' %}
+          {% assign item_path = item_prefix | append: '/terms-of-service/' %}
+        {% else %}
+          {% assign item_path = item_prefix | append: '/' %}
+      {% endcase %}
+      <a
+        role="option"
+        href="{{ item_path | relative_url }}"
+        data-locale="{{ item.id }}"
+        class="locale-menu__item flex cursor-pointer items-center justify-between gap-3 rounded-sm px-2.5 py-1.5 text-sm outline-none hover:bg-white/10 {% if item.id == current_lang %}text-[#FF6F00]{% else %}text-white/85{% endif %}"
+        {% if item.id == current_lang %}aria-selected="true"{% endif %}
+      >
+        <span>{{ item.name }}</span>
+        {% if item.id == current_lang %}
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="locale-menu__check shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+        {% endif %}
+      </a>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<header id="site-header" data-state="inactive" class="group fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-[#121212]/90 backdrop-blur">
+  <div class="absolute inset-x-0 top-0 z-50 h-18 border-transparent ring-1 ring-transparent transition-all duration-300 max-lg:h-14 max-lg:overflow-hidden max-lg:border-b" id="header-bar">
+    <div class="container">
+      <div class="relative flex flex-wrap items-center justify-between lg:py-5">
+        <div class="flex justify-between gap-8 max-lg:h-14 max-lg:w-full max-lg:border-b max-lg:border-white/5">
+          <a class="flex items-center space-x-3" href="{{ url_home }}">
+            <img alt="MediaForge" width="32" height="32" class="h-8 w-8 rounded-xl object-cover" src="{{ '/assets/images/logo.png' | relative_url }}" />
+            <span class="text-lg font-semibold tracking-tight text-white">MediaForge</span>
+          </a>
+
+          <nav aria-label="Main" class="relative flex max-w-max flex-1 items-center justify-center max-lg:hidden">
+            <ul class="flex flex-1 list-none items-center justify-center gap-2">
+              <li>
+                <a class="flex flex-row items-center gap-2 rounded-md px-4 py-1.5 text-sm transition-colors duration-150 hover:bg-foreground/5 text-foreground/80{% if page_id == 'gallery' %} bg-foreground/5 text-foreground{% endif %}" href="{{ url_gallery }}">{{ t.header.gallery }}</a>
+              </li>
+            </ul>
+          </nav>
+
+          <button type="button" id="menu-toggle" aria-label="Open Menu" aria-expanded="false" class="relative z-20 -m-2.5 -mr-3 block cursor-pointer p-2.5 lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="menu-icon m-auto size-5" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="close-icon absolute inset-0 m-auto size-5 hidden" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+          </button>
+        </div>
+
+        <div id="header-actions" class="mb-6 flex w-full flex-wrap items-center justify-end gap-4 max-lg:hidden lg:m-0 lg:flex lg:w-fit">
+          <div class="flex w-full flex-row items-center gap-4 sm:w-fit">
+            <a class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap transition-colors h-7 px-3 bg-[#FF6F00] text-black hover:bg-[#FF6F00]/90 border border-white/10 shadow-md" href="{{ url_download }}">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg>
+              <span>{{ t.header.download }}</span>
+            </a>
+            {% include locale-selector.html type="icon" %}
+          </div>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden border-t border-white/5 pb-6 pt-4 lg:hidden">
+        <nav class="flex flex-col gap-2">
+          <a class="rounded-md px-3 py-2 text-sm text-foreground/80 hover:bg-foreground/5" href="{{ url_gallery }}">{{ t.header.gallery }}</a>
+          <a class="mt-2 inline-flex h-10 items-center justify-center gap-2 rounded-md bg-[#FF6F00] px-4 text-sm font-medium text-black" href="{{ url_download }}">{{ t.header.download }}</a>
+          <div class="mt-3 px-1">{% include locale-selector.html type="button" open="down" %}</div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,39 @@
+title: MediaForge
+description: >-
+  MediaForge is a desktop-first visual FFmpeg app: drag and drop files, pick
+  scenario presets, then export video, make GIFs, extract audio, and process
+  images. Open core is free; macOS download is available now.
+url: "https://www.mediaforgeapp.com"
+baseurl: ""
+
+permalink: pretty
+
+# Latest macOS release (update when publishing a new build)
+release:
+  version: "0.0.2-beta"
+  macos_dmg: "https://github.com/mediaforgeapp/mediaforge/releases/download/v0.0.2-beta/MediaForge_macos_v0.0.2-beta.dmg"
+
+github_repo: "https://github.com/mediaforgeapp/mediaforge"
+github_releases: "https://github.com/mediaforgeapp/mediaforge/releases"
+support_email: "support@mediaforgeapp.com"
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .gitignore
+
+# Disable the default github-pages Primer theme; this site is fully custom.
+theme: null
+
+# github-pages may force safe mode online; keep local builds flexible.
+safe: false
+plugins:
+  - jekyll-sitemap
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false

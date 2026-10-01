@@ -1,0 +1,148 @@
+{% include locale-setup.html %}
+{% assign og_locale = site.data.locales.og_locale[lang] | default: lang %}
+{% assign doc_title = page.title | default: site.title %}
+{% assign doc_description = page.description | default: site.description %}
+{% if page_id == 'home' and t.home_meta.title %}
+  {% assign doc_title = t.home_meta.title %}
+{% elsif page_id == 'gallery' and t.gallery_meta.title %}
+  {% assign doc_title = t.gallery_meta.title %}
+{% elsif page_id == 'download' and t.download_meta.title %}
+  {% assign doc_title = t.download_meta.title %}
+{% elsif page_id == 'privacy-policy' and t.privacy_meta.title %}
+  {% assign doc_title = t.privacy_meta.title %}
+{% elsif page_id == 'terms-of-service' and t.terms_meta.title %}
+  {% assign doc_title = t.terms_meta.title %}
+{% endif %}
+{% if page_id == 'home' and t.home_meta.description %}
+  {% assign doc_description = t.home_meta.description %}
+{% elsif page_id == 'gallery' and t.gallery_meta.description %}
+  {% assign doc_description = t.gallery_meta.description %}
+{% elsif page_id == 'download' and t.download_meta.description %}
+  {% assign doc_description = t.download_meta.description %}
+{% elsif page_id == 'privacy-policy' and t.privacy_meta.description %}
+  {% assign doc_description = t.privacy_meta.description %}
+{% elsif page_id == 'terms-of-service' and t.terms_meta.description %}
+  {% assign doc_description = t.terms_meta.description %}
+{% endif %}
+{% if page_id == 'home' %}
+  {% assign html_title = doc_title %}
+{% else %}
+  {% assign html_title = doc_title | append: ' – ' | append: site.title %}
+{% endif %}
+{% case page_id %}
+  {% when 'gallery' %}
+    {% assign en_default_path = '/gallery/' %}
+  {% when 'download' %}
+    {% assign en_default_path = '/download/' %}
+  {% when 'privacy-policy' %}
+    {% assign en_default_path = '/privacy-policy/' %}
+  {% when 'terms-of-service' %}
+    {% assign en_default_path = '/terms-of-service/' %}
+  {% else %}
+    {% assign en_default_path = '/' %}
+{% endcase %}
+<!DOCTYPE html>
+<html lang="{{ lang }}" class="dark roboto_mono_f1a74756-module__XAwxWq__variable">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ html_title }}</title>
+  <meta name="description" content="{{ doc_description | escape }}" />
+  {% if t.home_meta.keywords %}
+  <meta name="keywords" content="{{ t.home_meta.keywords | escape }}" />
+  {% else %}
+  <meta name="keywords" content="mediaforge, ffmpeg, video converter, gif maker, extract audio, desktop app, open source, media processing, macos, visual ffmpeg" />
+  {% endif %}
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="{{ page.url | absolute_url }}" />
+
+  {% for item in site.data.locales.items %}
+    {% if item.id == site.data.locales.default %}
+      {% assign alt_prefix = '' %}
+    {% else %}
+      {% assign alt_prefix = '/' | append: item.id %}
+    {% endif %}
+    {% case page_id %}
+      {% when 'gallery' %}
+        {% assign alt_path = alt_prefix | append: '/gallery/' %}
+      {% when 'download' %}
+        {% assign alt_path = alt_prefix | append: '/download/' %}
+      {% when 'privacy-policy' %}
+        {% assign alt_path = alt_prefix | append: '/privacy-policy/' %}
+      {% when 'terms-of-service' %}
+        {% assign alt_path = alt_prefix | append: '/terms-of-service/' %}
+      {% else %}
+        {% assign alt_path = alt_prefix | append: '/' %}
+    {% endcase %}
+    <link rel="alternate" hreflang="{{ item.id }}" href="{{ alt_path | absolute_url }}" />
+  {% endfor %}
+  <link rel="alternate" hreflang="x-default" href="{{ en_default_path | absolute_url }}" />
+
+  <meta property="og:title" content="{{ doc_title | escape }}" />
+  <meta property="og:description" content="{{ doc_description | escape }}" />
+  <meta property="og:url" content="{{ page.url | absolute_url }}" />
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:locale" content="{{ og_locale }}" />
+  {% for item in site.data.locales.items %}
+    {% unless item.id == lang %}
+      <meta property="og:locale:alternate" content="{{ site.data.locales.og_locale[item.id] }}" />
+    {% endunless %}
+  {% endfor %}
+  <meta property="og:image" content="{{ '/assets/images/preview.png' | absolute_url }}" />
+  <meta property="og:image:alt" content="MediaForge app preview" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ doc_title | escape }}" />
+  <meta name="twitter:description" content="{{ doc_description | escape }}" />
+  <meta name="twitter:image" content="{{ '/assets/images/preview.png' | absolute_url }}" />
+  <meta name="twitter:image:alt" content="MediaForge app preview" />
+
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any" />
+  <link rel="icon" type="image/png" href="{{ '/assets/images/favicon-32.png' | relative_url }}" sizes="32x32" />
+  <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/extras.css' | relative_url }}" />
+
+  {% if page_id == 'home' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MediaForge",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "macOS",
+    "description": {{ doc_description | jsonify }},
+    "url": {{ page.url | absolute_url | jsonify }},
+    "image": {{ '/assets/images/preview.png' | absolute_url | jsonify }},
+    "downloadUrl": {{ site.release.macos_dmg | jsonify }},
+    "softwareVersion": {{ site.release.version | jsonify }},
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "MediaForge",
+      "url": {{ '/' | absolute_url | jsonify }}
+    }
+  }
+  </script>
+  {% endif %}
+</head>
+<body>
+  <div class="bg-background relative min-h-screen w-screen overflow-x-hidden font-mono">
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
+      <div class="bg-background absolute inset-0"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_-10%,rgba(255,111,0,0.16),transparent_55%)]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(255,111,0,0.06),transparent_45%)]"></div>
+    </div>
+
+    {% include header.html %}
+    {{ content }}
+    {% include footer.html %}
+  </div>
+  <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
+</body>
+</html>

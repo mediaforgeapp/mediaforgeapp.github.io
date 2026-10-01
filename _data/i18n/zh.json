@@ -1,0 +1,269 @@
+{
+  "name": "简体中文",
+  "header": {
+    "gallery": "配方库",
+    "download": "下载"
+  },
+  "footer": {
+    "description": "用可视化 FFmpeg 工作流锻造你的媒体。桌面优先、本地处理、开源核心。",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "copyright_suffix": "保留所有权利"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "MediaForge Open",
+      "title": "不用记命令行，也能锻造媒体。",
+      "lead": "桌面端 FFmpeg 可视化应用：拖入文件、选择场景预设，即可完成导出、GIF、音频提取等操作。",
+      "primary": {
+        "title": "下载 macOS 版",
+        "href": "/download"
+      },
+      "secondary": {
+        "title": "在 GitHub 查看",
+        "href": "https://github.com/mediaforgeapp/mediaforge"
+      },
+      "note": "开源版本。macOS 现已可用；Windows、Linux 与移动端即将推出。",
+      "download_macos": "下载 macOS · {version}",
+      "release_note": "最新 macOS 版本 · {version}。Windows、Linux 与移动端仍在开发中。"
+    },
+    "pillars": {
+      "eyebrow": "为创作者打造",
+      "title": "锻造流程的三大支柱",
+      "lead": "可视化预设、专注的锻造体验，以及本地 FFmpeg 能力。",
+      "items": [
+        {
+          "title": "可视化 FFmpeg 预设",
+          "desc": "快速导出、制作 GIF、提取音频、压缩图片、转换 WebP——无需终端。"
+        },
+        {
+          "title": "Spark 锻造体验",
+          "desc": "拖放预览、实时进度、可控的输出路径，一气呵成。"
+        },
+        {
+          "title": "开源核心，Pro 可扩展",
+          "desc": "核心免费开源；AI Forge、高级编解码与更广媒体支持将在 MediaForge Pro 提供。"
+        }
+      ]
+    },
+    "final_cta": {
+      "title": "准备好锻造第一个文件了吗？",
+      "lead": "在 macOS 上安装 MediaForge，几分钟内把 FFmpeg 变成可视化工作流。",
+      "primary": {
+        "title": "获取 MediaForge",
+        "href": "/download"
+      },
+      "secondary": {
+        "title": "在 GitHub 查看",
+        "href": "https://github.com/mediaforgeapp/mediaforge"
+      },
+      "download_macos": "下载 macOS · {version}"
+    },
+    "screenshots": {
+      "eyebrow": "一眼看懂",
+      "title": "从拖放到完成",
+      "lead": "围绕场景卡片、进度与结果打造的桌面界面。"
+    },
+    "micro_features": {
+      "items": [
+        {
+          "icon": "search",
+          "title": "场景卡片",
+          "desc": "导出、GIF、音频、图片等工作流一目了然。"
+        },
+        {
+          "icon": "tags",
+          "title": "自定义命令",
+          "desc": "将原始 FFmpeg 参数保存为首页卡片，适合进阶用户。"
+        },
+        {
+          "icon": "preview",
+          "title": "输入预览",
+          "desc": "锻造前预览视频输入。"
+        },
+        {
+          "icon": "keyboard",
+          "title": "桌面优先",
+          "desc": "为 macOS 与 Windows 设计，支持拖放与原生窗口。"
+        },
+        {
+          "icon": "privacy",
+          "title": "本地处理",
+          "desc": "使用本机 FFmpeg 在本地完成转换。"
+        },
+        {
+          "icon": "speed",
+          "title": "硬件加速",
+          "desc": "预设管线可在可用时使用 VideoToolbox、NVENC、QSV 等。"
+        }
+      ]
+    }
+  },
+  "download": {
+    "hero": {
+      "eyebrow": "下载",
+      "title": "选择你的平台",
+      "lead": "安装开源桌面应用，用可视化 FFmpeg 预设开始锻造。",
+      "primary": {
+        "title": "查看功能",
+        "href": "/features"
+      },
+      "secondary": {
+        "title": "GitHub Releases",
+        "href": "https://github.com/mediaforgeapp/mediaforge/releases"
+      },
+      "note": "macOS DMG 可从 GitHub Releases 获取，其它平台开发中。",
+      "release_note": "最新 macOS 版本 · {version}，其它平台仍在开发中。"
+    },
+    "platforms": {
+      "eyebrow": "平台",
+      "title": "选择你的平台",
+      "lead": "我们正逐步推出各平台版本——macOS 优先。",
+      "items": [
+        {
+          "title": "macOS",
+          "desc": "从 GitHub Releases 下载 DMG。需要系统 PATH 中的 ffmpeg/ffprobe，或在设置中指定路径。",
+          "status": "available",
+          "badge": "Apple Silicon + Intel"
+        },
+        {
+          "title": "Windows",
+          "desc": "Windows 桌面版在路线图中。",
+          "status": "coming_soon",
+          "badge": "即将推出"
+        },
+        {
+          "title": "Linux",
+          "desc": "Deb 与 RPM 包计划在 macOS/Windows 之后提供。",
+          "status": "coming_soon"
+        },
+        {
+          "title": "iOS / Android",
+          "desc": "iPhone、iPad 与 Android 客户端将在桌面版之后推出。",
+          "status": "coming_soon"
+        }
+      ]
+    },
+    "macos": {
+      "app_store": "Mac App Store",
+      "download_dmg": "下载 DMG · {version}",
+      "download_dmg_fallback": "下载 DMG"
+    },
+    "mobile": {
+      "app_store": "App Store",
+      "download_apk": "下载 APK"
+    },
+    "steps": {
+      "eyebrow": "安装",
+      "title": "三步完成安装",
+      "lead": "需要先安装 FFmpeg——在 macOS 上用 Homebrew 最方便。",
+      "items": [
+        {
+          "title": "安装 FFmpeg",
+          "desc": "运行 brew install ffmpeg（或在设置中指向你的 ffmpeg 路径）。"
+        },
+        {
+          "title": "下载 MediaForge",
+          "desc": "从 GitHub Releases 获取最新 macOS DMG 并打开应用。"
+        },
+        {
+          "title": "拖入并锻造",
+          "desc": "拖入视频或图片，选择场景，开始锻造。"
+        }
+      ]
+    },
+    "security": {
+      "eyebrow": "隐私",
+      "title": "本地优先设计",
+      "lead": "使用你本机的 FFmpeg 完成处理。",
+      "items": [
+        {
+          "title": "本机锻造",
+          "desc": "媒体文件不会上传到 MediaForge 服务器进行转换。"
+        },
+        {
+          "title": "你的 FFmpeg",
+          "desc": "自动发现 PATH，或在设置中自定义 ffmpeg 路径。"
+        },
+        {
+          "title": "开源",
+          "desc": "可在 GitHub 审计核心应用代码。"
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "常见问题",
+      "title": "下载与安装 FAQ",
+      "lead": "macOS 设置的快速解答。",
+      "items": [
+        {
+          "q": "需要安装 FFmpeg 吗？",
+          "a": "需要。MediaForge 是 ffmpeg 与 ffprobe 的可视化外壳。macOS 上推荐 brew install ffmpeg。"
+        },
+        {
+          "q": "支持哪些 macOS 版本？",
+          "a": "请使用 GitHub Releases 上的最新 DMG。发布资源中会提供 Apple Silicon 与 Intel 构建（如有）。"
+        },
+        {
+          "q": "MediaForge 免费吗？",
+          "a": "GitHub 上的开源核心免费。含 AI Forge 等高级功能的 MediaForge Pro 将单独推出。"
+        },
+        {
+          "q": "输出文件保存在哪里？",
+          "a": "默认与源文件同目录，也可在设置中选择固定输出文件夹。"
+        },
+        {
+          "q": "Windows 和 Linux 何时可用？",
+          "a": "已在路线图中。可关注 GitHub Releases 或给仓库点 Star 获取更新。"
+        },
+        {
+          "q": "如何更新？",
+          "a": "从 GitHub Releases 下载新版 DMG。应用内更新检查可能后续加入。"
+        }
+      ]
+    },
+    "final_cta": {
+      "title": "准备好安装了吗？",
+      "lead": "下载 macOS 版 MediaForge，锻造你的第一个文件。",
+      "primary": {
+        "title": "下载",
+        "href": "/download"
+      },
+      "secondary": {
+        "title": "阅读文档",
+        "href": "/docs"
+      }
+    }
+  },
+  "gallery": {
+    "eyebrow": "转码配方",
+    "title": "Gallery 配方库",
+    "lead": "可分享的 MediaForge 编码预设。",
+    "body": "我们正在建设官方与社区的 .mfrecipe 配方库，支持在线预览并一键导入桌面端。敬请期待。",
+    "cta": {
+      "title": "下载 MediaForge",
+      "href": "/download"
+    }
+  },
+  "gallery_meta": {
+    "title": "配方库",
+    "description": "MediaForge 转码配方库 — 即将上线。"
+  },
+  "home_meta": {
+    "title": "MediaForge – 可视化 FFmpeg 桌面工具，轻松锻造你的媒体",
+    "description": "MediaForge 是一款桌面优先的 FFmpeg 可视化应用：拖放文件、选择场景预设，即可完成导出、GIF、音频提取与图片处理。开源核心免费可用，macOS 现已提供下载。",
+    "keywords": "mediaforge, ffmpeg, 视频转换, gif, 提取音频, 桌面应用, 开源, 媒体处理, macos, 可视化 ffmpeg"
+  },
+  "download_meta": {
+    "title": "下载 MediaForge（macOS）",
+    "description": "下载适用于 macOS 的 MediaForge Open。可视化 FFmpeg 预设，支持视频导出、GIF、音频提取与图片处理。Windows、Linux 与移动端即将推出。"
+  },
+  "privacy_meta": {
+    "title": "隐私政策",
+    "description": "MediaForge 桌面应用与网站的隐私说明。本地优先处理，媒体文件留在你的设备上。"
+  },
+  "terms_meta": {
+    "title": "服务条款",
+    "description": "MediaForge 桌面应用、网站及相关服务的使用条款。"
+  }
+}

@@ -1,0 +1,16 @@
+{% comment %}
+  Sets: lang, t, locale_prefix, url_home, url_gallery, url_download, url_privacy, url_terms
+{% endcomment %}
+{% assign lang = page.lang | default: site.data.locales.default %}
+{% assign t = site.data.i18n[lang] %}
+{% if lang == site.data.locales.default %}
+  {% assign locale_prefix = '' %}
+{% else %}
+  {% assign locale_prefix = '/' | append: lang %}
+{% endif %}
+{% assign url_home = locale_prefix | append: '/' | relative_url %}
+{% assign url_gallery = locale_prefix | append: '/gallery/' | relative_url %}
+{% assign url_download = locale_prefix | append: '/download/' | relative_url %}
+{% assign url_privacy = locale_prefix | append: '/privacy-policy/' | relative_url %}
+{% assign url_terms = locale_prefix | append: '/terms-of-service/' | relative_url %}
+{% assign page_id = page.page_id | default: 'home' %}

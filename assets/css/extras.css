@@ -1,0 +1,137 @@
+/* Site extras on top of migrated production Tailwind CSS */
+
+.locale-menu {
+  min-width: 12.5rem;
+}
+
+.locale-menu:not(.hidden) {
+  display: block;
+}
+
+.locale-menu--down {
+  top: calc(100% + 0.5rem);
+  bottom: auto;
+}
+
+.locale-menu--up {
+  bottom: calc(100% + 0.5rem);
+  top: auto;
+}
+
+.locale-menu__item {
+  white-space: nowrap;
+}
+
+.locale-menu__check {
+  flex-shrink: 0;
+}
+
+#header-bar.is-scrolled {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(18, 18, 18, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+#site-header[data-state="active"] #mobile-menu {
+  display: block;
+}
+
+#site-header[data-state="active"] .menu-icon {
+  display: none;
+}
+
+#site-header[data-state="active"] .close-icon {
+  display: block;
+}
+
+#site-header[data-state="active"] #header-actions {
+  display: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details > summary::after {
+  content: "";
+  float: right;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-top: 0.35rem;
+  border-right: 2px solid rgba(255, 255, 255, 0.45);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.45);
+  transform: rotate(45deg);
+  transition: transform 0.15s ease;
+}
+
+details[open] > summary::after {
+  transform: rotate(-135deg);
+  margin-top: 0.55rem;
+}
+
+.legal-body {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.legal-body h2 {
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-top: 2.25rem;
+  margin-bottom: 0.85rem;
+}
+
+.legal-body h3 {
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.legal-body p,
+.legal-body ul,
+.legal-body ol {
+  margin-bottom: 1rem;
+}
+
+.legal-body ul,
+.legal-body ol {
+  padding-left: 1.25rem;
+}
+
+.legal-body ul {
+  list-style: disc;
+}
+
+.legal-body ol {
+  list-style: decimal;
+}
+
+.legal-body li {
+  margin-bottom: 0.35rem;
+}
+
+.legal-body a {
+  color: #ff6f00;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.legal-body a:hover {
+  color: rgba(255, 111, 0, 0.85);
+}
+
+.legal-body strong {
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 600;
+}
+
+.legal-body hr {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 2rem 0;
+}
