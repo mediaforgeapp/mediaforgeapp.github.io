@@ -236,8 +236,8 @@
     }
   },
   "gallery": {
-    "eyebrow": "转码配方",
-    "title": "Gallery 配方库",
+    "eyebrow": "预设配方",
+    "title": "配方库",
     "lead": "可分享的 MediaForge 编码预设。",
     "body": "我们正在建设官方与社区的 .mfrecipe 配方库，支持在线预览并一键导入桌面端。敬请期待。",
     "cta": {

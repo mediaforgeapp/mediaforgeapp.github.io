@@ -1,253 +1,253 @@
 {
   "name": "日本語",
   "header": {
-    "gallery": "Gallery",
-    "download": "Download"
+    "gallery": "ギャラリー",
+    "download": "ダウンロード"
   },
   "footer": {
-    "description": "Forge your media with visual FFmpeg workflows. Desktop-first, local processing, open core.",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
+    "description": "ビジュアル FFmpeg ワークフローでメディアを鍛造。デスクトップ優先、ローカル処理、オープンコア。",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
     "copyright_suffix": "All rights reserved"
   },
   "home": {
     "hero": {
       "eyebrow": "MediaForge Open",
-      "title": "Forge your media without the command line.",
-      "lead": "A desktop app that wraps FFmpeg in visual presets—export video, make GIFs, extract audio, and more. Drop a file, pick a scenario, forge.",
+      "title": "コマンドラインなしでメディアを鍛造。",
+      "lead": "FFmpeg をビジュアルプリセットで包むデスクトップアプリ。動画書き出し、GIF 作成、音声抽出など。ファイルをドロップし、シナリオを選んで鍛造。",
       "primary": {
-        "title": "Download for macOS",
+        "title": "macOS 版をダウンロード",
         "href": "/download"
       },
       "secondary": {
-        "title": "View on GitHub",
+        "title": "GitHub で見る",
         "href": "https://github.com/mediaforgeapp/mediaforge"
       },
-      "note": "Open-source edition. macOS available now; Windows, Linux, and mobile coming soon.",
-      "download_macos": "Download macOS · {version}",
-      "release_note": "Latest macOS build · {version}. Windows, Linux, and mobile are still in development."
+      "note": "オープンソース版。macOS は利用可能。Windows / Linux / モバイルは近日対応。",
+      "download_macos": "macOS をダウンロード · {version}",
+      "release_note": "最新 macOS ビルド · {version}。Windows、Linux、モバイルは開発中です。"
     },
     "pillars": {
-      "eyebrow": "Built for creators",
-      "title": "Three pillars behind every forge",
-      "lead": "Visual presets, a focused forge flow, and local FFmpeg power under the hood.",
+      "eyebrow": "クリエイターのために",
+      "title": "鍛造を支える3本の柱",
+      "lead": "ビジュアルプリセット、集中できる鍛造フロー、そしてローカル FFmpeg。",
       "items": [
         {
-          "title": "Visual FFmpeg presets",
-          "desc": "Quick Export, Make GIF, Extract Audio, image compress, and WebP convert—no terminal required."
+          "title": "ビジュアル FFmpeg プリセット",
+          "desc": "Quick Export、Make GIF、Extract Audio、画像圧縮、WebP 変換——ターミナル不要。"
         },
         {
-          "title": "Spark forge flow",
-          "desc": "Drag and drop, preview inputs, watch live progress, and get polished output paths you control."
+          "title": "Spark 鍛造フロー",
+          "desc": "ドラッグ＆ドロップ、入力プレビュー、ライブ進捗、出力パスも自分で制御。"
         },
         {
-          "title": "Open core, Pro-ready",
-          "desc": "Free and open source today. AI Forge, advanced codecs, and broader media support ship in MediaForge Pro."
+          "title": "オープンコア、Pro 対応",
+          "desc": "今すぐ無料でオープンソース。AI Forge や高度なコーデックは MediaForge Pro で。"
         }
       ]
     },
     "final_cta": {
-      "title": "Ready to forge your first file?",
-      "lead": "Install MediaForge on macOS and turn FFmpeg into a visual workflow in minutes.",
+      "title": "最初のファイルを鍛造する準備はできましたか？",
+      "lead": "macOS に MediaForge を入れて、数分で FFmpeg をビジュアルワークフローに。",
       "primary": {
-        "title": "Get MediaForge",
+        "title": "MediaForge を入手",
         "href": "/download"
       },
       "secondary": {
-        "title": "View on GitHub",
+        "title": "GitHub で見る",
         "href": "https://github.com/mediaforgeapp/mediaforge"
       },
-      "download_macos": "Download macOS · {version}"
+      "download_macos": "macOS をダウンロード · {version}"
     },
     "screenshots": {
-      "eyebrow": "See it in action",
-      "title": "From drop to done",
-      "lead": "A focused desktop UI built around scenarios, progress, and results."
+      "eyebrow": "実際の画面",
+      "title": "ドロップから完了まで",
+      "lead": "シナリオ、進捗、結果に焦点を当てたデスクトップ UI。"
     },
     "micro_features": {
       "items": [
         {
           "icon": "search",
-          "title": "Scenario cards",
-          "desc": "Pick the right workflow at a glance—export, GIF, audio, images."
+          "title": "シナリオカード",
+          "desc": "書き出し、GIF、音声、画像——最適なワークフローを一目で。"
         },
         {
           "icon": "tags",
-          "title": "Custom commands",
-          "desc": "Save raw FFmpeg argv presets as home cards for expert workflows."
+          "title": "カスタムコマンド",
+          "desc": "生の FFmpeg 引数プリセットをホームカードとして保存。"
         },
         {
           "icon": "preview",
-          "title": "Input preview",
-          "desc": "Review video inputs before you start forging."
+          "title": "入力プレビュー",
+          "desc": "鍛造前に動画入力を確認。"
         },
         {
           "icon": "keyboard",
-          "title": "Desktop-first",
-          "desc": "Built for macOS and Windows with drag-and-drop and window controls."
+          "title": "デスクトップ優先",
+          "desc": "macOS / Windows 向け。ドラッグ＆ドロップとウィンドウ操作。"
         },
         {
           "icon": "privacy",
-          "title": "Local processing",
-          "desc": "Files are processed on your machine with your FFmpeg binaries."
+          "title": "ローカル処理",
+          "desc": "お使いの FFmpeg で端末上で処理。"
         },
         {
           "icon": "speed",
-          "title": "Hardware-aware",
-          "desc": "Preset pipelines can use VideoToolbox, NVENC, QSV, and more when available."
+          "title": "ハードウェア対応",
+          "desc": "利用可能なら VideoToolbox、NVENC、QSV などを使用。"
         }
       ]
     }
   },
   "download": {
     "hero": {
-      "eyebrow": "Download",
-      "title": "Get MediaForge for your platform",
-      "lead": "Install the open-source desktop app and start forging with visual FFmpeg presets.",
+      "eyebrow": "ダウンロード",
+      "title": "プラットフォームを選択",
+      "lead": "オープンソースのデスクトップアプリをインストールし、ビジュアル FFmpeg プリセットで鍛造を開始。",
       "primary": {
-        "title": "View features",
+        "title": "機能を見る",
         "href": "/features"
       },
       "secondary": {
         "title": "GitHub releases",
         "href": "https://github.com/mediaforgeapp/mediaforge/releases"
       },
-      "note": "macOS DMG is available from GitHub Releases. Other platforms are in development.",
-      "release_note": "Latest macOS release · {version}. Other platforms are still in development."
+      "note": "macOS DMG は GitHub Releases から入手可能。他プラットフォームは開発中。",
+      "release_note": "最新 macOS リリース · {version}。他プラットフォームは開発中です。"
     },
     "platforms": {
-      "eyebrow": "Platforms",
-      "title": "Choose your platform",
-      "lead": "We are rolling out platforms gradually—macOS first.",
+      "eyebrow": "プラットフォーム",
+      "title": "プラットフォームを選択",
+      "lead": "段階的に展開中——まずは macOS。",
       "items": [
         {
           "title": "macOS",
-          "desc": "Download the DMG from GitHub Releases. Requires ffmpeg and ffprobe on PATH or configured in Settings.",
+          "desc": "GitHub Releases から DMG をダウンロード。ffmpeg/ffprobe が PATH にあるか、設定で指定してください。",
           "status": "available",
           "badge": "Apple Silicon + Intel"
         },
         {
           "title": "Windows",
-          "desc": "Desktop build for Windows is on the roadmap.",
+          "desc": "Windows デスクトップ版はロードマップ上です。",
           "status": "coming_soon",
-          "badge": "Coming soon"
+          "badge": "近日公開"
         },
         {
           "title": "Linux",
-          "desc": "Deb and RPM packages are planned after the macOS and Windows releases.",
+          "desc": "Deb / RPM は macOS と Windows の後に予定。",
           "status": "coming_soon"
         },
         {
           "title": "iOS / Android",
-          "desc": "Mobile apps for iPhone, iPad, and Android are on the roadmap after the desktop releases.",
+          "desc": "iPhone、iPad、Android はデスクトップ版の後に予定。",
           "status": "coming_soon"
         }
       ]
     },
     "macos": {
       "app_store": "Mac App Store",
-      "download_dmg": "Download DMG · {version}",
-      "download_dmg_fallback": "Download DMG"
+      "download_dmg": "DMG をダウンロード · {version}",
+      "download_dmg_fallback": "DMG をダウンロード"
     },
     "mobile": {
       "app_store": "App Store",
-      "download_apk": "Download APK"
+      "download_apk": "APK をダウンロード"
     },
     "steps": {
-      "eyebrow": "Install",
-      "title": "Install in 3 steps",
-      "lead": "You will need FFmpeg installed—Homebrew on macOS is the quickest path.",
+      "eyebrow": "インストール",
+      "title": "3ステップでインストール",
+      "lead": "FFmpeg が必要です。macOS では Homebrew が最短です。",
       "items": [
         {
-          "title": "Install FFmpeg",
-          "desc": "Run brew install ffmpeg (or point MediaForge to your binaries in Settings)."
+          "title": "FFmpeg をインストール",
+          "desc": "brew install ffmpeg を実行（または設定でバイナリを指定）。"
         },
         {
-          "title": "Download MediaForge",
-          "desc": "Grab the latest macOS DMG from GitHub Releases and open the app."
+          "title": "MediaForge をダウンロード",
+          "desc": "GitHub Releases の最新 macOS DMG を取得して開きます。"
         },
         {
-          "title": "Drop and forge",
-          "desc": "Drag a video or image, pick a scenario, and start forging."
+          "title": "ドロップして鍛造",
+          "desc": "動画や画像をドラッグし、シナリオを選んで開始。"
         }
       ]
     },
     "security": {
-      "eyebrow": "Privacy",
-      "title": "Local-first by design",
-      "lead": "Processing happens on your machine with your FFmpeg install.",
+      "eyebrow": "プライバシー",
+      "title": "ローカルファースト設計",
+      "lead": "お使いの FFmpeg で端末上で処理します。",
       "items": [
         {
-          "title": "On-device forging",
-          "desc": "Media files are not uploaded to MediaForge servers for conversion."
+          "title": "端末内で鍛造",
+          "desc": "変換のためにメディアを MediaForge サーバーへ送信しません。"
         },
         {
-          "title": "Your FFmpeg",
-          "desc": "Use PATH discovery or set a custom ffmpeg path in Settings."
+          "title": "あなたの FFmpeg",
+          "desc": "PATH 検出、または設定でカスタムパスを指定。"
         },
         {
-          "title": "Open source",
-          "desc": "Audit the core app code on GitHub."
+          "title": "オープンソース",
+          "desc": "コアアプリのコードは GitHub で確認できます。"
         }
       ]
     },
     "faq": {
       "eyebrow": "FAQ",
-      "title": "Download & installation FAQ",
-      "lead": "Quick answers for macOS setup.",
+      "title": "ダウンロードとインストール FAQ",
+      "lead": "macOS セットアップのクイック回答。",
       "items": [
         {
-          "q": "Do I need FFmpeg installed?",
-          "a": "Yes. MediaForge is a visual wrapper around ffmpeg and ffprobe. On macOS, brew install ffmpeg is the easiest setup."
+          "q": "FFmpeg のインストールは必要ですか？",
+          "a": "はい。MediaForge は ffmpeg / ffprobe のビジュアルラッパーです。macOS では brew install ffmpeg が簡単です。"
         },
         {
-          "q": "Which macOS versions are supported?",
-          "a": "Use the latest DMG from GitHub Releases. Apple Silicon and Intel builds are provided when available in the release assets."
+          "q": "対応する macOS バージョンは？",
+          "a": "GitHub Releases の最新 DMG を使用してください。Apple Silicon と Intel 向けビルドが提供される場合があります。"
         },
         {
-          "q": "Is MediaForge free?",
-          "a": "The open-core edition on GitHub is free and open source. MediaForge Pro with AI Forge and advanced features is planned separately."
+          "q": "MediaForge は無料ですか？",
+          "a": "GitHub のオープンコア版は無料です。AI Forge などを含む MediaForge Pro は別途予定です。"
         },
         {
-          "q": "Where are forged files saved?",
-          "a": "By default next to the source file, or in a fixed folder you choose in Settings."
+          "q": "出力ファイルはどこに保存されますか？",
+          "a": "既定ではソースの隣。設定で固定フォルダも選べます。"
         },
         {
-          "q": "When will Windows and Linux be available?",
-          "a": "They are on the roadmap. Follow GitHub releases or star the repo for updates."
+          "q": "Windows / Linux はいつ？",
+          "a": "ロードマップにあります。GitHub Releases をフォローするか Star してください。"
         },
         {
-          "q": "How do updates work?",
-          "a": "Download new DMGs from GitHub Releases. In-app update checks may be added later."
+          "q": "更新方法は？",
+          "a": "GitHub Releases から新しい DMG をダウンロード。アプリ内更新は今後追加予定です。"
         }
       ]
     },
     "final_cta": {
-      "title": "Ready to install?",
-      "lead": "Download MediaForge for macOS and forge your first file.",
+      "title": "インストールの準備はできましたか？",
+      "lead": "macOS 向け MediaForge をダウンロードして最初のファイルを鍛造。",
       "primary": {
-        "title": "Download",
+        "title": "ダウンロード",
         "href": "/download"
       },
       "secondary": {
-        "title": "Read the docs",
+        "title": "ドキュメントを読む",
         "href": "/docs"
       }
     }
   },
   "gallery": {
-    "eyebrow": "Preset recipes",
-    "title": "Gallery",
-    "lead": "Shareable encoding presets for MediaForge.",
-    "body": "We're building a gallery of official and community .mfrecipe presets you can preview and import into the app. Check back soon.",
+    "eyebrow": "プリセットレシピ",
+    "title": "ギャラリー",
+    "lead": "共有可能な MediaForge エンコードプリセット。",
+    "body": "公式およびコミュニティの .mfrecipe プリセットをプレビューし、アプリに取り込めるギャラリーを準備中です。しばらくお待ちください。",
     "cta": {
-      "title": "Download MediaForge",
+      "title": "MediaForge をダウンロード",
       "href": "/download"
     }
   },
   "gallery_meta": {
-    "title": "Gallery",
-    "description": "MediaForge preset gallery — coming soon."
+    "title": "ギャラリー",
+    "description": "MediaForge プリセットギャラリー — 近日公開。"
   },
   "home_meta": {
     "title": "MediaForge – ビジュアル FFmpeg デスクトップツールでメディアを鍛える",

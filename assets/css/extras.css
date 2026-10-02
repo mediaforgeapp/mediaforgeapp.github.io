@@ -32,6 +32,16 @@
   backdrop-filter: blur(8px);
 }
 
+/* Expand the fixed-height mobile bar so the menu isn't clipped by overflow-hidden */
+#site-header[data-state="active"] #header-bar {
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  background: rgba(18, 18, 18, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
 #site-header[data-state="active"] #mobile-menu {
   display: block;
 }

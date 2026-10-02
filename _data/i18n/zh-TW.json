@@ -1,243 +1,243 @@
 {
   "name": "繁體中文",
   "header": {
-    "gallery": "Gallery",
-    "download": "Download"
+    "gallery": "配方庫",
+    "download": "下載"
   },
   "footer": {
-    "description": "Forge your media with visual FFmpeg workflows. Desktop-first, local processing, open core.",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
+    "description": "用視覺化 FFmpeg 工作流鍛造你的媒體。桌面優先、本機處理、開源核心。",
+    "privacy": "隱私權政策",
+    "terms": "服務條款",
     "copyright_suffix": "保留所有權利"
   },
   "home": {
     "hero": {
       "eyebrow": "MediaForge Open",
-      "title": "Forge your media without the command line.",
-      "lead": "A desktop app that wraps FFmpeg in visual presets—export video, make GIFs, extract audio, and more. Drop a file, pick a scenario, forge.",
+      "title": "不用記命令列，也能鍛造媒體。",
+      "lead": "桌面端 FFmpeg 視覺化應用：拖入檔案、選擇場景預設，即可完成匯出、GIF、音訊擷取等操作。",
       "primary": {
-        "title": "Download for macOS",
+        "title": "下載 macOS 版",
         "href": "/download"
       },
       "secondary": {
-        "title": "View on GitHub",
+        "title": "在 GitHub 查看",
         "href": "https://github.com/mediaforgeapp/mediaforge"
       },
-      "note": "Open-source edition. macOS available now; Windows, Linux, and mobile coming soon.",
-      "download_macos": "Download macOS · {version}",
-      "release_note": "Latest macOS build · {version}. Windows, Linux, and mobile are still in development."
+      "note": "開源版本。macOS 現已可用；Windows、Linux 與行動版即將推出。",
+      "download_macos": "下載 macOS · {version}",
+      "release_note": "最新 macOS 版本 · {version}。Windows、Linux 與行動版仍在開發中。"
     },
     "pillars": {
-      "eyebrow": "Built for creators",
-      "title": "Three pillars behind every forge",
-      "lead": "Visual presets, a focused forge flow, and local FFmpeg power under the hood.",
+      "eyebrow": "為創作者打造",
+      "title": "鍛造流程的三大支柱",
+      "lead": "視覺化預設、專注的鍛造體驗，以及本機 FFmpeg 能力。",
       "items": [
         {
-          "title": "Visual FFmpeg presets",
-          "desc": "Quick Export, Make GIF, Extract Audio, image compress, and WebP convert—no terminal required."
+          "title": "視覺化 FFmpeg 預設",
+          "desc": "快速匯出、製作 GIF、擷取音訊、壓縮圖片、轉換 WebP——無需終端機。"
         },
         {
-          "title": "Spark forge flow",
-          "desc": "Drag and drop, preview inputs, watch live progress, and get polished output paths you control."
+          "title": "Spark 鍛造體驗",
+          "desc": "拖放預覽、即時進度、可控的輸出路徑，一氣呵成。"
         },
         {
-          "title": "Open core, Pro-ready",
-          "desc": "Free and open source today. AI Forge, advanced codecs, and broader media support ship in MediaForge Pro."
+          "title": "開源核心，Pro 可擴充",
+          "desc": "核心免費開源；AI Forge、進階編解碼與更廣媒體支援將在 MediaForge Pro 提供。"
         }
       ]
     },
     "final_cta": {
-      "title": "Ready to forge your first file?",
-      "lead": "Install MediaForge on macOS and turn FFmpeg into a visual workflow in minutes.",
+      "title": "準備好鍛造第一個檔案了嗎？",
+      "lead": "在 macOS 上安裝 MediaForge，幾分鐘內把 FFmpeg 變成視覺化工作流。",
       "primary": {
-        "title": "Get MediaForge",
+        "title": "取得 MediaForge",
         "href": "/download"
       },
       "secondary": {
-        "title": "View on GitHub",
+        "title": "在 GitHub 查看",
         "href": "https://github.com/mediaforgeapp/mediaforge"
       },
-      "download_macos": "Download macOS · {version}"
+      "download_macos": "下載 macOS · {version}"
     },
     "screenshots": {
-      "eyebrow": "See it in action",
-      "title": "From drop to done",
-      "lead": "A focused desktop UI built around scenarios, progress, and results."
+      "eyebrow": "一眼看懂",
+      "title": "從拖放到完成",
+      "lead": "圍繞場景卡片、進度與結果打造的桌面介面。"
     },
     "micro_features": {
       "items": [
         {
           "icon": "search",
-          "title": "Scenario cards",
-          "desc": "Pick the right workflow at a glance—export, GIF, audio, images."
+          "title": "場景卡片",
+          "desc": "匯出、GIF、音訊、圖片等工作流一目了然。"
         },
         {
           "icon": "tags",
-          "title": "Custom commands",
-          "desc": "Save raw FFmpeg argv presets as home cards for expert workflows."
+          "title": "自訂命令",
+          "desc": "將原始 FFmpeg 參數儲存為首頁卡片，適合進階使用者。"
         },
         {
           "icon": "preview",
-          "title": "Input preview",
-          "desc": "Review video inputs before you start forging."
+          "title": "輸入預覽",
+          "desc": "鍛造前預覽影片輸入。"
         },
         {
           "icon": "keyboard",
-          "title": "Desktop-first",
-          "desc": "Built for macOS and Windows with drag-and-drop and window controls."
+          "title": "桌面優先",
+          "desc": "為 macOS 與 Windows 設計，支援拖放與原生視窗。"
         },
         {
           "icon": "privacy",
-          "title": "Local processing",
-          "desc": "Files are processed on your machine with your FFmpeg binaries."
+          "title": "本機處理",
+          "desc": "使用本機 FFmpeg 在本機完成轉換。"
         },
         {
           "icon": "speed",
-          "title": "Hardware-aware",
-          "desc": "Preset pipelines can use VideoToolbox, NVENC, QSV, and more when available."
+          "title": "硬體加速",
+          "desc": "預設管線可在可用時使用 VideoToolbox、NVENC、QSV 等。"
         }
       ]
     }
   },
   "download": {
     "hero": {
-      "eyebrow": "Download",
-      "title": "Get MediaForge for your platform",
-      "lead": "Install the open-source desktop app and start forging with visual FFmpeg presets.",
+      "eyebrow": "下載",
+      "title": "選擇你的平台",
+      "lead": "安裝開源桌面應用，用視覺化 FFmpeg 預設開始鍛造。",
       "primary": {
-        "title": "View features",
+        "title": "查看功能",
         "href": "/features"
       },
       "secondary": {
-        "title": "GitHub releases",
+        "title": "GitHub Releases",
         "href": "https://github.com/mediaforgeapp/mediaforge/releases"
       },
-      "note": "macOS DMG is available from GitHub Releases. Other platforms are in development.",
-      "release_note": "Latest macOS release · {version}. Other platforms are still in development."
+      "note": "macOS DMG 可從 GitHub Releases 取得，其它平台開發中。",
+      "release_note": "最新 macOS 版本 · {version}，其它平台仍在開發中。"
     },
     "platforms": {
-      "eyebrow": "Platforms",
-      "title": "Choose your platform",
-      "lead": "We are rolling out platforms gradually—macOS first.",
+      "eyebrow": "平台",
+      "title": "選擇你的平台",
+      "lead": "我們正逐步推出各平台版本——macOS 優先。",
       "items": [
         {
           "title": "macOS",
-          "desc": "Download the DMG from GitHub Releases. Requires ffmpeg and ffprobe on PATH or configured in Settings.",
+          "desc": "從 GitHub Releases 下載 DMG。需要系統 PATH 中的 ffmpeg/ffprobe，或在設定中指定。",
           "status": "available",
           "badge": "Apple Silicon + Intel"
         },
         {
           "title": "Windows",
-          "desc": "Desktop build for Windows is on the roadmap.",
+          "desc": "Windows 桌面版在路線圖中。",
           "status": "coming_soon",
-          "badge": "Coming soon"
+          "badge": "即將推出"
         },
         {
           "title": "Linux",
-          "desc": "Deb and RPM packages are planned after the macOS and Windows releases.",
+          "desc": "Deb 與 RPM 套件計畫在 macOS/Windows 之後提供。",
           "status": "coming_soon"
         },
         {
           "title": "iOS / Android",
-          "desc": "Mobile apps for iPhone, iPad, and Android are on the roadmap after the desktop releases.",
+          "desc": "iPhone、iPad 與 Android 客戶端將在桌面版之後推出。",
           "status": "coming_soon"
         }
       ]
     },
     "macos": {
       "app_store": "Mac App Store",
-      "download_dmg": "Download DMG · {version}",
-      "download_dmg_fallback": "Download DMG"
+      "download_dmg": "下載 DMG · {version}",
+      "download_dmg_fallback": "下載 DMG"
     },
     "mobile": {
       "app_store": "App Store",
-      "download_apk": "Download APK"
+      "download_apk": "下載 APK"
     },
     "steps": {
-      "eyebrow": "Install",
-      "title": "Install in 3 steps",
-      "lead": "You will need FFmpeg installed—Homebrew on macOS is the quickest path.",
+      "eyebrow": "安裝",
+      "title": "三步完成安裝",
+      "lead": "需要先安裝 FFmpeg——在 macOS 上用 Homebrew 最方便。",
       "items": [
         {
-          "title": "Install FFmpeg",
-          "desc": "Run brew install ffmpeg (or point MediaForge to your binaries in Settings)."
+          "title": "安裝 FFmpeg",
+          "desc": "執行 brew install ffmpeg（或在設定中指向你的 ffmpeg 路徑）。"
         },
         {
-          "title": "Download MediaForge",
-          "desc": "Grab the latest macOS DMG from GitHub Releases and open the app."
+          "title": "下載 MediaForge",
+          "desc": "從 GitHub Releases 取得最新 macOS DMG 並打開應用。"
         },
         {
-          "title": "Drop and forge",
-          "desc": "Drag a video or image, pick a scenario, and start forging."
+          "title": "拖入並鍛造",
+          "desc": "拖入影片或圖片，選擇場景，開始鍛造。"
         }
       ]
     },
     "security": {
-      "eyebrow": "Privacy",
-      "title": "Local-first by design",
-      "lead": "Processing happens on your machine with your FFmpeg install.",
+      "eyebrow": "隱私",
+      "title": "本機優先設計",
+      "lead": "使用你本機的 FFmpeg 完成處理。",
       "items": [
         {
-          "title": "On-device forging",
-          "desc": "Media files are not uploaded to MediaForge servers for conversion."
+          "title": "本機鍛造",
+          "desc": "媒體檔案不會上傳到 MediaForge 伺服器進行轉換。"
         },
         {
-          "title": "Your FFmpeg",
-          "desc": "Use PATH discovery or set a custom ffmpeg path in Settings."
+          "title": "你的 FFmpeg",
+          "desc": "自動探索 PATH，或在設定中自訂 ffmpeg 路徑。"
         },
         {
-          "title": "Open source",
-          "desc": "Audit the core app code on GitHub."
+          "title": "開源",
+          "desc": "可在 GitHub 稽核核心應用程式碼。"
         }
       ]
     },
     "faq": {
-      "eyebrow": "FAQ",
-      "title": "Download & installation FAQ",
-      "lead": "Quick answers for macOS setup.",
+      "eyebrow": "常見問題",
+      "title": "下載與安裝 FAQ",
+      "lead": "macOS 設定的快速解答。",
       "items": [
         {
-          "q": "Do I need FFmpeg installed?",
-          "a": "Yes. MediaForge is a visual wrapper around ffmpeg and ffprobe. On macOS, brew install ffmpeg is the easiest setup."
+          "q": "需要安裝 FFmpeg 嗎？",
+          "a": "需要。MediaForge 是 ffmpeg 與 ffprobe 的視覺化外殼。macOS 上推薦 brew install ffmpeg。"
         },
         {
-          "q": "Which macOS versions are supported?",
-          "a": "Use the latest DMG from GitHub Releases. Apple Silicon and Intel builds are provided when available in the release assets."
+          "q": "支援哪些 macOS 版本？",
+          "a": "請使用 GitHub Releases 上的最新 DMG。發布資源中會提供 Apple Silicon 與 Intel 版本（如有）。"
         },
         {
-          "q": "Is MediaForge free?",
-          "a": "The open-core edition on GitHub is free and open source. MediaForge Pro with AI Forge and advanced features is planned separately."
+          "q": "MediaForge 免費嗎？",
+          "a": "GitHub 上的開源核心免費。含 AI Forge 等進階功能的 MediaForge Pro 將單獨推出。"
         },
         {
-          "q": "Where are forged files saved?",
-          "a": "By default next to the source file, or in a fixed folder you choose in Settings."
+          "q": "輸出檔案儲存在哪裡？",
+          "a": "預設與來源檔案同目錄，也可在設定中選擇固定輸出資料夾。"
         },
         {
-          "q": "When will Windows and Linux be available?",
-          "a": "They are on the roadmap. Follow GitHub releases or star the repo for updates."
+          "q": "Windows 和 Linux 何時可用？",
+          "a": "已在路線圖中。可關注 GitHub Releases 或為倉庫按 Star 取得更新。"
         },
         {
-          "q": "How do updates work?",
-          "a": "Download new DMGs from GitHub Releases. In-app update checks may be added later."
+          "q": "如何更新？",
+          "a": "從 GitHub Releases 下載新版 DMG。應用內更新檢查可能後續加入。"
         }
       ]
     },
     "final_cta": {
-      "title": "Ready to install?",
-      "lead": "Download MediaForge for macOS and forge your first file.",
+      "title": "準備好安裝了嗎？",
+      "lead": "下載 macOS 版 MediaForge，鍛造你的第一個檔案。",
       "primary": {
-        "title": "Download",
+        "title": "下載",
         "href": "/download"
       },
       "secondary": {
-        "title": "Read the docs",
+        "title": "閱讀文件",
         "href": "/docs"
       }
     }
   },
   "gallery": {
-    "eyebrow": "轉碼配方",
-    "title": "Gallery 配方庫",
+    "eyebrow": "預設配方",
+    "title": "配方庫",
     "lead": "可分享的 MediaForge 編碼預設。",
     "body": "我們正在建設官方與社群的 .mfrecipe 配方庫，支援線上預覽並一鍵匯入桌面端。敬請期待。",
     "cta": {

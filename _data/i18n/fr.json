@@ -1,253 +1,253 @@
 {
   "name": "Français",
   "header": {
-    "gallery": "Gallery",
-    "download": "Download"
+    "gallery": "Galerie",
+    "download": "Télécharger"
   },
   "footer": {
-    "description": "Forge your media with visual FFmpeg workflows. Desktop-first, local processing, open core.",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
-    "copyright_suffix": "All rights reserved"
+    "description": "Forgez vos médias avec des workflows FFmpeg visuels. Desktop-first, traitement local, open core.",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d’utilisation",
+    "copyright_suffix": "Tous droits réservés"
   },
   "home": {
     "hero": {
       "eyebrow": "MediaForge Open",
-      "title": "Forge your media without the command line.",
-      "lead": "A desktop app that wraps FFmpeg in visual presets—export video, make GIFs, extract audio, and more. Drop a file, pick a scenario, forge.",
+      "title": "Forgez vos médias sans la ligne de commande.",
+      "lead": "Une app bureau qui enveloppe FFmpeg dans des presets visuels—exporter vidéo, GIFs, extraction audio, et plus. Déposez un fichier, choisissez un scénario, forgez.",
       "primary": {
-        "title": "Download for macOS",
+        "title": "Télécharger pour macOS",
         "href": "/download"
       },
       "secondary": {
-        "title": "View on GitHub",
+        "title": "Voir sur GitHub",
         "href": "https://github.com/mediaforgeapp/mediaforge"
       },
-      "note": "Open-source edition. macOS available now; Windows, Linux, and mobile coming soon.",
-      "download_macos": "Download macOS · {version}",
-      "release_note": "Latest macOS build · {version}. Windows, Linux, and mobile are still in development."
+      "note": "Édition open source. macOS disponible ; Windows, Linux et mobile bientôt.",
+      "download_macos": "Télécharger macOS · {version}",
+      "release_note": "Dernière build macOS · {version}. Windows, Linux et mobile sont encore en développement."
     },
     "pillars": {
-      "eyebrow": "Built for creators",
-      "title": "Three pillars behind every forge",
-      "lead": "Visual presets, a focused forge flow, and local FFmpeg power under the hood.",
+      "eyebrow": "Conçu pour les créateurs",
+      "title": "Trois piliers derrière chaque forge",
+      "lead": "Presets visuels, un flux de forge concentré, et FFmpeg local sous le capot.",
       "items": [
         {
-          "title": "Visual FFmpeg presets",
-          "desc": "Quick Export, Make GIF, Extract Audio, image compress, and WebP convert—no terminal required."
+          "title": "Presets FFmpeg visuels",
+          "desc": "Quick Export, Make GIF, Extract Audio, compression d’images et WebP—sans terminal."
         },
         {
-          "title": "Spark forge flow",
-          "desc": "Drag and drop, preview inputs, watch live progress, and get polished output paths you control."
+          "title": "Flux Spark forge",
+          "desc": "Glisser-déposer, aperçu des entrées, progression en direct et chemins de sortie que vous contrôlez."
         },
         {
-          "title": "Open core, Pro-ready",
-          "desc": "Free and open source today. AI Forge, advanced codecs, and broader media support ship in MediaForge Pro."
+          "title": "Open core, prêt pour Pro",
+          "desc": "Gratuit et open source aujourd’hui. AI Forge et codecs avancés arrivent dans MediaForge Pro."
         }
       ]
     },
     "final_cta": {
-      "title": "Ready to forge your first file?",
-      "lead": "Install MediaForge on macOS and turn FFmpeg into a visual workflow in minutes.",
+      "title": "Prêt à forger votre premier fichier ?",
+      "lead": "Installez MediaForge sur macOS et transformez FFmpeg en workflow visuel en quelques minutes.",
       "primary": {
-        "title": "Get MediaForge",
+        "title": "Obtenir MediaForge",
         "href": "/download"
       },
       "secondary": {
-        "title": "View on GitHub",
+        "title": "Voir sur GitHub",
         "href": "https://github.com/mediaforgeapp/mediaforge"
       },
-      "download_macos": "Download macOS · {version}"
+      "download_macos": "Télécharger macOS · {version}"
     },
     "screenshots": {
-      "eyebrow": "See it in action",
-      "title": "From drop to done",
-      "lead": "A focused desktop UI built around scenarios, progress, and results."
+      "eyebrow": "En action",
+      "title": "Du drop au résultat",
+      "lead": "Une UI bureau centrée sur scénarios, progression et résultats."
     },
     "micro_features": {
       "items": [
         {
           "icon": "search",
-          "title": "Scenario cards",
-          "desc": "Pick the right workflow at a glance—export, GIF, audio, images."
+          "title": "Cartes scénario",
+          "desc": "Export, GIF, audio, images—le bon workflow en un coup d’œil."
         },
         {
           "icon": "tags",
-          "title": "Custom commands",
-          "desc": "Save raw FFmpeg argv presets as home cards for expert workflows."
+          "title": "Commandes perso",
+          "desc": "Enregistrez des presets argv FFmpeg bruts comme cartes d’accueil."
         },
         {
           "icon": "preview",
-          "title": "Input preview",
-          "desc": "Review video inputs before you start forging."
+          "title": "Aperçu d’entrée",
+          "desc": "Vérifiez les entrées vidéo avant de forger."
         },
         {
           "icon": "keyboard",
           "title": "Desktop-first",
-          "desc": "Built for macOS and Windows with drag-and-drop and window controls."
+          "desc": "Pour macOS et Windows avec glisser-déposer et contrôles de fenêtre."
         },
         {
           "icon": "privacy",
-          "title": "Local processing",
-          "desc": "Files are processed on your machine with your FFmpeg binaries."
+          "title": "Traitement local",
+          "desc": "Les fichiers sont traités sur votre machine avec votre FFmpeg."
         },
         {
           "icon": "speed",
-          "title": "Hardware-aware",
-          "desc": "Preset pipelines can use VideoToolbox, NVENC, QSV, and more when available."
+          "title": "Aware du hardware",
+          "desc": "Les presets peuvent utiliser VideoToolbox, NVENC, QSV, etc."
         }
       ]
     }
   },
   "download": {
     "hero": {
-      "eyebrow": "Download",
-      "title": "Get MediaForge for your platform",
-      "lead": "Install the open-source desktop app and start forging with visual FFmpeg presets.",
+      "eyebrow": "Télécharger",
+      "title": "Choisissez votre plateforme",
+      "lead": "Installez l’app bureau open source et commencez à forger avec des presets FFmpeg visuels.",
       "primary": {
-        "title": "View features",
+        "title": "Voir les fonctions",
         "href": "/features"
       },
       "secondary": {
         "title": "GitHub releases",
         "href": "https://github.com/mediaforgeapp/mediaforge/releases"
       },
-      "note": "macOS DMG is available from GitHub Releases. Other platforms are in development.",
-      "release_note": "Latest macOS release · {version}. Other platforms are still in development."
+      "note": "Le DMG macOS est disponible sur GitHub Releases. Autres plateformes en cours.",
+      "release_note": "Dernière version macOS · {version}. Les autres plateformes sont encore en développement."
     },
     "platforms": {
-      "eyebrow": "Platforms",
-      "title": "Choose your platform",
-      "lead": "We are rolling out platforms gradually—macOS first.",
+      "eyebrow": "Plateformes",
+      "title": "Choisissez votre plateforme",
+      "lead": "Nous déployons les plateformes progressivement—macOS d’abord.",
       "items": [
         {
           "title": "macOS",
-          "desc": "Download the DMG from GitHub Releases. Requires ffmpeg and ffprobe on PATH or configured in Settings.",
+          "desc": "Téléchargez le DMG depuis GitHub Releases. ffmpeg/ffprobe doivent être dans le PATH ou configurés dans Réglages.",
           "status": "available",
           "badge": "Apple Silicon + Intel"
         },
         {
           "title": "Windows",
-          "desc": "Desktop build for Windows is on the roadmap.",
+          "desc": "La build bureau Windows est sur la feuille de route.",
           "status": "coming_soon",
-          "badge": "Coming soon"
+          "badge": "Bientôt"
         },
         {
           "title": "Linux",
-          "desc": "Deb and RPM packages are planned after the macOS and Windows releases.",
+          "desc": "Les paquets Deb et RPM sont prévus après macOS et Windows.",
           "status": "coming_soon"
         },
         {
           "title": "iOS / Android",
-          "desc": "Mobile apps for iPhone, iPad, and Android are on the roadmap after the desktop releases.",
+          "desc": "Les apps iPhone, iPad et Android arriveront après le bureau.",
           "status": "coming_soon"
         }
       ]
     },
     "macos": {
       "app_store": "Mac App Store",
-      "download_dmg": "Download DMG · {version}",
-      "download_dmg_fallback": "Download DMG"
+      "download_dmg": "Télécharger le DMG · {version}",
+      "download_dmg_fallback": "Télécharger le DMG"
     },
     "mobile": {
       "app_store": "App Store",
-      "download_apk": "Download APK"
+      "download_apk": "Télécharger l’APK"
     },
     "steps": {
-      "eyebrow": "Install",
-      "title": "Install in 3 steps",
-      "lead": "You will need FFmpeg installed—Homebrew on macOS is the quickest path.",
+      "eyebrow": "Installer",
+      "title": "Installer en 3 étapes",
+      "lead": "FFmpeg est requis—sur macOS, Homebrew est le plus rapide.",
       "items": [
         {
-          "title": "Install FFmpeg",
-          "desc": "Run brew install ffmpeg (or point MediaForge to your binaries in Settings)."
+          "title": "Installer FFmpeg",
+          "desc": "Lancez brew install ffmpeg (ou indiquez vos binaires dans Réglages)."
         },
         {
-          "title": "Download MediaForge",
-          "desc": "Grab the latest macOS DMG from GitHub Releases and open the app."
+          "title": "Télécharger MediaForge",
+          "desc": "Récupérez le dernier DMG macOS sur GitHub Releases et ouvrez-le."
         },
         {
-          "title": "Drop and forge",
-          "desc": "Drag a video or image, pick a scenario, and start forging."
+          "title": "Déposer et forger",
+          "desc": "Glissez une vidéo ou une image, choisissez un scénario, lancez."
         }
       ]
     },
     "security": {
-      "eyebrow": "Privacy",
+      "eyebrow": "Confidentialité",
       "title": "Local-first by design",
-      "lead": "Processing happens on your machine with your FFmpeg install.",
+      "lead": "Le traitement se fait sur votre machine avec votre FFmpeg.",
       "items": [
         {
-          "title": "On-device forging",
-          "desc": "Media files are not uploaded to MediaForge servers for conversion."
+          "title": "Forge sur l’appareil",
+          "desc": "Les médias ne sont pas envoyés aux serveurs MediaForge pour conversion."
         },
         {
-          "title": "Your FFmpeg",
-          "desc": "Use PATH discovery or set a custom ffmpeg path in Settings."
+          "title": "Votre FFmpeg",
+          "desc": "Détection PATH ou chemin personnalisé dans Réglages."
         },
         {
           "title": "Open source",
-          "desc": "Audit the core app code on GitHub."
+          "desc": "Auditez le code du cœur sur GitHub."
         }
       ]
     },
     "faq": {
       "eyebrow": "FAQ",
-      "title": "Download & installation FAQ",
-      "lead": "Quick answers for macOS setup.",
+      "title": "FAQ téléchargement et installation",
+      "lead": "Réponses rapides pour macOS.",
       "items": [
         {
-          "q": "Do I need FFmpeg installed?",
-          "a": "Yes. MediaForge is a visual wrapper around ffmpeg and ffprobe. On macOS, brew install ffmpeg is the easiest setup."
+          "q": "Faut-il installer FFmpeg ?",
+          "a": "Oui. MediaForge est une enveloppe visuelle autour de ffmpeg et ffprobe. Sur macOS, brew install ffmpeg est le plus simple."
         },
         {
-          "q": "Which macOS versions are supported?",
-          "a": "Use the latest DMG from GitHub Releases. Apple Silicon and Intel builds are provided when available in the release assets."
+          "q": "Quelles versions de macOS sont prises en charge ?",
+          "a": "Utilisez le dernier DMG sur GitHub Releases. Des builds Apple Silicon et Intel peuvent être fournis."
         },
         {
-          "q": "Is MediaForge free?",
-          "a": "The open-core edition on GitHub is free and open source. MediaForge Pro with AI Forge and advanced features is planned separately."
+          "q": "MediaForge est-il gratuit ?",
+          "a": "L’édition open core sur GitHub est gratuite. MediaForge Pro avec AI Forge est prévu séparément."
         },
         {
-          "q": "Where are forged files saved?",
-          "a": "By default next to the source file, or in a fixed folder you choose in Settings."
+          "q": "Où sont enregistrés les fichiers forgés ?",
+          "a": "Par défaut à côté de la source, ou dans un dossier fixe choisi dans Réglages."
         },
         {
-          "q": "When will Windows and Linux be available?",
-          "a": "They are on the roadmap. Follow GitHub releases or star the repo for updates."
+          "q": "Quand Windows et Linux seront-ils disponibles ?",
+          "a": "Ils sont sur la feuille de route. Suivez les releases GitHub ou mettez une étoile au dépôt."
         },
         {
-          "q": "How do updates work?",
-          "a": "Download new DMGs from GitHub Releases. In-app update checks may be added later."
+          "q": "Comment fonctionnent les mises à jour ?",
+          "a": "Téléchargez de nouveaux DMGs depuis GitHub Releases. Les mises à jour in-app pourront arriver plus tard."
         }
       ]
     },
     "final_cta": {
-      "title": "Ready to install?",
-      "lead": "Download MediaForge for macOS and forge your first file.",
+      "title": "Prêt à installer ?",
+      "lead": "Téléchargez MediaForge pour macOS et forgez votre premier fichier.",
       "primary": {
-        "title": "Download",
+        "title": "Télécharger",
         "href": "/download"
       },
       "secondary": {
-        "title": "Read the docs",
+        "title": "Lire la doc",
         "href": "/docs"
       }
     }
   },
   "gallery": {
-    "eyebrow": "Preset recipes",
-    "title": "Gallery",
-    "lead": "Shareable encoding presets for MediaForge.",
-    "body": "We're building a gallery of official and community .mfrecipe presets you can preview and import into the app. Check back soon.",
+    "eyebrow": "Recettes de presets",
+    "title": "Galerie",
+    "lead": "Presets d’encodage partageables pour MediaForge.",
+    "body": "Nous préparons une galerie de presets .mfrecipe officiels et communautaires à prévisualiser et importer. Revenez bientôt.",
     "cta": {
-      "title": "Download MediaForge",
+      "title": "Télécharger MediaForge",
       "href": "/download"
     }
   },
   "gallery_meta": {
-    "title": "Gallery",
-    "description": "MediaForge preset gallery — coming soon."
+    "title": "Galerie",
+    "description": "Galerie de presets MediaForge — bientôt."
   },
   "home_meta": {
     "title": "MediaForge – Outil de bureau FFmpeg visuel pour forger vos médias",
