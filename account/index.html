@@ -1,0 +1,45 @@
+---
+layout: default
+lang: en
+page_id: account
+permalink: /account/
+title: Account
+description: Your MediaForge account, credits, and billing.
+---
+<main class="auth-page account-page" data-builtly-boot="account">
+  <section class="auth-page__stage container">
+    <div class="account-page__grid">
+      <div class="account-page__intro">
+        <p class="auth-page__eyebrow">
+          <span class="auth-page__dot" aria-hidden="true"></span>
+          MediaForge account
+        </p>
+        <h1 class="auth-page__title">Account</h1>
+        <p class="auth-page__lead">
+          Credits, profile, and billing for this browser session.
+        </p>
+        <div class="account-page__intro-actions">
+          <a class="builtly-btn" href="{{ '/pricing/' | relative_url }}">Buy credits</a>
+          <button type="button" id="account-logout" class="builtly-btn builtly-btn--ghost">Sign out</button>
+        </div>
+      </div>
+
+      <div class="account-page__panels">
+        <article class="account-page__credit builtly-panel">
+          <h2 class="account-page__label">Credits</h2>
+          <p class="account-page__balance"><span id="account-credits">—</span></p>
+          <p class="account-page__hint">Balance updates after Stripe checkout completes.</p>
+        </article>
+
+        <article class="builtly-panel">
+          <h2 class="account-page__label">Profile</h2>
+          <div id="account-profile" class="account-page__profile">
+            <p class="builtly-muted">Loading…</p>
+          </div>
+        </article>
+
+        <p id="account-status" class="builtly-status account-page__status" hidden></p>
+      </div>
+    </div>
+  </section>
+</main>

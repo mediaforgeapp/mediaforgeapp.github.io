@@ -13,6 +13,12 @@
               <li>
                 <a class="flex flex-row items-center gap-2 rounded-md px-4 py-1.5 text-sm transition-colors duration-150 hover:bg-foreground/5 text-foreground/80{% if page_id == 'gallery' %} bg-foreground/5 text-foreground{% endif %}" href="{{ url_gallery }}">{{ t.header.gallery }}</a>
               </li>
+              <li>
+                <a class="flex flex-row items-center gap-2 rounded-md px-4 py-1.5 text-sm transition-colors duration-150 hover:bg-foreground/5 text-foreground/80{% if page_id == 'pricing' %} bg-foreground/5 text-foreground{% endif %}" href="{{ url_pricing }}">{{ t.header.pricing | default: 'Pricing' }}</a>
+              </li>
+              <li>
+                <a class="flex flex-row items-center gap-2 rounded-md px-4 py-1.5 text-sm transition-colors duration-150 hover:bg-foreground/5 text-foreground/80{% if page_id == 'download' %} bg-foreground/5 text-foreground{% endif %}" href="{{ url_download }}">{{ t.header.download }}</a>
+              </li>
             </ul>
           </nav>
 
@@ -23,12 +29,10 @@
         </div>
 
         <div id="header-actions" class="mb-6 flex w-full flex-wrap items-center justify-end gap-4 max-lg:hidden lg:m-0 lg:flex lg:w-fit">
-          <div class="flex w-full flex-row items-center gap-4 sm:w-fit">
-            <a class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap transition-colors h-7 px-3 bg-[#FF6F00] text-black hover:bg-[#FF6F00]/90 border border-white/10 shadow-md" href="{{ url_download }}">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg>
-              <span>{{ t.header.download }}</span>
-            </a>
+          <div class="flex w-full flex-row items-center gap-8 sm:w-fit">
             {% include locale-selector.html type="icon" %}
+            <a data-auth-guest class="inline-flex h-7 items-center justify-center rounded-md bg-[#FF6F00] px-3 text-sm font-medium whitespace-nowrap text-black shadow-md transition-colors hover:bg-[#FF6F00]/90 border border-white/10" href="{{ url_login }}">{{ t.header.login | default: 'Sign in' }}</a>
+            <a data-auth-user hidden class="inline-flex h-7 items-center justify-center rounded-md bg-[#FF6F00] px-3 text-sm font-medium whitespace-nowrap text-black shadow-md transition-colors hover:bg-[#FF6F00]/90 border border-white/10" href="{{ url_account }}">{{ t.header.account | default: 'Account' }}</a>
           </div>
         </div>
       </div>
@@ -36,8 +40,11 @@
       <div id="mobile-menu" class="hidden border-t border-white/5 pb-6 pt-4 lg:hidden">
         <nav class="flex flex-col gap-2">
           <a class="rounded-md px-3 py-2 text-sm text-foreground/80 hover:bg-foreground/5" href="{{ url_gallery }}">{{ t.header.gallery }}</a>
-          <a class="mt-2 inline-flex h-10 items-center justify-center gap-2 rounded-md bg-[#FF6F00] px-4 text-sm font-medium text-black" href="{{ url_download }}">{{ t.header.download }}</a>
+          <a class="rounded-md px-3 py-2 text-sm text-foreground/80 hover:bg-foreground/5" href="{{ url_pricing }}">{{ t.header.pricing | default: 'Pricing' }}</a>
+          <a class="rounded-md px-3 py-2 text-sm text-foreground/80 hover:bg-foreground/5" href="{{ url_download }}">{{ t.header.download }}</a>
           <div class="mt-3 px-1">{% include locale-selector.html type="button" open="down" %}</div>
+          <a data-auth-guest class="mt-2 inline-flex h-10 items-center justify-center rounded-md bg-[#FF6F00] px-4 text-sm font-medium text-black" href="{{ url_login }}">{{ t.header.login | default: 'Sign in' }}</a>
+          <a data-auth-user hidden class="mt-2 inline-flex h-10 items-center justify-center rounded-md bg-[#FF6F00] px-4 text-sm font-medium text-black" href="{{ url_account }}">{{ t.header.account | default: 'Account' }}</a>
         </nav>
       </div>
     </div>

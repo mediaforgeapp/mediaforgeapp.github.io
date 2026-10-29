@@ -1,0 +1,24 @@
+---
+layout: default
+lang: en
+page_id: auth-callback
+permalink: /auth/callback/
+title: Signing in
+description: Completing OAuth sign-in.
+robots: noindex
+---
+<main class="auth-page" data-builtly-boot="callback">
+  <section class="auth-page__stage container">
+    <div class="auth-page__solo">
+      <p class="auth-page__eyebrow">
+        <span class="auth-page__dot" aria-hidden="true"></span>
+        MediaForge account
+      </p>
+      <h1 class="auth-page__title">Signing you in…</h1>
+      <p id="auth-status" class="builtly-status auth-page__status mt-6" data-kind="info">Completing sign-in…</p>
+      <p class="auth-page__fineprint mt-8">
+        <a class="builtly-link" href="{{ '/account/login/' | relative_url }}">Back to sign in</a>
+      </p>
+    </div>
+  </section>
+</main>

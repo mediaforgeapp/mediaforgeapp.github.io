@@ -2,7 +2,10 @@
   "name": "日本語",
   "header": {
     "gallery": "ギャラリー",
-    "download": "ダウンロード"
+    "download": "ダウンロード",
+    "pricing": "料金",
+    "login": "ログイン",
+    "account": "アカウント"
   },
   "footer": {
     "description": "ビジュアル FFmpeg ワークフローでメディアを鍛造。デスクトップ優先、ローカル処理、オープンコア。",
@@ -265,5 +268,26 @@
   "terms_meta": {
     "title": "利用規約",
     "description": "MediaForge デスクトップアプリ、ウェブサイトおよび関連サービスの利用規約。"
+  },
+  "login": {
+    "eyebrow": "MediaForge アカウント",
+    "lead": "Google または GitHub でサインインし、クレジット、購入、Pro 機能にアクセスできます。",
+    "points": [
+      "クレジットパックの購入と確認",
+      "MediaForge Pro とアカウント状態を同期",
+      "チェックアウト後の請求管理"
+    ],
+    "card_title": "続行",
+    "card_lead": "プロバイダーを選んで、このブラウザでアカウントを開きます。",
+    "google": "Google",
+    "github": "GitHub",
+    "fineprint_before": "続行すると、当社の",
+    "fineprint_and": "および",
+    "terms": "利用規約",
+    "privacy": "プライバシーポリシー"
+  },
+  "login_meta": {
+    "title": "サインイン",
+    "description": "Google または GitHub で MediaForge にサインイン。"
   }
 }

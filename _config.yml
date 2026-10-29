@@ -17,6 +17,15 @@ github_repo: "https://github.com/mediaforgeapp/mediaforge"
 github_releases: "https://github.com/mediaforgeapp/mediaforge/releases"
 support_email: "support@mediaforgeapp.com"
 
+# Builtly SaaS backend (auth / credits / Stripe checkout)
+# Local: http://localhost:8080 — swap api_base to your public Builtly host in production.
+builtly:
+  api_base: "http://localhost:8080/api/v1"
+  app_id: "01a187d6-b42f-7988-ade5-05a50543d2cf"
+  auth_redirect: "/auth/callback/"
+  checkout_success: "/billing/thanks/"
+  checkout_cancel: "/pricing/"
+
 exclude:
   - README.md
   - LICENSE

@@ -9,6 +9,7 @@ PAGES = [
     ("home", "index.html", "/"),
     ("gallery", "gallery.html", "/gallery/"),
     ("download", "download.html", "/download/"),
+    ("login", "account/login.html", "/account/login/"),
 ]
 
 
@@ -19,6 +20,8 @@ def main() -> None:
         for page_id, filename, suffix in PAGES:
             include = "home" if page_id == "home" else page_id
             permalink = f"/{loc}{suffix}"
+            out_path = dest_dir / filename
+            out_path.parent.mkdir(parents=True, exist_ok=True)
             content = (
                 "---\n"
                 "layout: default\n"
@@ -28,7 +31,7 @@ def main() -> None:
                 "---\n"
                 f"{{% include {include}.html %}}\n"
             )
-            (dest_dir / filename).write_text(content, encoding="utf-8")
+            out_path.write_text(content, encoding="utf-8")
             print(f"wrote {loc}/{filename}")
 
 

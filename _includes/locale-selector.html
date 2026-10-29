@@ -16,7 +16,7 @@
 <div class="locale-selector relative" data-locale-selector>
   <button
     type="button"
-    class="locale-trigger inline-flex items-center justify-center gap-1.5 whitespace-nowrap text-sm font-medium transition-all border bg-background shadow-xs hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 {% if selector_type == 'icon' %}size-9 h-auto w-auto border-0 bg-transparent p-0 shadow-none hover:bg-accent hover:text-accent-foreground{% else %}h-8 rounded-md px-3 hover:bg-primary/10{% endif %}"
+    class="locale-trigger inline-flex items-center justify-center gap-1.5 whitespace-nowrap text-sm font-medium transition-colors duration-150 {% if selector_type == 'icon' %}size-7 rounded-md border-0 bg-transparent p-0 text-foreground/80 shadow-none hover:bg-foreground/5 hover:text-foreground{% else %}h-8 rounded-md border border-white/10 bg-transparent px-3 text-foreground/80 shadow-none hover:bg-foreground/5 hover:text-foreground{% endif %}"
     aria-haspopup="listbox"
     aria-expanded="false"
     aria-label="Language"
@@ -41,6 +41,12 @@
           {% assign item_path = item_prefix | append: '/gallery/' %}
         {% when 'download' %}
           {% assign item_path = item_prefix | append: '/download/' %}
+        {% when 'login' %}
+          {% assign item_path = item_prefix | append: '/account/login/' %}
+        {% when 'pricing' %}
+          {% assign item_path = '/pricing/' %}
+        {% when 'account' %}
+          {% assign item_path = '/account/' %}
         {% when 'privacy-policy' %}
           {% assign item_path = item_prefix | append: '/privacy-policy/' %}
         {% when 'terms-of-service' %}

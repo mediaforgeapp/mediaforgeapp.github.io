@@ -2,7 +2,10 @@
   "name": "繁體中文",
   "header": {
     "gallery": "配方庫",
-    "download": "下載"
+    "download": "下載",
+    "pricing": "定價",
+    "login": "登入",
+    "account": "帳戶"
   },
   "footer": {
     "description": "用視覺化 FFmpeg 工作流鍛造你的媒體。桌面優先、本機處理、開源核心。",
@@ -265,5 +268,26 @@
   "terms_meta": {
     "title": "服務條款",
     "description": "MediaForge 桌面應用、網站及相關服務的使用條款。"
+  },
+  "login": {
+    "eyebrow": "MediaForge 帳戶",
+    "lead": "使用 Google 或 GitHub 登入，管理點數、購買記錄與 Pro 功能。",
+    "points": [
+      "購買並查看點數包",
+      "與 MediaForge Pro 同步帳戶狀態",
+      "結帳後管理帳單"
+    ],
+    "card_title": "繼續使用",
+    "card_lead": "選擇一個身分提供方，在此瀏覽器中開啟帳戶。",
+    "google": "Google",
+    "github": "GitHub",
+    "fineprint_before": "繼續即表示你同意我們的",
+    "fineprint_and": "與",
+    "terms": "服務條款",
+    "privacy": "隱私權政策"
+  },
+  "login_meta": {
+    "title": "登入",
+    "description": "使用 Google 或 GitHub 登入 MediaForge。"
   }
 }

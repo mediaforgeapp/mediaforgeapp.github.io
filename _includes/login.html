@@ -1,0 +1,49 @@
+{% include locale-setup.html %}
+<main class="auth-page auth-page--login" data-builtly-boot="login">
+  <section class="auth-page__stage container">
+    <div class="auth-page__grid">
+      <div class="auth-page__intro">
+        <p class="auth-page__eyebrow">
+          <span class="auth-page__dot" aria-hidden="true"></span>
+          {{ t.login.eyebrow }}
+        </p>
+        <p class="auth-page__lead auth-page__lead--flush">
+          {{ t.login.lead }}
+        </p>
+        <ul class="auth-page__points" role="list">
+          {% for point in t.login.points %}
+          <li>{{ point }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <aside class="auth-page__card builtly-panel" aria-label="{{ t.login.card_title }}">
+        <h1 class="auth-page__card-title">{{ t.login.card_title }}</h1>
+        <p class="auth-page__card-lead">{{ t.login.card_lead }}</p>
+        <div class="auth-page__oauth-wrap">
+          <div class="builtly-oauth auth-page__oauth">
+            <button type="button" class="builtly-btn builtly-btn--block auth-page__btn" data-oauth="google">
+              <svg class="auth-page__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.35 11.1h-9.17v2.96h5.3c-.23 1.4-1.67 4.1-5.3 4.1A6.13 6.13 0 0 1 6 12a6.13 6.13 0 0 1 6.18-6.16c1.76 0 2.94.75 3.61 1.4l2.46-2.37C16.84 3.55 14.7 2.5 12.18 2.5 6.93 2.5 2.7 6.74 2.7 12s4.23 9.5 9.48 9.5c5.47 0 9.1-3.84 9.1-9.25 0-.62-.07-1.08-.13-1.15z"/></svg>
+              {{ t.login.google }}
+            </button>
+            <button type="button" class="builtly-btn builtly-btn--ghost builtly-btn--block auth-page__btn" data-oauth="github">
+              <svg class="auth-page__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 6.8c.85 0 1.7.12 2.5.34 1.9-1.32 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.8 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg>
+              {{ t.login.github }}
+            </button>
+          </div>
+          <div class="auth-page__oauth-loading" hidden aria-live="polite" aria-busy="true">
+            <span class="auth-page__spinner" aria-hidden="true"></span>
+            <span class="sr-only">Loading</span>
+          </div>
+        </div>
+        <p id="auth-status" class="builtly-status auth-page__status" hidden></p>
+        <p class="auth-page__fineprint">
+          {{ t.login.fineprint_before }}
+          <a class="builtly-link" href="{{ url_terms }}">{{ t.login.terms }}</a>
+          {{ t.login.fineprint_and }}
+          <a class="builtly-link" href="{{ url_privacy }}">{{ t.login.privacy }}</a>.
+        </p>
+      </aside>
+    </div>
+  </section>
+</main>

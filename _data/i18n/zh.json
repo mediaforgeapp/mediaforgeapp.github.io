@@ -2,7 +2,10 @@
   "name": "简体中文",
   "header": {
     "gallery": "配方库",
-    "download": "下载"
+    "download": "下载",
+    "pricing": "定价",
+    "login": "登录",
+    "account": "账户"
   },
   "footer": {
     "description": "用可视化 FFmpeg 工作流锻造你的媒体。桌面优先、本地处理、开源核心。",
@@ -265,5 +268,26 @@
   "terms_meta": {
     "title": "服务条款",
     "description": "MediaForge 桌面应用、网站及相关服务的使用条款。"
+  },
+  "login": {
+    "eyebrow": "MediaForge 账户",
+    "lead": "使用 Google 或 GitHub 登录，管理积分、购买记录与 Pro 功能。",
+    "points": [
+      "购买并查看积分包",
+      "与 MediaForge Pro 同步账户状态",
+      "结账后管理账单"
+    ],
+    "card_title": "继续使用",
+    "card_lead": "选择一个身份提供方，在此浏览器中打开账户。",
+    "google": "Google",
+    "github": "GitHub",
+    "fineprint_before": "继续即表示你同意我们的",
+    "fineprint_and": "与",
+    "terms": "服务条款",
+    "privacy": "隐私政策"
+  },
+  "login_meta": {
+    "title": "登录",
+    "description": "使用 Google 或 GitHub 登录 MediaForge。"
   }
 }

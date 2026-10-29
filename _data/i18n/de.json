@@ -2,7 +2,10 @@
   "name": "Deutsch",
   "header": {
     "gallery": "Galerie",
-    "download": "Download"
+    "download": "Download",
+    "pricing": "Preise",
+    "login": "Anmelden",
+    "account": "Konto"
   },
   "footer": {
     "description": "Schmieden Sie Medien mit visuellen FFmpeg-Workflows. Desktop-first, lokale Verarbeitung, Open Core.",
@@ -265,5 +268,26 @@
   "terms_meta": {
     "title": "Nutzungsbedingungen",
     "description": "Bedingungen für die Nutzung der MediaForge-Desktop-App, Website und verwandter Dienste."
+  },
+  "login": {
+    "eyebrow": "MediaForge-Konto",
+    "lead": "Melden Sie sich mit Google oder GitHub an, um Credits, Käufe und Pro-Funktionen zu nutzen.",
+    "points": [
+      "Credit-Pakete kaufen und verfolgen",
+      "Kontostatus mit MediaForge Pro synchronisieren",
+      "Abrechnung nach dem Checkout verwalten"
+    ],
+    "card_title": "Weiter mit",
+    "card_lead": "Wählen Sie einen Anbieter, um Ihr Konto in diesem Browser zu öffnen.",
+    "google": "Google",
+    "github": "GitHub",
+    "fineprint_before": "Mit dem Fortfahren stimmen Sie unseren",
+    "fineprint_and": "und der",
+    "terms": "Nutzungsbedingungen",
+    "privacy": "Datenschutzerklärung"
+  },
+  "login_meta": {
+    "title": "Anmelden",
+    "description": "Melden Sie sich bei MediaForge mit Google oder GitHub an."
   }
 }
