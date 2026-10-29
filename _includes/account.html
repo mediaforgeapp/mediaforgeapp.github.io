@@ -1,0 +1,45 @@
+{% include locale-setup.html %}
+<main class="auth-page auth-page--account account-page" data-builtly-boot="account">
+  <section class="auth-page__stage container">
+    <div class="auth-page__grid">
+      <div class="auth-page__intro">
+        <p class="auth-page__eyebrow">
+          <span class="auth-page__dot" aria-hidden="true"></span>
+          {{ t.account.eyebrow }}
+        </p>
+        <p class="auth-page__lead auth-page__lead--flush">
+          {{ t.account.lead }}
+        </p>
+        <ul class="auth-page__points" role="list">
+          {% for point in t.account.points %}
+          <li>{{ point }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <aside class="account-page__card builtly-panel auth-page__card">
+        <h1 class="account-page__label">{{ t.account.credits_label }}</h1>
+        <div class="account-page__credits-row">
+          <p class="account-page__balance"><span id="account-credits">—</span></p>
+          <a class="builtly-btn account-page__buy" href="{{ url_pricing }}">{{ t.account.buy_credits }}</a>
+        </div>
+        <p class="account-page__hint">{{ t.account.credits_hint }}</p>
+
+        <div class="account-page__divider" aria-hidden="true"></div>
+
+        <h2 class="account-page__label">{{ t.account.profile_label }}</h2>
+        <div
+          id="account-profile"
+          class="account-page__profile"
+          data-i18n-change-avatar="{{ t.account.change_avatar | escape }}"
+          data-i18n-email="{{ t.account.email | escape }}"
+          data-i18n-name="{{ t.account.name | escape }}"
+        >
+          <p class="builtly-muted">{{ t.account.loading }}</p>
+        </div>
+
+        <p id="account-status" class="builtly-status account-page__status" hidden></p>
+      </aside>
+    </div>
+  </section>
+</main>

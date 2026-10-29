@@ -36,7 +36,11 @@ export async function api(method, path, { body, auth = false, headers = {} } = {
     ...headers,
   };
   if (auth) {
-    const t = getAccess();
+    let t = getAccess();
+    if (!t && getRefresh()) {
+      await refreshSession();
+      t = getAccess();
+    }
     if (!t) throw { code: "unauthorized", message: "not signed in" };
     h.Authorization = "Bearer " + t;
   }

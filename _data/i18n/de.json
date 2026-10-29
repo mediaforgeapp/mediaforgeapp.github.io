@@ -289,5 +289,27 @@
   "login_meta": {
     "title": "Anmelden",
     "description": "Melden Sie sich bei MediaForge mit Google oder GitHub an."
+  },
+  "account": {
+    "eyebrow": "MediaForge-Konto",
+    "lead": "Credits, Profil und Abrechnung für diese Browser-Sitzung.",
+    "points": [
+      "Credit-Saldo nach dem Checkout prüfen",
+      "Profil-Avatar aktualisieren",
+      "Jederzeit von dieser Sitzung abmelden"
+    ],
+    "buy_credits": "Credits kaufen",
+    "sign_out": "Abmelden",
+    "credits_label": "Credits",
+    "credits_hint": "Der Saldo wird nach Abschluss des Stripe-Checkouts aktualisiert.",
+    "profile_label": "Profil",
+    "loading": "Laden…",
+    "change_avatar": "Avatar ändern",
+    "email": "E-Mail",
+    "name": "Name"
+  },
+  "account_meta": {
+    "title": "Konto",
+    "description": "Ihr MediaForge-Konto, Credits und Abrechnung."
   }
 }

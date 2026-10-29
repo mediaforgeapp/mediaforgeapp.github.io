@@ -289,5 +289,27 @@
   "login_meta": {
     "title": "Sign in",
     "description": "Sign in to MediaForge with Google or GitHub."
+  },
+  "account": {
+    "eyebrow": "MediaForge account",
+    "lead": "Credits, profile, and billing for this browser session.",
+    "points": [
+      "Check your credit balance after checkout",
+      "Update your profile avatar",
+      "Sign out of this browser session anytime"
+    ],
+    "buy_credits": "Buy credits",
+    "sign_out": "Sign out",
+    "credits_label": "Credits",
+    "credits_hint": "Balance updates after Stripe checkout completes.",
+    "profile_label": "Profile",
+    "loading": "Loading…",
+    "change_avatar": "Change avatar",
+    "email": "Email",
+    "name": "Name"
+  },
+  "account_meta": {
+    "title": "Account",
+    "description": "Your MediaForge account, credits, and billing."
   }
 }

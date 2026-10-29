@@ -10,6 +10,7 @@ PAGES = [
     ("gallery", "gallery.html", "/gallery/"),
     ("download", "download.html", "/download/"),
     ("login", "account/login.html", "/account/login/"),
+    ("account", "account/index.html", "/account/"),
 ]
 
 

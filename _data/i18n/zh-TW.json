@@ -289,5 +289,27 @@
   "login_meta": {
     "title": "登入",
     "description": "使用 Google 或 GitHub 登入 MediaForge。"
+  },
+  "account": {
+    "eyebrow": "MediaForge 帳戶",
+    "lead": "查看此瀏覽器工作階段的點數、資料與帳單資訊。",
+    "points": [
+      "結帳後查看點數餘額",
+      "更新個人頭像",
+      "隨時登出此瀏覽器工作階段"
+    ],
+    "buy_credits": "購買點數",
+    "sign_out": "登出",
+    "credits_label": "點數",
+    "credits_hint": "Stripe 結帳完成後餘額會更新。",
+    "profile_label": "資料",
+    "loading": "載入中…",
+    "change_avatar": "更換頭像",
+    "email": "電子郵件",
+    "name": "名稱"
+  },
+  "account_meta": {
+    "title": "帳戶",
+    "description": "你的 MediaForge 帳戶、點數與帳單。"
   }
 }

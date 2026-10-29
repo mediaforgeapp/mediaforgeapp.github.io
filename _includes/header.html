@@ -32,7 +32,23 @@
           <div class="flex w-full flex-row items-center gap-8 sm:w-fit">
             {% include locale-selector.html type="icon" %}
             <a data-auth-guest class="inline-flex h-7 items-center justify-center rounded-md bg-[#FF6F00] px-3 text-sm font-medium whitespace-nowrap text-black shadow-md transition-colors hover:bg-[#FF6F00]/90 border border-white/10" href="{{ url_login }}">{{ t.header.login | default: 'Sign in' }}</a>
-            <a data-auth-user hidden class="inline-flex h-7 items-center justify-center rounded-md bg-[#FF6F00] px-3 text-sm font-medium whitespace-nowrap text-black shadow-md transition-colors hover:bg-[#FF6F00]/90 border border-white/10" href="{{ url_account }}">{{ t.header.account | default: 'Account' }}</a>
+            <div data-auth-user hidden class="auth-menu relative">
+              <button
+                type="button"
+                class="auth-menu__trigger"
+                data-auth-menu-trigger
+                aria-haspopup="menu"
+                aria-expanded="false"
+                aria-label="{{ t.header.account | default: 'Account' }}"
+              >
+                <img data-auth-avatar class="auth-menu__avatar" alt="" hidden width="28" height="28" />
+                <span data-auth-avatar-fallback class="auth-menu__fallback" aria-hidden="true"></span>
+              </button>
+              <div class="auth-menu__dropdown locale-menu locale-menu--down absolute right-0 z-50 hidden overflow-hidden rounded-md border border-white/10 bg-[#1a1a1a] p-1 text-white shadow-lg" data-auth-menu role="menu">
+                <a role="menuitem" data-auth-name class="auth-menu__item flex cursor-pointer items-center rounded-sm px-2.5 py-1.5 text-sm text-white/90 outline-none hover:bg-white/10" href="{{ url_account }}">—</a>
+                <button type="button" role="menuitem" data-auth-logout class="auth-menu__item flex w-full cursor-pointer items-center rounded-sm px-2.5 py-1.5 text-left text-sm text-white/85 outline-none hover:bg-white/10">{{ t.account.sign_out | default: 'Sign out' }}</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -44,7 +60,10 @@
           <a class="rounded-md px-3 py-2 text-sm text-foreground/80 hover:bg-foreground/5" href="{{ url_download }}">{{ t.header.download }}</a>
           <div class="mt-3 px-1">{% include locale-selector.html type="button" open="down" %}</div>
           <a data-auth-guest class="mt-2 inline-flex h-10 items-center justify-center rounded-md bg-[#FF6F00] px-4 text-sm font-medium text-black" href="{{ url_login }}">{{ t.header.login | default: 'Sign in' }}</a>
-          <a data-auth-user hidden class="mt-2 inline-flex h-10 items-center justify-center rounded-md bg-[#FF6F00] px-4 text-sm font-medium text-black" href="{{ url_account }}">{{ t.header.account | default: 'Account' }}</a>
+          <div data-auth-user hidden class="mt-2 flex flex-col gap-1">
+            <a data-auth-name class="rounded-md px-3 py-2 text-sm text-foreground/90 hover:bg-foreground/5" href="{{ url_account }}">—</a>
+            <button type="button" data-auth-logout class="rounded-md px-3 py-2 text-left text-sm text-foreground/80 hover:bg-foreground/5">{{ t.account.sign_out | default: 'Sign out' }}</button>
+          </div>
         </nav>
       </div>
     </div>

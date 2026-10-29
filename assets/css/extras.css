@@ -396,33 +396,13 @@ details[open] > summary::after {
   }
 }
 
-/* Account — same viewport shell as login; content stays below fixed header */
-.account-page__grid {
-  display: grid;
-  gap: 2.5rem;
+/* Account — same split shell as login */
+.account-page__card.builtly-panel {
   width: 100%;
-  align-items: start;
-}
-
-@media (min-width: 960px) {
-  .account-page__grid {
-    grid-template-columns: minmax(0, 1.05fr) minmax(18rem, 24rem);
-    gap: 4rem;
-    align-items: center;
-  }
-}
-
-.account-page__intro-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1.75rem;
-}
-
-.account-page__panels {
-  display: grid;
-  gap: 1rem;
-  width: 100%;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(255, 111, 0, 0.18), transparent 55%),
+    rgba(255, 255, 255, 0.035);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
 }
 
 .account-page__label {
@@ -434,19 +414,26 @@ details[open] > summary::after {
   text-transform: uppercase;
 }
 
-.account-page__credit {
-  background:
-    radial-gradient(circle at 12% 0%, rgba(255, 111, 0, 0.18), transparent 55%),
-    rgba(255, 255, 255, 0.03);
+.account-page__credits-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.85rem;
+  flex-wrap: wrap;
 }
 
 .account-page__balance {
-  margin: 0.85rem 0 0;
+  margin: 0;
   color: #fff;
-  font-size: clamp(2.75rem, 6vw, 3.5rem);
+  font-size: clamp(2.5rem, 5.5vw, 3.25rem);
   font-weight: 600;
   letter-spacing: -0.04em;
   line-height: 1;
+}
+
+.account-page__buy {
+  flex-shrink: 0;
 }
 
 .account-page__hint {
@@ -456,15 +443,68 @@ details[open] > summary::after {
   line-height: 1.5;
 }
 
+.account-page__divider {
+  height: 1px;
+  margin: 1.35rem 0;
+  background: rgba(255, 255, 255, 0.08);
+}
+
 .account-page__profile {
   margin-top: 1rem;
   display: grid;
   gap: 0.85rem;
 }
 
+.auth-menu__trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  overflow: hidden;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.auth-menu__trigger:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.auth-menu__avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.auth-menu__fallback {
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.auth-menu__dropdown {
+  min-width: 11rem;
+  margin-top: 0.5rem;
+}
+
+.auth-menu__item {
+  font: inherit;
+  background: transparent;
+  border: 0;
+  color: inherit;
+}
+
 .account-page__avatar-row {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
   margin-bottom: 0.25rem;
 }
@@ -483,45 +523,12 @@ details[open] > summary::after {
 }
 
 .account-page__avatar-btn {
+  margin-left: auto;
   cursor: pointer;
 }
 
-.account-page__locale {
-  display: grid;
-  gap: 0.5rem;
-  margin-top: 0.35rem;
-}
-
-.account-page__locale label {
-  color: rgba(255, 255, 255, 0.55);
-  font-size: 0.8rem;
-}
-
-.account-page__locale-row {
-  display: flex;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-}
-
-.account-page__locale-row input {
-  flex: 1 1 8rem;
-  min-width: 0;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(0, 0, 0, 0.25);
-  color: #fff;
-  border-radius: 0.5rem;
-  padding: 0.55rem 0.75rem;
-}
-
 .account-page__status {
-  margin-top: 0;
-}
-
-@media (max-width: 959px) {
-  .account-page__panels {
-    padding-top: 0.25rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-  }
+  margin-top: 1rem;
 }
 
 /* Builtly account / pricing */

@@ -46,7 +46,7 @@
         {% when 'pricing' %}
           {% assign item_path = '/pricing/' %}
         {% when 'account' %}
-          {% assign item_path = '/account/' %}
+          {% assign item_path = item_prefix | append: '/account/' %}
         {% when 'privacy-policy' %}
           {% assign item_path = item_prefix | append: '/privacy-policy/' %}
         {% when 'terms-of-service' %}

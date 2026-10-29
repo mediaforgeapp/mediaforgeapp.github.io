@@ -2,13 +2,11 @@ import {
   buyProduct,
   errMessage,
   finishOAuth,
-  getAccess,
   getCredits,
   getMe,
   isSignedIn,
   listProducts,
   logout,
-  patchMe,
   startOAuth,
   uploadAvatar,
 } from "./builtly.js";
@@ -114,8 +112,13 @@ async function initLogin() {
     });
   });
 
-  if (getAccess()) {
-    location.replace(consumeNext());
+  if (isSignedIn()) {
+    try {
+      await getMe();
+      location.replace(consumeNext());
+    } catch (_) {
+      /* stay on login if session cannot be restored */
+    }
   }
 }
 
@@ -130,8 +133,24 @@ async function initCallback() {
   }
 }
 
+function accountCopy(profileEl) {
+  const d = (profileEl && profileEl.dataset) || {};
+  return {
+    changeAvatar: d.i18nChangeAvatar || "Change avatar",
+    email: d.i18nEmail || "Email",
+    name: d.i18nName || "Name",
+  };
+}
+
+function displayName(user) {
+  return (
+    (user && (user.display_name || user.name || user.email)) || "Account"
+  );
+}
+
 function renderAccountProfile(profileEl, user) {
   if (!profileEl) return;
+  const copy = accountCopy(profileEl);
   const avatar = user.avatar_url
     ? '<img class="account-page__avatar" src="' +
       escapeAttr(user.avatar_url) +
@@ -141,35 +160,19 @@ function renderAccountProfile(profileEl, user) {
     '<div class="account-page__avatar-row">' +
     avatar +
     '<label class="builtly-btn builtly-btn--ghost account-page__avatar-btn">' +
-    "Change avatar" +
+    escapeHtml(copy.changeAvatar) +
     '<input id="account-avatar-input" type="file" accept="image/png,image/jpeg,image/webp,image/gif" hidden>' +
     "</label></div>" +
-    '<div class="builtly-kv"><span>Email</span><strong>' +
+    '<div class="builtly-kv"><span>' +
+    escapeHtml(copy.email) +
+    "</span><strong>" +
     escapeHtml(user.email || "—") +
     "</strong></div>" +
-    '<div class="builtly-kv"><span>Name</span><strong>' +
+    '<div class="builtly-kv"><span>' +
+    escapeHtml(copy.name) +
+    "</span><strong>" +
     escapeHtml(user.display_name || "—") +
-    "</strong></div>" +
-    '<div class="builtly-kv"><span>Verified</span><strong>' +
-    (user.email_verified ? "Yes" : "No") +
-    "</strong></div>" +
-    '<div class="builtly-kv"><span>Locale</span><strong>' +
-    escapeHtml(user.locale || "—") +
-    "</strong></div>" +
-    '<div class="builtly-kv"><span>IP</span><strong class="mono">' +
-    escapeHtml(user.last_ip || "—") +
-    "</strong></div>" +
-    '<div class="builtly-kv"><span>UTM source</span><strong>' +
-    escapeHtml(user.utm_source || "—") +
-    "</strong></div>" +
-    '<form id="account-locale-form" class="account-page__locale">' +
-    '<label for="account-locale">Update locale</label>' +
-    '<div class="account-page__locale-row">' +
-    '<input id="account-locale" name="locale" value="' +
-    escapeAttr(user.locale || "") +
-    '" placeholder="en-US" maxlength="35">' +
-    '<button type="submit" class="builtly-btn">Save</button>' +
-    "</div></form>";
+    "</strong></div>";
 }
 
 async function initAccount() {
@@ -177,14 +180,8 @@ async function initAccount() {
   const profileEl = $("#account-profile");
   const creditsEl = $("#account-credits");
   const status = $("#account-status");
-  const logoutBtn = $("#account-logout");
 
-  logoutBtn?.addEventListener("click", async () => {
-    await logout();
-    location.href = loginPath();
-  });
-
-  const bindProfileActions = (user) => {
+  const bindProfileActions = () => {
     const input = $("#account-avatar-input");
     input?.addEventListener("change", async () => {
       const file = input.files && input.files[0];
@@ -193,22 +190,11 @@ async function initAccount() {
       setStatus(status, "Uploading avatar…", "info");
       try {
         const me = await uploadAvatar(file);
-        renderAccountProfile(profileEl, me.user || me);
-        bindProfileActions(me.user || me);
+        const user = me.user || me;
+        renderAccountProfile(profileEl, user);
+        bindProfileActions();
+        fillAuthChrome(user);
         setStatus(status, "Avatar updated.", "ok");
-      } catch (err) {
-        setStatus(status, errMessage(err));
-      }
-    });
-    $("#account-locale-form")?.addEventListener("submit", async (ev) => {
-      ev.preventDefault();
-      const locale = new FormData(ev.target).get("locale");
-      setStatus(status, "Saving…", "info");
-      try {
-        const me = await patchMe({ locale: String(locale || "") });
-        renderAccountProfile(profileEl, me.user || me);
-        bindProfileActions(me.user || me);
-        setStatus(status, "Locale saved.", "ok");
       } catch (err) {
         setStatus(status, errMessage(err));
       }
@@ -216,10 +202,21 @@ async function initAccount() {
   };
 
   try {
-    const [me, credits] = await Promise.all([getMe(), getCredits()]);
+    const me = await getMe();
     const user = me.user || me;
     renderAccountProfile(profileEl, user);
-    bindProfileActions(user);
+    bindProfileActions();
+    fillAuthChrome(user);
+  } catch (err) {
+    if (err && err.code === "unauthorized") {
+      location.replace(loginPath());
+      return;
+    }
+    setStatus(status, errMessage(err));
+  }
+
+  try {
+    const credits = await getCredits();
     if (creditsEl) {
       creditsEl.textContent = String(credits.balance ?? 0);
     }
@@ -228,6 +225,7 @@ async function initAccount() {
       location.replace(loginPath());
       return;
     }
+    if (creditsEl) creditsEl.textContent = "—";
     setStatus(status, errMessage(err));
   }
 }
@@ -334,8 +332,7 @@ function escapeAttr(s) {
   return escapeHtml(s).replace(/'/g, "&#39;");
 }
 
-function syncHeaderAuth() {
-  const signed = isSignedIn();
+function setAuthVisibility(signed) {
   document.querySelectorAll("[data-auth-guest]").forEach((el) => {
     el.hidden = signed;
   });
@@ -343,6 +340,95 @@ function syncHeaderAuth() {
     el.hidden = !signed;
   });
 }
+
+function fillAuthChrome(user) {
+  const name = displayName(user);
+  const initial = String(name).trim().charAt(0).toUpperCase() || "?";
+  document.querySelectorAll("[data-auth-name]").forEach((el) => {
+    el.textContent = name;
+  });
+  document.querySelectorAll("[data-auth-avatar]").forEach((img) => {
+    const fallback = img.parentElement?.querySelector("[data-auth-avatar-fallback]");
+    if (user.avatar_url) {
+      img.src = user.avatar_url;
+      img.hidden = false;
+      if (fallback) fallback.hidden = true;
+    } else {
+      img.removeAttribute("src");
+      img.hidden = true;
+      if (fallback) {
+        fallback.hidden = false;
+        fallback.textContent = initial;
+      }
+    }
+  });
+  document.querySelectorAll("[data-auth-avatar-fallback]").forEach((el) => {
+    if (!user.avatar_url) el.textContent = initial;
+  });
+}
+
+function closeAuthMenus() {
+  document.querySelectorAll("[data-auth-menu]").forEach((menu) => {
+    menu.classList.add("hidden");
+  });
+  document.querySelectorAll("[data-auth-menu-trigger]").forEach((btn) => {
+    btn.setAttribute("aria-expanded", "false");
+  });
+}
+
+function closeLocaleMenus() {
+  document.querySelectorAll(".locale-menu").forEach((menu) => {
+    menu.classList.add("hidden");
+  });
+  document.querySelectorAll(".locale-trigger").forEach((btn) => {
+    btn.setAttribute("aria-expanded", "false");
+  });
+}
+
+async function syncHeaderAuth() {
+  const signed = isSignedIn();
+  setAuthVisibility(signed);
+  if (!signed) return;
+
+  document.querySelectorAll("[data-auth-menu-trigger]").forEach((trigger) => {
+    if (trigger.dataset.bound === "1") return;
+    trigger.dataset.bound = "1";
+    const root = trigger.closest("[data-auth-user]");
+    const menu = root?.querySelector("[data-auth-menu]");
+    trigger.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const willOpen = menu?.classList.contains("hidden");
+      closeLocaleMenus();
+      closeAuthMenus();
+      if (willOpen && menu) {
+        menu.classList.remove("hidden");
+        trigger.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+
+  document.querySelectorAll("[data-auth-logout]").forEach((btn) => {
+    if (btn.dataset.bound === "1") return;
+    btn.dataset.bound = "1";
+    btn.addEventListener("click", async () => {
+      await logout();
+      location.href = loginPath();
+    });
+  });
+
+  try {
+    const me = await getMe();
+    fillAuthChrome(me.user || me);
+  } catch (err) {
+    if (err && err.code === "unauthorized") {
+      setAuthVisibility(false);
+    }
+  }
+}
+
+document.addEventListener("click", () => {
+  closeAuthMenus();
+});
 
 const page =
   document.body?.dataset?.builtlyPage ||

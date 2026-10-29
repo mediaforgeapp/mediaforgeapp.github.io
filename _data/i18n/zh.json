@@ -289,5 +289,27 @@
   "login_meta": {
     "title": "登录",
     "description": "使用 Google 或 GitHub 登录 MediaForge。"
+  },
+  "account": {
+    "eyebrow": "MediaForge 账户",
+    "lead": "查看本浏览器会话中的积分、资料与账单信息。",
+    "points": [
+      "结账后查看积分余额",
+      "更新个人头像",
+      "随时退出本浏览器会话"
+    ],
+    "buy_credits": "购买积分",
+    "sign_out": "退出登录",
+    "credits_label": "积分",
+    "credits_hint": "Stripe 结账完成后余额会更新。",
+    "profile_label": "资料",
+    "loading": "加载中…",
+    "change_avatar": "更换头像",
+    "email": "邮箱",
+    "name": "名称"
+  },
+  "account_meta": {
+    "title": "账户",
+    "description": "你的 MediaForge 账户、积分与账单。"
   }
 }

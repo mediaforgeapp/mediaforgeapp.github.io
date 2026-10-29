@@ -10,6 +10,8 @@
   {% assign doc_title = t.download_meta.title %}
 {% elsif page_id == 'login' and t.login_meta.title %}
   {% assign doc_title = t.login_meta.title %}
+{% elsif page_id == 'account' and t.account_meta.title %}
+  {% assign doc_title = t.account_meta.title %}
 {% elsif page_id == 'privacy-policy' and t.privacy_meta.title %}
   {% assign doc_title = t.privacy_meta.title %}
 {% elsif page_id == 'terms-of-service' and t.terms_meta.title %}
@@ -23,6 +25,8 @@
   {% assign doc_description = t.download_meta.description %}
 {% elsif page_id == 'login' and t.login_meta.description %}
   {% assign doc_description = t.login_meta.description %}
+{% elsif page_id == 'account' and t.account_meta.description %}
+  {% assign doc_description = t.account_meta.description %}
 {% elsif page_id == 'privacy-policy' and t.privacy_meta.description %}
   {% assign doc_description = t.privacy_meta.description %}
 {% elsif page_id == 'terms-of-service' and t.terms_meta.description %}
@@ -71,7 +75,7 @@
   <link rel="canonical" href="{{ page.url | absolute_url }}" />
 
   {% assign skip_hreflang = false %}
-  {% if page_id == 'account' or page_id == 'auth-callback' or page_id == 'billing-thanks' or page_id == 'pricing' %}
+  {% if page_id == 'auth-callback' or page_id == 'billing-thanks' or page_id == 'pricing' %}
     {% assign skip_hreflang = true %}
   {% endif %}
   {% unless skip_hreflang %}
@@ -88,6 +92,8 @@
         {% assign alt_path = alt_prefix | append: '/download/' %}
       {% when 'login' %}
         {% assign alt_path = alt_prefix | append: '/account/login/' %}
+      {% when 'account' %}
+        {% assign alt_path = alt_prefix | append: '/account/' %}
       {% when 'privacy-policy' %}
         {% assign alt_path = alt_prefix | append: '/privacy-policy/' %}
       {% when 'terms-of-service' %}
