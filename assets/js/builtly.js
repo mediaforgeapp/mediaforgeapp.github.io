@@ -246,6 +246,24 @@ export async function loginWithGoogleIdToken(idToken, { rawNonce, referralCode, 
   return data;
 }
 
+const AUTH_CONFIG_KEY = "builtly_auth_config";
+
+export async function getAuthConfig(force = false) {
+  if (!force && typeof sessionStorage !== "undefined") {
+    try {
+      const cached = sessionStorage.getItem(AUTH_CONFIG_KEY);
+      if (cached) return JSON.parse(cached);
+    } catch (_) {}
+  }
+  const data = await api("GET", "/auth/config");
+  if (typeof sessionStorage !== "undefined") {
+    try {
+      sessionStorage.setItem(AUTH_CONFIG_KEY, JSON.stringify(data));
+    } catch (_) {}
+  }
+  return data;
+}
+
 export async function getMe() {
   return api("GET", "/user/me", { auth: true });
 }

@@ -2,6 +2,7 @@ import {
   buyProduct,
   errMessage,
   finishOAuth,
+  getAuthConfig,
   getCredits,
   getMe,
   isSignedIn,
@@ -112,6 +113,20 @@ async function initLogin() {
       }
     });
   });
+
+  // Sync provider button visibility with active Builtly auth settings
+  getAuthConfig()
+    .then((cfg) => {
+      if (cfg?.auth?.providers) {
+        document.querySelectorAll("[data-oauth]").forEach((btn) => {
+          const p = btn.getAttribute("data-oauth");
+          if (cfg.auth.providers[p] && !cfg.auth.providers[p].enabled) {
+            btn.style.display = "none";
+          }
+        });
+      }
+    })
+    .catch(() => {});
 
   if (isSignedIn()) {
     try {
@@ -557,9 +572,22 @@ function loadGoogleGIS() {
 
 export async function initGoogleOneTap({ onStart, onSuccess, onError } = {}) {
   if (isSignedIn()) return;
-  const clientId = window.BUILTLY && window.BUILTLY.googleClientId;
-  if (!clientId) return;
   if (oneTapInitialized) return;
+
+  let clientId = window.BUILTLY && window.BUILTLY.googleClientId;
+  if (!clientId) {
+    try {
+      const authCfg = await getAuthConfig();
+      const google = authCfg?.auth?.providers?.google;
+      if (google && google.enabled && google.client_id) {
+        clientId = google.client_id;
+      }
+    } catch (err) {
+      console.debug("Failed to fetch public auth config:", err);
+      return;
+    }
+  }
+  if (!clientId) return;
   oneTapInitialized = true;
 
   try {
