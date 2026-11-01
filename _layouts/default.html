@@ -299,9 +299,6 @@
 
     })();
   </script>
-  {% if site.builtly.google_client_id and site.builtly.google_client_id != '' %}
-  <script src="https://accounts.google.com/gsi/client" async defer></script>
-  {% endif %}
   <script type="module" src="{{ '/assets/js/builtly-pages.js' | relative_url }}"></script>
   {% endif %}
   <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
