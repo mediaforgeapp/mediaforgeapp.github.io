@@ -2,10 +2,18 @@
 
 .locale-menu {
   min-width: 12.5rem;
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  transform-origin: top right;
 }
 
 .locale-menu:not(.hidden) {
   display: block;
+  animation: locale-menu-in 0.16s ease-out;
 }
 
 .locale-menu--down {
@@ -13,18 +21,61 @@
   bottom: auto;
 }
 
+.locale-menu--left {
+  left: 0;
+  right: auto;
+  transform-origin: top left;
+}
+
 .locale-menu--up {
   bottom: calc(100% + 0.5rem);
   top: auto;
+  transform-origin: bottom right;
+}
+
+.locale-menu--up:not(.hidden) {
+  animation-name: locale-menu-in-up;
 }
 
 .locale-menu__item {
   white-space: nowrap;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.locale-menu__item:hover,
+.locale-menu__item:focus-visible {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .locale-menu__check {
   flex-shrink: 0;
 }
+
+@keyframes locale-menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-0.35rem) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes locale-menu-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(0.35rem) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 
 #header-bar.is-scrolled {
   border-color: rgba(255, 255, 255, 0.1);
@@ -37,9 +88,7 @@
   height: 100vh;
   height: 100dvh;
   overflow-y: auto;
-  background: rgba(18, 18, 18, 0.95);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: #121212;
 }
 
 #site-header[data-state="active"] #mobile-menu {
@@ -62,21 +111,26 @@ details > summary::-webkit-details-marker {
   display: none;
 }
 
+details > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
 details > summary::after {
   content: "";
-  float: right;
+  flex-shrink: 0;
   width: 0.5rem;
   height: 0.5rem;
-  margin-top: 0.35rem;
   border-right: 2px solid rgba(255, 255, 255, 0.45);
   border-bottom: 2px solid rgba(255, 255, 255, 0.45);
   transform: rotate(45deg);
-  transition: transform 0.15s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 details[open] > summary::after {
   transform: rotate(-135deg);
-  margin-top: 0.55rem;
 }
 
 .legal-body {
@@ -255,7 +309,12 @@ details[open] > summary::after {
 }
 
 .auth-page__lead--flush {
-  margin-top: 1rem;
+  margin-top: 1.15rem;
+  color: #fff;
+  font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.35;
 }
 
 .auth-page__points {
@@ -396,8 +455,169 @@ details[open] > summary::after {
   }
 }
 
+/* Thanks — same split shell as login */
+.thanks-page__card.builtly-panel {
+  width: 100%;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(255, 111, 0, 0.18), transparent 55%),
+    rgba(255, 255, 255, 0.035);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+}
+
+.thanks-page__balance-label {
+  margin: 1.35rem 0 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.thanks-page__balance {
+  margin: 0.55rem 0 0;
+  color: #fff;
+  font-size: clamp(2.5rem, 5.5vw, 3.25rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.thanks-page__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.35rem;
+}
+
+.thanks-page .auth-page__status {
+  margin-top: 1rem;
+}
+
+/* Pricing — same split shell as login; packs stack in the right card */
+@media (min-width: 960px) {
+  .pricing-page__grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(22rem, 28rem);
+  }
+}
+
+.pricing-page__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 1.75rem 0 0;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.875rem;
+}
+
+.pricing-page__card.builtly-panel {
+  width: 100%;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(255, 111, 0, 0.16), transparent 52%),
+    rgba(255, 255, 255, 0.035);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+}
+
+.pricing-page__checkout-wrap {
+  position: relative;
+}
+
+.pricing-page__checkout-wrap.is-busy .pricing-page__packs {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.pricing-page__checkout-loading {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.pricing-page__checkout-loading[hidden] {
+  display: none;
+}
+
+.pricing-page__packs {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.pricing-page__pack {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.22);
+  border-radius: 0.85rem;
+  padding: 1rem 1.05rem;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.pricing-page__pack:hover {
+  border-color: rgba(255, 111, 0, 0.35);
+  background: rgba(255, 111, 0, 0.03);
+}
+
+.pricing-page__pack-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.pricing-page__pack-name {
+  margin: 0;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.pricing-page__pack-desc {
+  margin: 0.35rem 0 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+
+.pricing-page__pack-price {
+  flex-shrink: 0;
+  color: #ff6f00;
+  font-size: 1.35rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.pricing-page__pack-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 0.9rem;
+}
+
+.pricing-page__pack-credits {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.8125rem;
+}
+
+.pricing-page__buy {
+  min-height: 2.25rem;
+  padding: 0 0.9rem;
+  font-size: 0.85rem;
+}
+
+.pricing-page .auth-page__status {
+  margin-top: 0;
+  margin-bottom: 0.85rem;
+}
+
 /* Account — same split shell as login */
 .account-page__card.builtly-panel {
+
   width: 100%;
   background:
     radial-gradient(circle at 12% 0%, rgba(255, 111, 0, 0.18), transparent 55%),
@@ -468,12 +688,23 @@ details[open] > summary::after {
   color: rgba(255, 255, 255, 0.9);
   cursor: pointer;
   overflow: hidden;
-  transition: background 0.15s ease, border-color 0.15s ease;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .auth-menu__trigger:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.24);
+  transform: scale(1.06);
+  box-shadow: 0 0 0 3px rgba(255, 111, 0, 0.12);
+}
+
+.auth-menu__trigger[aria-expanded="true"] {
+  border-color: rgba(255, 111, 0, 0.45);
+  box-shadow: 0 0 0 3px rgba(255, 111, 0, 0.14);
 }
 
 .auth-menu__avatar {
@@ -490,8 +721,23 @@ details[open] > summary::after {
 }
 
 .auth-menu__dropdown {
-  min-width: 11rem;
-  margin-top: 0.5rem;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  min-width: 12.5rem;
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  transform-origin: top right;
+  border-radius: 0.5rem;
+}
+
+.auth-menu__dropdown:not(.hidden) {
+  display: block;
+  animation: locale-menu-in 0.16s ease-out;
 }
 
 .auth-menu__item {
@@ -499,6 +745,14 @@ details[open] > summary::after {
   background: transparent;
   border: 0;
   color: inherit;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.auth-menu__item:hover,
+.auth-menu__item:focus-visible {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .account-page__avatar-row {
@@ -519,7 +773,17 @@ details[open] > summary::after {
 }
 
 .account-page__avatar--empty {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255, 111, 0, 0.25), transparent 70%),
+    rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 111, 0, 0.35);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
 
 .account-page__avatar-btn {
@@ -605,6 +869,11 @@ details[open] > summary::after {
   background: rgba(255, 111, 0, 0.9);
 }
 
+.builtly-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 111, 0, 0.35);
+}
+
 .builtly-btn:disabled {
   opacity: 0.45;
   cursor: not-allowed;
@@ -628,6 +897,12 @@ details[open] > summary::after {
   color: #ff6f00;
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+
+.builtly-link:focus-visible {
+  outline: 2px solid rgba(255, 111, 0, 0.6);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 .builtly-divider {

@@ -263,11 +263,11 @@
   },
   "privacy_meta": {
     "title": "プライバシーポリシー",
-    "description": "MediaForge デスクトップアプリとウェブサイトのプライバシー方針。ローカル優先処理で、メディアファイルは端末内に留まります。"
+    "description": "MediaForge デスクトップアプリ、ウェブサイト、ユーザーアカウント、AI Forge、Stripe 決済におけるプライバシー保護方針。"
   },
   "terms_meta": {
     "title": "利用規約",
-    "description": "MediaForge デスクトップアプリ、ウェブサイトおよび関連サービスの利用規約。"
+    "description": "MediaForge デスクトップアプリ、ウェブサイト、アカウント、AI Forge、クレジットパック購入に関する利用規約。"
   },
   "login": {
     "eyebrow": "MediaForge アカウント",
@@ -311,5 +311,51 @@
   "account_meta": {
     "title": "アカウント",
     "description": "MediaForge アカウント、クレジット、請求情報。"
+  },
+  "pricing": {
+    "eyebrow": "MediaForge クレジット",
+    "lead": "AI Forge と Pro 機能向けのクレジットパックを購入できます。決済は Stripe 経由です。",
+    "points": [
+      "1 クレジットで標準の AI Forge を 1 回実行",
+      "クレジットは MediaForge アカウントと同期",
+      "都度購入 — サブスクリプション不要"
+    ],
+    "card_title": "クレジットパック",
+    "card_lead": "パックを選んで、このブラウザセッションにチャージします。",
+    "check_balance": "残高を確認",
+    "sign_in": "サインイン",
+    "loading": "パックを読み込み中…",
+    "empty": "クレジットパックがまだありません。Builtly 管理画面で商品を作成して更新してください。",
+    "error": "商品を読み込めません。Builtly の起動と CORS 設定を確認してください。",
+    "credits_suffix": "クレジット",
+    "buy": "購入",
+    "opening": "Stripe Checkout を開いています…",
+    "stripe_missing": "Stripe 価格が未連携",
+    "stripe_missing_hint": "Builtly 管理画面で各商品に Stripe Price ID（price_…）を設定すると Buy が有効になります。"
+  },
+  "pricing_meta": {
+    "title": "料金",
+    "description": "AI Forge と Pro 機能向けの MediaForge クレジットパック。"
+  },
+  "thanks": {
+    "eyebrow": "支払い完了",
+    "lead": "Stripe チェックアウトが完了しました。クレジットは webhook で付与され、通常数秒で反映されます。",
+    "points": [
+      "このページで残高が自動更新されます",
+      "いつでもパックを追加購入できます",
+      "アカウントで最新の残高を確認できます"
+    ],
+    "card_title": "完了しました",
+    "card_lead": "このブラウザセッションの現在のクレジット残高です。",
+    "balance_label": "クレジット",
+    "account": "アカウント",
+    "buy_more": "追加購入",
+    "refreshing": "残高を更新中…",
+    "updated": "クレジットを更新しました。",
+    "signed_out": "サインアウト中 — サインイン後に残高が更新されます。"
+  },
+  "thanks_meta": {
+    "title": "ありがとうございます",
+    "description": "お支払いを受け付けました。クレジットはまもなく反映されます。"
   }
 }

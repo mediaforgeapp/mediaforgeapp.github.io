@@ -263,11 +263,11 @@
   },
   "privacy_meta": {
     "title": "隱私權政策",
-    "description": "MediaForge 桌面應用與網站的隱私說明。本地優先處理，媒體檔案留在你的裝置上。"
+    "description": "MediaForge 桌面應用程式、官方網站、使用者帳戶、AI Forge 與 Stripe 帳單的隱私與資料安全說明。"
   },
   "terms_meta": {
     "title": "服務條款",
-    "description": "MediaForge 桌面應用、網站及相關服務的使用條款。"
+    "description": "MediaForge 桌面應用程式、官方網站、使用者帳戶、AI Forge 與點數包購買的使用條款與規範協議。"
   },
   "login": {
     "eyebrow": "MediaForge 帳戶",
@@ -311,5 +311,51 @@
   "account_meta": {
     "title": "帳戶",
     "description": "你的 MediaForge 帳戶、點數與帳單。"
+  },
+  "pricing": {
+    "eyebrow": "MediaForge 點數",
+    "lead": "購買點數包，用於 AI Forge 與 Pro 功能。結帳透過 Stripe 完成。",
+    "points": [
+      "1 點數對應一次標準 AI Forge",
+      "點數與 MediaForge 帳戶同步",
+      "一次性購買，無需訂閱"
+    ],
+    "card_title": "點數包",
+    "card_lead": "選擇一個禮包，為此瀏覽器工作階段加值。",
+    "check_balance": "查看餘額",
+    "sign_in": "登入",
+    "loading": "正在載入禮包…",
+    "empty": "尚無點數包。請在 Builtly 後台建立產品後重新整理。",
+    "error": "無法載入產品。請確認 Builtly 已執行且 CORS 已設定。",
+    "credits_suffix": "點數",
+    "buy": "購買",
+    "opening": "正在開啟 Stripe Checkout…",
+    "stripe_missing": "尚未連結 Stripe 價格",
+    "stripe_missing_hint": "請在 Builtly 後台為每個產品填寫 Stripe Price ID（price_…），Buy 才會可用。"
+  },
+  "pricing_meta": {
+    "title": "定價",
+    "description": "購買 MediaForge 點數包，用於 AI Forge 與 Pro 功能。"
+  },
+  "thanks": {
+    "eyebrow": "付款完成",
+    "lead": "Stripe 結帳已完成。點數由 webhook 發放，通常幾秒內到帳。",
+    "points": [
+      "本頁會自動重新整理餘額",
+      "隨時可以繼續購買點數包",
+      "帳戶頁可查看最新點數總額"
+    ],
+    "card_title": "一切就緒",
+    "card_lead": "這是此瀏覽器工作階段的點數餘額。",
+    "balance_label": "點數",
+    "account": "帳戶",
+    "buy_more": "繼續購買",
+    "refreshing": "正在重新整理餘額…",
+    "updated": "點數已更新。",
+    "signed_out": "未登入 — 登入後才會更新餘額。"
+  },
+  "thanks_meta": {
+    "title": "感謝購買",
+    "description": "付款已收到 — 點數即將到帳。"
   }
 }

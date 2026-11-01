@@ -1,0 +1,41 @@
+{% include locale-setup.html %}
+<main class="auth-page auth-page--thanks thanks-page" data-builtly-boot="thanks">
+  <section class="auth-page__stage container">
+    <div class="auth-page__grid">
+      <div class="auth-page__intro">
+        <p class="auth-page__eyebrow">
+          <span class="auth-page__dot" aria-hidden="true"></span>
+          {{ t.thanks.eyebrow }}
+        </p>
+        <p class="auth-page__lead auth-page__lead--flush">
+          {{ t.thanks.lead }}
+        </p>
+        <ul class="auth-page__points" role="list">
+          {% for point in t.thanks.points %}
+          <li>{{ point }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <aside
+        class="thanks-page__card builtly-panel auth-page__card"
+        aria-label="{{ t.thanks.card_title }}"
+        data-i18n-refreshing="{{ t.thanks.refreshing | escape }}"
+        data-i18n-updated="{{ t.thanks.updated | escape }}"
+        data-i18n-signed-out="{{ t.thanks.signed_out | escape }}"
+      >
+        <h1 class="auth-page__card-title">{{ t.thanks.card_title }}</h1>
+        <p class="auth-page__card-lead">{{ t.thanks.card_lead }}</p>
+
+        <p class="thanks-page__balance-label">{{ t.thanks.balance_label }}</p>
+        <p class="thanks-page__balance"><span id="thanks-balance">—</span></p>
+        <p id="thanks-status" class="builtly-status auth-page__status" data-kind="info" hidden></p>
+
+        <div class="thanks-page__actions">
+          <a class="builtly-btn" href="{{ url_account }}">{{ t.thanks.account }}</a>
+          <a class="builtly-btn builtly-btn--ghost" href="{{ url_pricing }}">{{ t.thanks.buy_more }}</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>

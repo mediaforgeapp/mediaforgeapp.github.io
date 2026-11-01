@@ -1,145 +1,137 @@
 ---
 layout: legal
 title: Terms of Service
-description: "Terms governing use of the MediaForge desktop app, website, and related services."
+description: "Terms governing use of the MediaForge desktop app, website, user accounts, AI Forge, and credit pack purchases."
 lang: en
 page_id: terms-of-service
 permalink: /terms-of-service/
 ---
-**Effective Date: May 23, 2026**
+**Effective Date: November 1, 2026**
 
 ## Introduction and Acceptance
 
-Welcome to **MediaForge**. These Terms of Service ("Terms") govern your use of the MediaForge desktop app, the website at [mediaforgeapp.com](https://www.mediaforgeapp.com), downloads, documentation, and any related services we provide (collectively, the "Service").
+Welcome to **MediaForge**. These Terms of Service ("Terms") govern your use of the MediaForge desktop application, our website at [mediaforgeapp.com](https://www.mediaforgeapp.com), downloads, documentation, user accounts, AI Forge, and related services (collectively, the "Service").
 
-MediaForge is operated by the MediaForge project team ("MediaForge", "we", "us", or "our"). By accessing or using the Service, you agree to these Terms. If you do not agree, do not use the Service.
+MediaForge is operated by the MediaForge project team ("MediaForge", "we", "us", or "our"). By accessing the website, downloading the software, creating an account, or purchasing credits, you agree to be bound by these Terms. If you do not agree, do not access or use the Service.
 
 ## What MediaForge Provides
 
-MediaForge is a **desktop-first visual wrapper around FFmpeg**. The open-source edition ("MediaForge Open") helps you:
+MediaForge is a multimedia productivity suite offering both local open-core tools and cloud-enhanced professional capabilities:
 
-- export and transcode video with visual presets
-- create GIFs and extract audio
-- run image utilities and custom FFmpeg commands
-- process files **locally on your device** using FFmpeg/FFprobe installed on your system
+1. **MediaForge Open** — an open-source, local-first visual wrapper around FFmpeg for transcoding video, generating GIFs, extracting audio, and inspecting streams locally on your device.
+2. **MediaForge Pro & AI Forge** — cloud-assisted intelligence features, including automated AI processing, neural audio/video enhancements, and workflow automation powered by consumable credits.
+3. **Accounts & Credit Services** — secure web portal for managing your account identity, profile avatar, and purchasing one-time credit packs via Stripe.
 
-Our website provides product information, download links (currently via GitHub Releases), and support resources. Additional paid or subscription features ("MediaForge Pro") may be offered in the future under separate terms shown at purchase.
+## Eligibility and Account Responsibilities
 
-## Eligibility
+You must be at least 18 years old or the age of majority in your jurisdiction to purchase credits or enter into binding contracts.
 
-You must be able to form a binding contract in your jurisdiction to use the Service. If you use the Service on behalf of an organization, you represent that you have authority to bind that organization to these Terms.
+When creating an account or signing in via Google or GitHub OAuth:
 
-## Using the Service
+- You are responsible for maintaining the confidentiality of your account credentials and tokens.
+- You agree to notify us immediately at [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com) of any suspected unauthorized access to your account.
+- You are responsible for all activities that occur under your account.
 
-### Lawful use
+## MediaForge Pro, Credits, and Payments
 
-You agree to use MediaForge only for lawful purposes and in compliance with applicable laws, including copyright and content-licensing rules. You are solely responsible for the media files you import, process, export, or distribute.
+### Credit Pack Model
 
-### Your content and files
+MediaForge Pro uses a flexible, pay-as-you-go credit system rather than a recurring subscription:
 
-You retain ownership of your media and outputs. MediaForge does not claim ownership over files you create with the app. You grant us only the limited rights needed to operate the Service—for example, processing files locally when you run a job in the app.
+- **One-Time Purchase** — credit packs are purchased as one-time payments. They do not auto-renew, and there are no recurring subscription commitments.
+- **Consumption Rate** — credits are deducted based on task requirements (for example, 1 credit covers one standard AI Forge run). Current credit costs are displayed prior to executing tasks.
+- **Account Synchronization** — purchased credits are linked to your MediaForge account and synchronize across your browser sessions and desktop app instances.
 
-Because processing happens on your machine, you are responsible for:
+### Payment Processing & Stripe
 
-- securing your device and storage locations
-- backing up important projects
-- reviewing FFmpeg commands before running advanced or custom workflows
-- ensuring you have the right to use any third-party codecs, fonts, music, footage, or other materials in your projects
+Payments for credit packs are processed securely by **Stripe** via our Builtly billing backend:
 
-### FFmpeg and system dependencies
+- All prices are quoted in USD or your local currency where applicable. Taxes (such as sales tax or VAT) may be added based on your billing location.
+- You represent and warrant that you have the legal right to use the payment method provided.
 
-MediaForge invokes **FFmpeg** and related tools on your computer. FFmpeg is third-party software subject to its own licenses. You are responsible for installing, updating, and complying with the terms of FFmpeg and any other dependencies on your system.
+### Refund Policy
 
-### Open edition limitations
+Due to the immediate operational computing and inference costs incurred when running cloud AI models:
 
-Features, platforms, and presets may vary by version. Some capabilities shown in the app or on our website may be marked as Pro or coming soon. We may change, suspend, or discontinue parts of the Service with reasonable notice where practical.
+- **Consumed Credits** — credits that have already been used for AI Forge runs or other Pro processing tasks are strictly non-refundable.
+- **Unused Credit Packs** — if you have purchased a credit pack and have not consumed any credits from that pack, you may request a full refund within 14 calendar days of purchase by contacting [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
+- Nothing in this section affects any statutory rights you may hold under mandatory consumer protection laws in your jurisdiction.
 
-## Accounts and Pro Features
+## AI Forge Acceptable Use & Content Policy
 
-MediaForge Open does not require an account today. If we introduce account-based, cloud-connected, AI-assisted, or paid Pro features, additional terms may apply at sign-up or checkout. Those terms will supplement—not replace—these Terms unless explicitly stated otherwise.
+When utilizing cloud-assisted AI Forge features, you agree to adhere to our content and acceptable use standards:
 
-## Open Source Software
+### Ownership of Input and Output
 
-Portions of MediaForge are distributed as open-source software under the [MIT License](https://github.com/mediaforgeapp/mediaforge/blob/main/LICENSE) via [github.com/mediaforgeapp/mediaforge](https://github.com/mediaforgeapp/mediaforge).
+- You retain full ownership of the source media, images, and text prompts you submit to AI Forge.
+- Subject to your compliance with these Terms, you own all rights in the output files generated by AI Forge for your personal or commercial use.
 
-- You may use, modify, and redistribute the open-source components according to the applicable license.
-- The MIT License applies to the open-source code; these Terms govern your use of the MediaForge brand, website, hosted services, and any proprietary Pro offerings we provide outside the open-source repository.
+### Prohibited Conduct
 
-## Prohibited Activities
+You agree that you will **not** use AI Forge to upload, process, generate, or distribute:
 
-You agree not to:
+- Material that is unlawful, defamatory, libelous, or promotes violence or illegal acts.
+- Non-consensual sexual content, sexually explicit depictions of real individuals without consent, or Child Sexual Abuse Material (CSAM).
+- Content that infringes or misappropriates any third-party copyright, patent, trademark, trade secret, or privacy rights.
+- Malware, viruses, malicious scripts, or denial-of-service exploits against our processing infrastructure.
+- Automated reverse engineering or scraping designed to reconstruct our proprietary inference pipelines or bypass credit metering.
 
-- use the Service to infringe intellectual property or privacy rights
-- upload, process, or distribute unlawful content through the Service
-- interfere with or disrupt the Service, website, or related infrastructure
-- attempt unauthorized access to our systems or other users' data
-- misrepresent your affiliation with MediaForge
-- resell or commercially exploit the Service in a way that violates these Terms or applicable law
-- reverse engineer proprietary Pro components except where permitted by law
+We reserve the right to immediately suspend or terminate accounts that violate this Acceptable Use Policy.
 
-Nothing in these Terms limits rights granted to you under the MIT License for open-source components.
+## Local Media Processing & Third-Party Dependencies
 
-## Intellectual Property
+For standard, offline MediaForge Open workflows:
 
-The MediaForge name, logos, website content, and proprietary Pro software (if any) are owned by MediaForge or its licensors and protected by applicable intellectual-property laws. Except for rights expressly granted in these Terms or in the MIT License, no rights are transferred to you.
+- Media files are processed entirely on your local computer using the installed **FFmpeg** and **FFprobe** binaries.
+- You are solely responsible for ensuring you possess appropriate licenses, permissions, and rights to use any third-party proprietary audio codecs, fonts, video footage, or soundtracks included in your projects.
+- FFmpeg is third-party software distributed under its own respective licenses (LGPL/GPL). MediaForge invokes FFmpeg as an external process and does not claim ownership of FFmpeg.
 
-## Privacy
+## Open Source and Intellectual Property
 
-Our data practices are described in the [Privacy Policy](/privacy-policy). By using the Service, you acknowledge that policy.
+### Open Source Components
 
-## Downloads, Updates, and Availability
+Portions of the MediaForge desktop software are open source and distributed under the [Apache License 2.0 / MIT License](https://github.com/mediaforgeapp/mediaforge/blob/main/LICENSE). Your rights to inspect, fork, and modify open-source components are governed by those licenses.
 
-MediaForge Open is currently distributed through **GitHub Releases**. Downloads, release notes, and update availability may change over time. We do not guarantee uninterrupted access to any particular download mirror or version.
+### Proprietary Assets
 
-The Service is provided on an **"as is"** and **"as available"** basis. Media processing results may vary depending on your hardware, FFmpeg build, source media, and chosen settings.
+The MediaForge name, logo, website design, documentation, cloud AI Forge infrastructure, Builtly integration, and Pro features are proprietary property of MediaForge. Except as expressly stated, nothing in these Terms grants you any license or trademark rights to our branding or proprietary backend services.
 
-## Pricing and Payments
+## Disclaimers of Warranties
 
-MediaForge Open is free to download and use under its open-source license. If we offer paid Pro plans, subscriptions, or in-app purchases:
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SERVICE IS PROVIDED ON AN **"AS IS"** AND **"AS AVAILABLE"** BASIS, WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY.
 
-- prices, billing cycles, and refund rules will be shown before you pay
-- purchases through the Apple App Store, Microsoft Store, or other platforms are also subject to those platforms' terms
-- taxes may apply based on your location
+MEDIAFORGE DISCLAIMS ALL WARRANTIES, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT:
 
-Unless required by law or stated at purchase, fees are non-refundable.
-
-## Termination
-
-You may stop using the Service at any time by uninstalling the app and ceasing use of the website.
-
-We may suspend or terminate access to hosted services (such as the website or future online Pro features) if we reasonably believe you violated these Terms or used the Service in a harmful or unlawful way.
-
-## Disclaimer of Warranties
-
-To the fullest extent permitted by law, we disclaim all warranties, express or implied, including merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that the Service will be error-free, that outputs will meet your expectations, or that FFmpeg operations will succeed for every file or preset.
+- THE SERVICE WILL BE UNINTERRUPTED, TIMELY, OR ERROR-FREE.
+- OUTPUTS PRODUCED BY FFMPEG TRANSCODING OR AI FORGE WILL MEET YOUR SPECIFIC QUALITY EXPECTATIONS OR BE DEVOID OF ARTIFACTS.
+- ANY MEDIA FILE WILL CONVERT WITHOUT CRASHES CAUSED BY CORRUPT INPUT DATA OR INCOMPATIBLE CODECS.
 
 ## Limitation of Liability
 
-To the fullest extent permitted by law, MediaForge and its contributors will not be liable for any indirect, incidental, special, consequential, or punitive damages, or for loss of profits, data, or media projects, arising from your use of the Service.
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL MEDIAFORGE, ITS CONTRIBUTORS, DIRECTORS, OR PARTNERS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOSS OF PROFITS, DATA, USE, GOODWILL, OR CORRUPTED MEDIA FILES, ARISING OUT OF OR IN CONNECTION WITH YOUR ACCESS TO OR USE OF THE SERVICE.
 
-Our total liability for any claim relating to the Service will not exceed the greater of (a) the amount you paid us for the Service in the twelve months before the claim, or (b) USD $50.
+OUR AGGREGATE LIABILITY FOR ALL CLAIMS ARISING OUT OF OR RELATING TO THE SERVICE SHALL NOT EXCEED THE GREATER OF:
 
-Some jurisdictions do not allow certain limitations, so some of the above may not apply to you.
+1. THE TOTAL AMOUNT YOU PAID TO MEDIAFORGE IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM; OR
+2. FIFTY UNITED STATES DOLLARS (USD $50.00).
 
-## Indemnification
+## Termination
 
-You agree to indemnify and hold harmless MediaForge and its contributors from claims, damages, and expenses (including reasonable attorneys' fees) arising from your media, your use of the Service, or your violation of these Terms or applicable law.
+You may terminate this agreement at any time by stopping your use of the Service and requesting account deletion.
 
-## Governing Law
+We may suspend or terminate your account or access to Pro services immediately if we determine, in our sole discretion, that you have breached these Terms, engaged in fraudulent payment activity, or posed a security risk to the Service. Upon termination, unconsumed credits may be forfeited if termination is due to cause.
 
-These Terms are governed by the laws applicable to MediaForge's operator, without regard to conflict-of-law rules. Disputes should first be raised with us at [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com). Nothing in these Terms limits mandatory consumer rights in your jurisdiction.
+## Governing Law and Dispute Resolution
 
-## Changes to These Terms
+These Terms shall be governed by and construed in accordance with the laws of the applicable jurisdiction, without regard to its conflict of law principles. Any dispute arising out of or relating to these Terms shall be resolved through good-faith negotiation or competent courts of law.
 
-We may update these Terms from time to time. Revised Terms take effect when posted on this page with an updated effective date. Continued use of the Service after changes means you accept the updated Terms.
+## Changes to Terms
 
-## Contact
+We reserve the right to modify these Terms at any time. When modifications are made, we will revise the Effective Date at the top of this document. Continued use of the Service following published updates constitutes acceptance of the revised Terms.
 
-Questions about these Terms:
+## Contact Information
 
-**MediaForge** — [mediaforgeapp.com](https://www.mediaforgeapp.com)
-**Email**: [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com)
+For inquiries, support, or legal questions concerning these Terms, please contact:
 
----
-
-By using MediaForge, you confirm that you have read, understood, and agree to these Terms of Service.
+**Email:** [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com)  
+**Website:** [https://www.mediaforgeapp.com](https://www.mediaforgeapp.com)

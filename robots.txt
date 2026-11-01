@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /account/
+Disallow: /auth/
+Disallow: /billing/
+Disallow: /*/account/
+Disallow: /*/billing/
 
 Sitemap: https://www.mediaforgeapp.com/sitemap.xml

@@ -11,7 +11,9 @@
 {% assign url_home = locale_prefix | append: '/' | relative_url %}
 {% assign url_gallery = locale_prefix | append: '/gallery/' | relative_url %}
 {% assign url_download = locale_prefix | append: '/download/' | relative_url %}
-{% assign url_pricing = '/pricing/' | relative_url %}
+{% assign url_pricing = locale_prefix | append: '/pricing/' | relative_url %}
+{% assign url_thanks = locale_prefix | append: '/billing/thanks/' | relative_url %}
+
 {% assign url_account = locale_prefix | append: '/account/' | relative_url %}
 {% assign url_login = locale_prefix | append: '/account/login/' | relative_url %}
 {% assign url_privacy = locale_prefix | append: '/privacy-policy/' | relative_url %}

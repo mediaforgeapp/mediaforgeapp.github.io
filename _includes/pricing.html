@@ -1,0 +1,55 @@
+{% include locale-setup.html %}
+<main class="auth-page auth-page--pricing pricing-page" data-builtly-boot="pricing">
+  <section class="auth-page__stage container">
+    <div class="auth-page__grid pricing-page__grid">
+      <div class="auth-page__intro">
+        <p class="auth-page__eyebrow">
+          <span class="auth-page__dot" aria-hidden="true"></span>
+          {{ t.pricing.eyebrow }}
+        </p>
+        <h1 class="auth-page__lead auth-page__lead--flush">
+          {{ t.pricing.lead }}
+        </h1>
+        <ul class="auth-page__points" role="list">
+          {% for point in t.pricing.points %}
+          <li>{{ point }}</li>
+          {% endfor %}
+        </ul>
+        <p class="pricing-page__links">
+          <a class="builtly-link" href="{{ url_account }}">{{ t.pricing.check_balance }}</a>
+          <span data-auth-guest aria-hidden="true">·</span>
+          <a data-auth-guest class="builtly-link" href="{{ url_login }}?next={{ url_pricing | url_encode }}">{{ t.pricing.sign_in }}</a>
+        </p>
+      </div>
+
+      <aside class="pricing-page__card builtly-panel auth-page__card" aria-label="{{ t.pricing.card_title }}">
+        <h2 class="auth-page__card-title">{{ t.pricing.card_title }}</h2>
+        <p class="auth-page__card-lead">{{ t.pricing.card_lead }}</p>
+        <p
+          id="pricing-status"
+          class="builtly-status auth-page__status"
+          hidden
+        ></p>
+        <div class="pricing-page__checkout-wrap">
+          <div
+            id="pricing-grid"
+            class="pricing-page__packs"
+            data-i18n-empty="{{ t.pricing.empty | escape }}"
+            data-i18n-error="{{ t.pricing.error | escape }}"
+            data-i18n-credits="{{ t.pricing.credits_suffix | escape }}"
+            data-i18n-buy="{{ t.pricing.buy | escape }}"
+            data-i18n-opening="{{ t.pricing.opening | escape }}"
+            data-i18n-stripe-missing="{{ t.pricing.stripe_missing | escape }}"
+            data-i18n-stripe-missing-hint="{{ t.pricing.stripe_missing_hint | escape }}"
+          >
+            <p class="builtly-muted">{{ t.pricing.loading }}</p>
+          </div>
+          <div class="pricing-page__checkout-loading" hidden aria-live="polite" aria-busy="true">
+            <span class="auth-page__spinner" aria-hidden="true"></span>
+            <span class="sr-only">Loading</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>

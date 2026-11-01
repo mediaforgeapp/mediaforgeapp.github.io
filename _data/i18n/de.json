@@ -263,11 +263,11 @@
   },
   "privacy_meta": {
     "title": "Datenschutzrichtlinie",
-    "description": "Datenschutz bei MediaForge für App und Website. Lokale Verarbeitung – Mediendateien bleiben auf Ihrem Gerät."
+    "description": "Informationen zum Datenschutz für die MediaForge-Desktop-App, Website, Benutzerkonten, AI Forge und Stripe-Abrechnung."
   },
   "terms_meta": {
     "title": "Nutzungsbedingungen",
-    "description": "Bedingungen für die Nutzung der MediaForge-Desktop-App, Website und verwandter Dienste."
+    "description": "Bedingungen für die Nutzung der MediaForge-App, Website, Benutzerkonten, AI Forge und Credit-Pakete."
   },
   "login": {
     "eyebrow": "MediaForge-Konto",
@@ -311,5 +311,51 @@
   "account_meta": {
     "title": "Konto",
     "description": "Ihr MediaForge-Konto, Credits und Abrechnung."
+  },
+  "pricing": {
+    "eyebrow": "MediaForge-Credits",
+    "lead": "Kaufen Sie Credit-Pakete für AI Forge und Pro-Funktionen. Checkout läuft über Stripe.",
+    "points": [
+      "1 Credit deckt einen Standard-AI-Forge-Lauf ab",
+      "Credits synchronisieren mit Ihrem MediaForge-Konto",
+      "Einmalzahlung — kein Abo nötig"
+    ],
+    "card_title": "Credit-Pakete",
+    "card_lead": "Wählen Sie ein Paket, um diese Browser-Sitzung aufzuladen.",
+    "check_balance": "Saldo prüfen",
+    "sign_in": "Anmelden",
+    "loading": "Pakete werden geladen…",
+    "empty": "Noch keine Credit-Pakete. Legen Sie Produkte in Builtly an und aktualisieren Sie.",
+    "error": "Produkte konnten nicht geladen werden. Läuft Builtly und ist CORS konfiguriert?",
+    "credits_suffix": "Credits",
+    "buy": "Kaufen",
+    "opening": "Stripe Checkout wird geöffnet…",
+    "stripe_missing": "Stripe-Preis nicht verknüpft",
+    "stripe_missing_hint": "Tragen Sie in Builtly für jedes Produkt eine Stripe Price ID (price_…) ein, damit Buy funktioniert."
+  },
+  "pricing_meta": {
+    "title": "Preise",
+    "description": "MediaForge-Credit-Pakete für AI Forge und Pro-Funktionen."
+  },
+  "thanks": {
+    "eyebrow": "Zahlung abgeschlossen",
+    "lead": "Stripe-Checkout ist fertig. Credits werden per Webhook gutgeschrieben und erscheinen meist in wenigen Sekunden.",
+    "points": [
+      "Der Saldo aktualisiert sich auf dieser Seite automatisch",
+      "Sie können jederzeit weitere Pakete kaufen",
+      "Im Konto sehen Sie Ihren aktuellen Credit-Stand"
+    ],
+    "card_title": "Alles erledigt",
+    "card_lead": "Aktueller Credit-Saldo für diese Browser-Sitzung.",
+    "balance_label": "Credits",
+    "account": "Konto",
+    "buy_more": "Mehr kaufen",
+    "refreshing": "Saldo wird aktualisiert…",
+    "updated": "Credits aktualisiert.",
+    "signed_out": "Abgemeldet — der Saldo aktualisiert sich nach der Anmeldung."
+  },
+  "thanks_meta": {
+    "title": "Danke",
+    "description": "Zahlung erhalten — Credits erscheinen in Kürze."
   }
 }

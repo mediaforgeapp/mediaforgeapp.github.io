@@ -2,13 +2,51 @@
   var header = document.getElementById("site-header");
   var bar = document.getElementById("header-bar");
   var toggle = document.getElementById("menu-toggle");
+  var mobileMenu = document.getElementById("mobile-menu");
+
+  function closeMobileMenu() {
+    if (!header || header.getAttribute("data-state") !== "active") return;
+    header.setAttribute("data-state", "inactive");
+    if (toggle) {
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Open Menu");
+    }
+    document.body.style.overflow = "";
+  }
+
+  function closeAllDropdowns() {
+    document.querySelectorAll(".locale-menu").forEach(function (m) {
+      m.classList.add("hidden");
+    });
+    document.querySelectorAll(".locale-trigger").forEach(function (t) {
+      t.setAttribute("aria-expanded", "false");
+    });
+    document.querySelectorAll("[data-auth-menu]").forEach(function (m) {
+      m.classList.add("hidden");
+    });
+    document.querySelectorAll("[data-auth-menu-trigger]").forEach(function (t) {
+      t.setAttribute("aria-expanded", "false");
+    });
+  }
 
   if (toggle && header) {
     toggle.addEventListener("click", function () {
       var open = header.getAttribute("data-state") === "active";
-      header.setAttribute("data-state", open ? "inactive" : "active");
+      var nextState = open ? "inactive" : "active";
+      header.setAttribute("data-state", nextState);
       toggle.setAttribute("aria-expanded", open ? "false" : "true");
       toggle.setAttribute("aria-label", open ? "Open Menu" : "Close Menu");
+      document.body.style.overflow = open ? "" : "hidden";
+      if (!open) closeAllDropdowns();
+    });
+  }
+
+  if (mobileMenu) {
+    mobileMenu.querySelectorAll("a, button").forEach(function (el) {
+      if (el.classList.contains("locale-trigger")) return;
+      el.addEventListener("click", function () {
+        closeMobileMenu();
+      });
     });
   }
 
@@ -33,12 +71,7 @@
     trigger.addEventListener("click", function (e) {
       e.stopPropagation();
       var willOpen = menu.classList.contains("hidden");
-      document.querySelectorAll(".locale-menu").forEach(function (m) {
-        m.classList.add("hidden");
-      });
-      document.querySelectorAll(".locale-trigger").forEach(function (t) {
-        t.setAttribute("aria-expanded", "false");
-      });
+      closeAllDropdowns();
       if (willOpen) {
         menu.classList.remove("hidden");
         trigger.setAttribute("aria-expanded", "true");
@@ -55,11 +88,13 @@
   });
 
   document.addEventListener("click", function () {
-    document.querySelectorAll(".locale-menu").forEach(function (m) {
-      m.classList.add("hidden");
-    });
-    document.querySelectorAll(".locale-trigger").forEach(function (t) {
-      t.setAttribute("aria-expanded", "false");
-    });
+    closeAllDropdowns();
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      closeAllDropdowns();
+      closeMobileMenu();
+    }
   });
 })();

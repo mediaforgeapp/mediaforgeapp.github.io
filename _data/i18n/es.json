@@ -263,11 +263,11 @@
   },
   "privacy_meta": {
     "title": "Política de privacidad",
-    "description": "Cómo MediaForge trata la privacidad en la app y el sitio web. Procesamiento local; tus archivos permanecen en tu dispositivo."
+    "description": "Información sobre privacidad para la app de escritorio MediaForge, sitio web, cuentas de usuario, AI Forge y pagos con Stripe."
   },
   "terms_meta": {
     "title": "Términos de servicio",
-    "description": "Términos que rigen el uso de la app de escritorio MediaForge, el sitio web y servicios relacionados."
+    "description": "Términos que rigen el uso de la app MediaForge, el sitio web, las cuentas de usuario, AI Forge y la compra de paquetes de créditos."
   },
   "login": {
     "eyebrow": "Cuenta de MediaForge",
@@ -311,5 +311,51 @@
   "account_meta": {
     "title": "Cuenta",
     "description": "Tu cuenta de MediaForge, créditos y facturación."
+  },
+  "pricing": {
+    "eyebrow": "Créditos de MediaForge",
+    "lead": "Compra paquetes de créditos para AI Forge y funciones Pro. El pago se realiza con Stripe.",
+    "points": [
+      "1 crédito cubre una ejecución estándar de AI Forge",
+      "Los créditos se sincronizan con tu cuenta de MediaForge",
+      "Pago único — sin suscripción"
+    ],
+    "card_title": "Paquetes de créditos",
+    "card_lead": "Elige un paquete para recargar esta sesión del navegador.",
+    "check_balance": "Consultar saldo",
+    "sign_in": "Iniciar sesión",
+    "loading": "Cargando paquetes…",
+    "empty": "Aún no hay paquetes. Crea productos en Builtly y actualiza.",
+    "error": "No se pudieron cargar los productos. ¿Builtly está en marcha y CORS configurado?",
+    "credits_suffix": "créditos",
+    "buy": "Comprar",
+    "opening": "Abriendo Stripe Checkout…",
+    "stripe_missing": "Precio de Stripe no vinculado",
+    "stripe_missing_hint": "En Builtly, añade un Stripe Price ID (price_…) a cada producto para habilitar Buy."
+  },
+  "pricing_meta": {
+    "title": "Precios",
+    "description": "Compra paquetes de créditos de MediaForge para AI Forge y Pro."
+  },
+  "thanks": {
+    "eyebrow": "Pago completado",
+    "lead": "El checkout de Stripe ha terminado. Los créditos se otorgan por webhook y suelen aparecer en unos segundos.",
+    "points": [
+      "El saldo se actualiza solo en esta página",
+      "Puedes comprar más paquetes cuando quieras",
+      "La cuenta muestra tu total de créditos"
+    ],
+    "card_title": "Listo",
+    "card_lead": "Este es el saldo de créditos de esta sesión del navegador.",
+    "balance_label": "Créditos",
+    "account": "Cuenta",
+    "buy_more": "Comprar más",
+    "refreshing": "Actualizando saldo…",
+    "updated": "Créditos actualizados.",
+    "signed_out": "Sesión cerrada — el saldo se actualizará cuando inicies sesión."
+  },
+  "thanks_meta": {
+    "title": "Gracias",
+    "description": "Pago recibido — los créditos aparecerán en breve."
   }
 }

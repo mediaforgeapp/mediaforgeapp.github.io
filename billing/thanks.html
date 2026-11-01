@@ -3,22 +3,7 @@ layout: default
 lang: en
 page_id: billing-thanks
 permalink: /billing/thanks/
-title: Thanks
-description: Payment received — credits will appear shortly.
-robots: noindex
+robots: noindex, nofollow
+sitemap: false
 ---
-<main class="builtly-page" data-builtly-boot="thanks">
-  <section class="container pt-28 pb-16 sm:pt-32">
-    <div class="builtly-panel mx-auto max-w-lg text-center">
-      <h1 class="builtly-title">Thanks for your purchase</h1>
-      <p class="builtly-muted mt-3">Stripe checkout completed. Credits are granted by webhook and may take a few seconds.</p>
-      <p class="mt-8 text-sm text-white/60">Current balance</p>
-      <p class="mt-2 text-4xl font-semibold text-white"><span id="thanks-balance">—</span></p>
-      <p id="thanks-status" class="builtly-status mt-4" data-kind="info">Refreshing balance…</p>
-      <div class="mt-8 flex flex-wrap justify-center gap-3">
-        <a class="builtly-btn" href="{{ '/account/' | relative_url }}">Account</a>
-        <a class="builtly-btn builtly-btn--ghost" href="{{ '/pricing/' | relative_url }}">Buy more</a>
-      </div>
-    </div>
-  </section>
-</main>
+{% include thanks.html %}

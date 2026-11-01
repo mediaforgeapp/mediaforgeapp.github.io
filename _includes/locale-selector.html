@@ -3,6 +3,7 @@
   open: down | up  (default: icon→down, button→up)
 {% endcomment %}
 {% assign selector_type = include.type | default: 'button' %}
+{% assign selector_align = include.align | default: 'right' %}
 {% if include.open %}
   {% assign menu_open = include.open %}
 {% elsif selector_type == 'icon' %}
@@ -29,7 +30,7 @@
     {% endif %}
   </button>
 
-  <div class="locale-menu locale-menu--{{ menu_open }} absolute right-0 z-50 hidden overflow-hidden rounded-md border border-white/10 bg-[#1a1a1a] p-1 text-white shadow-lg" role="listbox">
+  <div class="locale-menu locale-menu--{{ menu_open }} locale-menu--{{ selector_align }} absolute {% if selector_align == 'left' %}left-0{% else %}right-0{% endif %} z-50 hidden overflow-hidden rounded-md border border-white/10 bg-[#1a1a1a] p-1 text-white shadow-lg" role="listbox">
     {% for item in site.data.locales.items %}
       {% if item.id == site.data.locales.default %}
         {% assign item_prefix = '' %}
@@ -44,9 +45,11 @@
         {% when 'login' %}
           {% assign item_path = item_prefix | append: '/account/login/' %}
         {% when 'pricing' %}
-          {% assign item_path = '/pricing/' %}
+          {% assign item_path = item_prefix | append: '/pricing/' %}
         {% when 'account' %}
           {% assign item_path = item_prefix | append: '/account/' %}
+        {% when 'billing-thanks' %}
+          {% assign item_path = item_prefix | append: '/billing/thanks/' %}
         {% when 'privacy-policy' %}
           {% assign item_path = item_prefix | append: '/privacy-policy/' %}
         {% when 'terms-of-service' %}

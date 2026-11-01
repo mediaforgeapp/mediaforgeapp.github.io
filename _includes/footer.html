@@ -1,7 +1,9 @@
 {% assign compact_footer = false %}
-{% if page_id == 'login' or page_id == 'account' %}
+{% if page_id == 'login' or page_id == 'account' or page_id == 'pricing' or page_id == 'billing-thanks' %}
   {% assign compact_footer = true %}
 {% endif %}
+
+
 <footer id="footer" class="relative z-10{% if compact_footer %} py-6 sm:py-7{% else %} py-8 sm:py-10{% endif %}">
   <div class="container space-y-8">
     {% unless compact_footer %}
@@ -15,7 +17,6 @@
           {{ t.footer.description }}
         </p>
       </div>
-      <div class="col-span-3 grid min-w-0 gap-6 sm:grid-cols-3"></div>
     </div>
 
     <div class="flex min-w-0 flex-wrap items-center gap-4 sm:gap-8">
@@ -26,7 +27,7 @@
 
     <div aria-hidden="true" class="h-px min-w-0 [background-image:linear-gradient(90deg,var(--color-foreground)_1px,transparent_1px)] bg-[length:6px_1px] bg-repeat-x opacity-25"></div>
 
-    <div class="flex min-w-0 flex-wrap justify-between gap-8">
+    <div class="flex min-w-0 flex-wrap justify-between gap-4 sm:gap-8">
       <div class="text-muted-foreground text-sm">
         © {{ 'now' | date: '%Y' }}
         <a href="{{ url_home }}" class="text-primary hover:text-primary/80 cursor-pointer">MediaForge</a>, {{ t.footer.copyright_suffix }}

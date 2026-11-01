@@ -1,131 +1,109 @@
 ---
 layout: legal
 title: Privacy Policy
-description: "How MediaForge handles privacy for the desktop app and website. Local-first processing; media files stay on your device."
+description: "How MediaForge handles privacy for the desktop app, website, user accounts, AI Forge, and Stripe billing."
 lang: en
 page_id: privacy-policy
 permalink: /privacy-policy/
 ---
-**Effective Date: May 23, 2026**
+**Effective Date: November 1, 2026**
 
 ## Introduction
 
-Welcome to **MediaForge**, a desktop-first app for visual FFmpeg workflows. MediaForge helps you export video, create GIFs, extract audio, work with images, and run custom FFmpeg commands—primarily on your own device.
+Welcome to **MediaForge**, a desktop-first visual multimedia application for FFmpeg workflows. MediaForge provides both an open-core local desktop edition (**MediaForge Open**) and cloud-enhanced professional capabilities (**MediaForge Pro**), including AI Forge.
 
-This Privacy Policy explains what information we collect when you use the MediaForge app, our website at [mediaforgeapp.com](https://www.mediaforgeapp.com), and related services (collectively, the "Service"). Your privacy matters to us, especially because **MediaForge Open is designed for local media processing**.
+This Privacy Policy explains what information we collect, how we use it, and how we protect your privacy across the MediaForge desktop application, our website at [mediaforgeapp.com](https://www.mediaforgeapp.com), user accounts, billing systems, and related services (collectively, the "Service").
 
-## Scope
+Our guiding principle is **local-first by default**: standard media conversions happen entirely on your machine. Cloud processing and account data are only used when you explicitly opt in to Pro or online features.
+
+## Scope of Services
 
 This policy covers:
 
-- **MediaForge Open** — the free, open-source desktop app available from [GitHub Releases](https://github.com/mediaforgeapp/mediaforge/releases)
-- **Our website** — product information, downloads, and support pages
-- **Future MediaForge Pro features** — such as AI Forge, expanded presets, or paid subscriptions. If we introduce account-based or cloud-connected Pro features, we will update this policy before they launch.
+- **MediaForge Open** — the free, open-source desktop app for macOS (and future platforms) available from [GitHub Releases](https://github.com/mediaforgeapp/mediaforge/releases).
+- **MediaForge Pro & AI Forge** — cloud-enhanced capabilities, including AI-assisted multimedia tasks and credit pack services.
+- **Website & Account Services** — product information, documentation, user authentication, profile settings, and payment checkouts.
 
-## MediaForge Open App — Local by Default
+## Local-First Processing (MediaForge Open)
 
-In the current open-source edition, MediaForge is built around **local processing**:
+For all standard workflows in the MediaForge desktop app, processing is strictly local:
 
-### What stays on your device
+- **Source and Output Media Files** — videos, audio, images, and subtitles you import or generate are processed exclusively on your local device. We never upload, receive, or store your local media files during standard offline workflows.
+- **FFmpeg Execution** — transcoding, trimming, GIF generation, and stream inspection run locally through FFmpeg and FFprobe binaries on your system.
+- **Local Application Data** — task history, custom presets, and user interface preferences are stored locally on your machine.
+- **No Mandatory Telemetry** — MediaForge Open does not collect your clipboard content, track your file names, or transmit mandatory diagnostic telemetry to our servers.
 
-- **Source and output media files** — videos, audio, images, and other files you select or produce through the app are processed on your machine. We do not receive or store your media on MediaForge servers.
-- **FFmpeg execution** — transcoding and conversion run locally through FFmpeg and FFprobe on your system. MediaForge does not upload your files to our infrastructure to perform these tasks.
-- **App preferences** — for example, your chosen UI language and other settings stored on your device.
-- **Workflow data** — built-in presets, recent tasks, and related metadata may be stored locally (for example, in a local database) to support history, presets, and the in-app experience.
+## MediaForge Pro & AI Forge Privacy
 
-### What we do not collect from the Open app today
+MediaForge Pro provides optional, credit-based cloud features such as **AI Forge** (smart video analysis, AI generation, and neural audio/video enhancement):
 
-MediaForge Open does **not** require an account and, in its current form, does **not**:
+- **Data Transmitted for AI Tasks** — when you explicitly initiate an AI Forge task, the specific media clip, image frame, or prompt required for that operation is securely transmitted over encrypted channels (TLS 1.3) to our backend infrastructure.
+- **Ephemeral Processing** — media submitted to AI Forge is processed in transient memory solely to fulfill your requested task. We do not retain your media files after processing completes.
+- **No Model Training on User Data** — your private media and prompts submitted to AI Forge are **never used to train, retrain, or improve** our AI foundation models or those of our third-party inference providers.
+- **Strict User Control** — AI features are entirely optional. Offline FFmpeg workflows never contact AI endpoints.
 
-- collect clipboard content
-- sync your media or project data to our servers
-- run mandatory in-app analytics or crash reporting to MediaForge
-- automatically send your media filenames or file contents to us
+## Account and Authentication Data
 
-If you tap links inside the app (for example, to our GitHub repository or website), your browser or operating system may handle that request separately.
+When you sign in to MediaForge to manage credits or use Pro features, we handle limited account data through our Builtly infrastructure:
 
-### Your responsibilities
+- **OAuth Authentication** — you can sign in using third-party identity providers (Google or GitHub) via OAuth 2.0 with PKCE. We receive basic public profile information, including your email address, display name, and avatar URL. We never receive or store your third-party account passwords.
+- **Profile Management** — you may optionally customize your display name or upload a custom profile avatar. Uploaded avatars are stored securely in cloud object storage for your account profile.
+- **Session Tokens** — authentication tokens (access and refresh tokens) are stored in your browser's local or session storage to keep you signed in securely.
 
-You choose which files to process and where outputs are saved. You are responsible for securing your device, backing up your work, and complying with applicable laws when handling media you do not own or are not licensed to use.
+## Payments, Billing, and Credits
 
-## Website
+Credit packs for MediaForge Pro are sold on our website through **Stripe** via our Builtly SaaS billing backend:
 
-When you visit [mediaforgeapp.com](https://www.mediaforgeapp.com), we may collect limited information needed to operate and improve the site.
+- **PCI-DSS Compliant Payments** — all payments are processed directly by Stripe. MediaForge does not collect, handle, or store your credit card numbers, expiration dates, CVVs, or full payment credentials. Stripe handles transactions subject to the [Stripe Privacy Policy](https://stripe.com/privacy).
+- **Billing Records** — we retain transaction records (such as Stripe Checkout session ID, amount paid, currency, timestamp, and product identifier) to credit your account balance and fulfill legal tax and accounting requirements.
+- **Credit Balance Ledger** — we maintain a secure ledger balance of your purchased and consumed credits associated with your account ID.
 
-### Information we may collect
+## Website and Cookie Usage
 
-1. **Contact information**
-   - If you email us at [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com), we receive the information you choose to send (such as your email address and message content) so we can respond.
+When you browse [mediaforgeapp.com](https://www.mediaforgeapp.com):
 
-2. **Usage and device information**
-   - Our website may use privacy-friendly or standard analytics tools (for example, Vercel Analytics or Google Analytics, if enabled) to understand page views, referrers, browser type, and general traffic patterns.
-   - We use this information to improve the site and measure interest in downloads and documentation—not to sell personal information.
+- **Essential Storage** — we use local storage and session storage exclusively for basic operational needs: language preference, active authentication tokens, and return URLs for checkout redirects.
+- **No Third-Party Advertising Trackers** — our website does not run third-party advertising tracking networks or sell your personal data.
+- **Contact Inquiries** — if you email us at [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com), we use your email address and message content only to respond to your inquiry.
 
-3. **Cookies and similar technologies**
-   - The website may place cookies or use similar technologies for basic functionality, language preferences, or analytics.
-   - You can limit cookies through your browser settings or blocking tools.
+## Third-Party Service Providers
 
-### Download pages
+We partner with reputable service providers to deliver parts of our online services:
 
-When you download MediaForge Open from GitHub Releases, the download is served by GitHub. GitHub may collect information according to its own privacy policy. We do not receive your media or app usage data through the download process itself.
+- **Builtly** — authentication, user account management, and credit pack catalog infrastructure.
+- **Stripe** — payment processing and checkout interfaces.
+- **Cloud AI Inference Providers** — ephemeral, confidential processing of AI Forge tasks.
+- **GitHub** — open-source code hosting, issue tracking, and software download releases.
 
-## Future MediaForge Pro Features
+Each service provider processes information under strict contractual obligations of confidentiality and security, consistent with this policy.
 
-We may offer paid or account-based Pro features in the future, such as AI-assisted workflows, expanded preset libraries, or subscription billing. If those features involve:
+## Data Security and Storage
 
-- creating an account
-- sending prompts or media to third-party AI providers
-- payment processing
-- optional cloud sync or licensing checks
+We implement industry-standard technical and organizational security measures, including HTTPS/TLS encryption for all data in transit and access controls for administrative services.
 
-we will describe the relevant data practices in an updated version of this policy and, where appropriate, at the point of use. Pro features will be optional and separate from MediaForge Open’s local workflow.
+Because standard MediaForge workflows run locally, you retain ultimate control over your local files. We recommend keeping your operating system updated and maintaining backups of critical media.
 
-## Third-Party Services
+## Your Rights and Data Choices
 
-MediaForge relies on or may link to third-party services, including:
+Depending on your jurisdiction (such as under GDPR, UK GDPR, or CCPA), you have rights regarding your personal information:
 
-- **FFmpeg / FFprobe** — open-source multimedia tools installed on your system
-- **GitHub** — source code, issue tracking, and release downloads
-- **Analytics providers** — only on the website, if enabled
-- **Payment processors or app stores** — only if and when you purchase Pro features
+- **Access and Portability** — you may request a copy of the account information and credit transaction history we hold about you.
+- **Correction and Deletion** — you may update your profile or request the deletion of your account and associated personal data by contacting us.
+- **Local Data Removal** — for MediaForge Open, you can delete all locally stored presets, task history, and outputs by clearing the application directory or uninstalling the app.
 
-Those providers process information under their own terms and privacy policies. We do not control their practices.
+To exercise your privacy rights, please contact us at [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
 
-## Data Storage and Security
+## Children's Privacy
 
-We apply reasonable administrative and technical safeguards to information we handle on the website and in any future online services. No method of transmission or storage is completely secure, and we cannot guarantee absolute security.
-
-Because MediaForge Open processes media locally, the strongest protections are on your device: disk encryption, access controls, and careful handling of sensitive files.
-
-## Information Sharing
-
-We do not sell your personal information. We may share information only when:
-
-- you ask us to or give consent
-- we use service providers to operate the website or future online features, under confidentiality obligations
-- required by law or to protect rights, safety, and security
-
-## Your Rights and Choices
-
-Depending on where you live, you may have rights to access, correct, delete, or restrict certain personal information we hold about you (mainly from website contact or future account features).
-
-For MediaForge Open data stored locally on your device, you can remove it by deleting app data, uninstalling the app, or deleting output files from your filesystem.
-
-To exercise privacy rights related to information we hold, contact us at [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
-
-## Children’s Privacy
-
-The Service is not directed to children under 13 (or the minimum age required in your jurisdiction). We do not knowingly collect personal information from children.
+The Service is not intended for children under 13 (or under 16 in certain jurisdictions). We do not knowingly collect personal information from children.
 
 ## Changes to This Policy
 
-We may update this Privacy Policy from time to time. We will post the revised policy on this page and update the effective date above. Material changes may also be noted on our website or in the app where appropriate.
+We may update this Privacy Policy from time to time to reflect new features, improvements, or legal requirements. The updated date at the top of this page indicates when changes take effect.
 
 ## Contact Us
 
-If you have questions about this Privacy Policy or our data practices, contact:
+If you have questions, concerns, or requests regarding this Privacy Policy or your data, please contact us at:
 
-**MediaForge** — [mediaforgeapp.com](https://www.mediaforgeapp.com)  
-**Email**: [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com)
-
-By using the Service, you acknowledge this Privacy Policy.
+**Email:** [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com)  
+**Website:** [https://www.mediaforgeapp.com](https://www.mediaforgeapp.com)

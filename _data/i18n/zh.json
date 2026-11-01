@@ -263,11 +263,11 @@
   },
   "privacy_meta": {
     "title": "隐私政策",
-    "description": "MediaForge 桌面应用与网站的隐私说明。本地优先处理，媒体文件留在你的设备上。"
+    "description": "MediaForge 桌面应用、官网、用户账户、AI Forge 与 Stripe 账单的隐私与数据说明。"
   },
   "terms_meta": {
     "title": "服务条款",
-    "description": "MediaForge 桌面应用、网站及相关服务的使用条款。"
+    "description": "MediaForge 桌面应用、官方网站、用户账户、AI Forge 与积分包购买的使用条款与约束协议。"
   },
   "login": {
     "eyebrow": "MediaForge 账户",
@@ -311,5 +311,51 @@
   "account_meta": {
     "title": "账户",
     "description": "你的 MediaForge 账户、积分与账单。"
+  },
+  "pricing": {
+    "eyebrow": "MediaForge 积分",
+    "lead": "购买积分包，用于 AI Forge 与 Pro 功能。结账通过 Stripe 完成。",
+    "points": [
+      "1 积分对应一次标准 AI Forge",
+      "积分与 MediaForge 账户同步",
+      "一次性购买，无需订阅"
+    ],
+    "card_title": "积分包",
+    "card_lead": "选择一个礼包，为当前浏览器会话充值。",
+    "check_balance": "查看余额",
+    "sign_in": "登录",
+    "loading": "正在加载礼包…",
+    "empty": "暂无积分包。请在 Builtly 后台创建产品后刷新。",
+    "error": "无法加载产品。请确认 Builtly 已运行且 CORS 已配置。",
+    "credits_suffix": "积分",
+    "buy": "购买",
+    "opening": "正在打开 Stripe Checkout…",
+    "stripe_missing": "尚未关联 Stripe 价格",
+    "stripe_missing_hint": "请在 Builtly 后台为每个产品填写 Stripe Price ID（price_…），Buy 才会可用。"
+  },
+  "pricing_meta": {
+    "title": "定价",
+    "description": "购买 MediaForge 积分包，用于 AI Forge 与 Pro 功能。"
+  },
+  "thanks": {
+    "eyebrow": "付款完成",
+    "lead": "Stripe 结账已完成。积分由 webhook 发放，通常几秒内到账。",
+    "points": [
+      "本页会自动刷新余额",
+      "随时可以继续购买积分包",
+      "账户页可查看最新积分总额"
+    ],
+    "card_title": "一切就绪",
+    "card_lead": "这是当前浏览器会话的积分余额。",
+    "balance_label": "积分",
+    "account": "账户",
+    "buy_more": "继续购买",
+    "refreshing": "正在刷新余额…",
+    "updated": "积分已更新。",
+    "signed_out": "未登录 — 登录后才会更新余额。"
+  },
+  "thanks_meta": {
+    "title": "感谢购买",
+    "description": "付款已收到 — 积分即将到账。"
   }
 }

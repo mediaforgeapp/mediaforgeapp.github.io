@@ -1,102 +1,74 @@
 ---
 layout: legal
 title: Política de privacidad
-description: "Cómo MediaForge trata la privacidad en la app y el sitio web. Procesamiento local; tus archivos permanecen en tu dispositivo."
+description: "Información sobre privacidad para la app de escritorio MediaForge, sitio web, cuentas de usuario, AI Forge y pagos con Stripe."
 lang: es
 page_id: privacy-policy
 permalink: /es/privacy-policy/
 ---
-**Fecha de vigencia: 23 de mayo de 2026**
+**Fecha de entrada en vigor: 1 de noviembre de 2026**
 
 ## Introducción
 
-Bienvenido a **MediaForge**, una aplicación de escritorio para flujos visuales con FFmpeg. Puede exportar vídeo, crear GIF, extraer audio, trabajar con imágenes y ejecutar comandos FFmpeg personalizados, principalmente en su propio dispositivo.
+Te damos la bienvenida a **MediaForge**, una aplicación de escritorio visual para flujos de trabajo con FFmpeg. MediaForge ofrece tanto una edición local de código abierto (**MediaForge Open**) como funciones profesionales en la nube (**MediaForge Pro**), incluida AI Forge.
 
-Esta Política de privacidad explica qué información recopilamos cuando utiliza la aplicación MediaForge, nuestro sitio web en [mediaforgeapp.com](https://www.mediaforgeapp.com) y servicios relacionados (el «Servicio»). Su privacidad nos importa, especialmente porque **MediaForge Open está diseñado para el procesamiento local de medios**.
+Esta Política de privacidad explica qué datos recopilamos, cómo los usamos y cómo protegemos tu privacidad al utilizar la aplicación de escritorio, nuestro sitio web en [mediaforgeapp.com](https://www.mediaforgeapp.com), las cuentas de usuario y los servicios de facturación (colectivamente, el "Servicio").
 
-## Alcance
+Nuestro principio rector es **local por defecto**: las conversiones de medios estándar se ejecutan íntegramente en tu dispositivo. El procesamiento en la nube solo se utiliza cuando activas explícitamente funciones Pro o de IA.
+
+## Ámbito del servicio
 
 Esta política cubre:
 
-- **MediaForge Open** — la aplicación de escritorio gratuita y de código abierto en [GitHub Releases](https://github.com/mediaforgeapp/mediaforge/releases)
-- **Nuestro sitio web** — información del producto, descargas y soporte
-- **Futuras funciones de MediaForge Pro** — como AI Forge, presets ampliados o suscripciones de pago. Si introducimos funciones Pro con cuenta o conexión en la nube, actualizaremos esta política antes de su lanzamiento.
+- **MediaForge Open** — la aplicación de escritorio gratuita y de código abierto para macOS disponible en [GitHub Releases](https://github.com/mediaforgeapp/mediaforge/releases).
+- **MediaForge Pro y AI Forge** — funciones en la nube, procesamiento multimedia asistido por IA y paquetes de créditos.
+- **Sitio web y servicios de cuenta** — información del producto, autenticación de usuarios, perfil y pasarela de pago Stripe.
 
-## MediaForge Open — local por defecto
+## Procesamiento local prioritario (MediaForge Open)
 
-En la edición open source actual, MediaForge se basa en el **procesamiento local**:
+En los flujos de trabajo habituales de la aplicación de escritorio:
 
-### Qué permanece en su dispositivo
+- **Archivos de medios de origen y salida** — tus vídeos, audios, imágenes y subtítulos se procesan exclusivamente en tu dispositivo local. Nunca subimos ni almacenamos tus medios en nuestros servidores.
+- **Ejecución de FFmpeg** — la transcodificación y edición se realizan mediante los binarios de FFmpeg y FFprobe instalados en tu sistema.
+- **Configuración local** — el historial de tareas, los ajustes preestablecidos y las preferencias se guardan en tu equipo local.
+- **Sin telemetría obligatoria** — MediaForge Open no recopila el portapapeles, nombres de archivos ni envía telemetría de diagnóstico obligatoria.
 
-- **Archivos de origen y salida** — vídeos, audio, imágenes y otros archivos se procesan en su máquina. No almacenamos sus medios en servidores de MediaForge.
-- **Ejecución de FFmpeg** — la transcodificación se ejecuta localmente con FFmpeg y FFprobe.
-- **Preferencias de la app** — por ejemplo, idioma de la interfaz.
-- **Datos de flujo de trabajo** — presets, tareas recientes y metadatos pueden guardarse localmente.
+## Privacidad en MediaForge Pro y AI Forge
 
-### Qué no recopila la app Open hoy
+MediaForge Pro ofrece funciones opcionales basadas en créditos en la nube, como **AI Forge** (análisis inteligente de vídeo, generación por IA y mejora neuronal):
 
-MediaForge Open **no requiere cuenta** y, en su forma actual, **no**:
+- **Datos transmitidos para tareas de IA** — solo cuando inicias activamente una tarea de AI Forge, el fragmento de medio o texto necesario se transmite por canales cifrados (TLS 1.3) a nuestra infraestructura de inferencia.
+- **Procesamiento efímero** — los medios enviados a AI Forge se procesan en memoria volátil únicamente para completar la tarea solicitada y se eliminan de inmediato al terminar.
+- **Sin entrenamiento de modelos** — los archivos y textos que envías a AI Forge **nunca se utilizan para entrenar ni mejorar modelos de IA**.
+- **Control total del usuario** — las funciones de IA son completamente opcionales. El FFmpeg local no se conecta a endpoints de IA.
 
-- recopila contenido del portapapeles
-- sincroniza sus medios o proyectos con nuestros servidores
-- envía análisis o informes de fallos obligatorios a MediaForge
-- envía automáticamente nombres o contenidos de archivos
+## Datos de cuenta y autenticación
 
-Los enlaces dentro de la app (p. ej. GitHub o el sitio web) los gestiona su navegador o sistema operativo por separado.
+Al iniciar sesión para gestionar créditos o usar funciones Pro a través de Builtly:
 
-### Sus responsabilidades
+- **Inicio de sesión OAuth** — puedes acceder con Google o GitHub mediante OAuth 2.0 (PKCE). Solo recibimos datos públicos básicos (correo, nombre y avatar). Nunca recibimos tus contraseñas.
+- **Gestión de perfil** — puedes personalizar tu nombre o subir una imagen de avatar, almacenada de forma segura en la nube.
+- **Tokens de sesión** — los tokens de acceso y actualización se almacenan en el navegador para mantener tu sesión activa de manera segura.
 
-Usted elige qué archivos procesar y dónde guardar las salidas. Es responsable de la seguridad del dispositivo, las copias de seguridad y el cumplimiento legal.
+## Pagos, facturación y créditos
 
-## Sitio web
+Los paquetes de créditos se adquieren a través de **Stripe**:
 
-Al visitar [mediaforgeapp.com](https://www.mediaforgeapp.com), podemos recopilar información limitada para operar y mejorar el sitio.
+- **Pagos seguros PCI-DSS** — todos los pagos se procesan directamente en Stripe. MediaForge no almacena números de tarjeta ni códigos CVV. Aplica la [Política de privacidad de Stripe](https://stripe.com/privacy).
+- **Registros de compra** — guardamos identificadores de sesión de Stripe, importes, marcas de tiempo y productos para acreditar tu saldo y cumplir con obligaciones contables.
+- **Libro de créditos** — mantenemos un registro seguro de tus créditos adquiridos y consumidos.
 
-### Información que podemos recopilar
+## Proveedores externos
 
-1. **Información de contacto** — si escribe a [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com), recibimos lo que envíe para responder.
+Colaboramos con proveedores de confianza: Builtly (cuentas y catálogo), Stripe (pagos), proveedores de inferencia de IA en la nube y GitHub (código y descargas).
 
-2. **Información de uso y dispositivo** — el sitio puede usar herramientas de análisis (p. ej. Vercel Analytics o Google Analytics, si están activas) para entender el tráfico, no para vender datos personales.
+## Tus derechos
 
-3. **Cookies** — para funciones básicas, idioma o análisis; puede limitarlas en el navegador.
-
-### Páginas de descarga
-
-Las descargas desde GitHub Releases las sirve GitHub según su propia política. El proceso de descarga no nos transmite sus medios ni datos de uso de la app.
-
-## Futuras funciones MediaForge Pro
-
-Podemos ofrecer funciones Pro de pago o con cuenta. Si implican cuentas, IA, pagos o sincronización en la nube, lo describiremos en una política actualizada. Las funciones Pro serán opcionales y separadas del flujo local de Open.
-
-## Servicios de terceros
-
-MediaForge utiliza o enlaza a FFmpeg / FFprobe, GitHub, proveedores de análisis (solo en el sitio web, si están activos) y procesadores de pago en el futuro. Esos proveedores actúan bajo sus propias políticas.
-
-## Almacenamiento y seguridad
-
-Aplicamos medidas razonables a la información del sitio web y futuros servicios en línea. Ningún método es 100 % seguro. Con MediaForge Open, la protección principal está en su dispositivo.
-
-## Compartición de información
-
-No vendemos su información personal. Solo compartimos cuando usted lo solicita, con proveedores bajo obligaciones de confidencialidad o cuando la ley lo exige.
-
-## Sus derechos
-
-Según su jurisdicción, puede solicitar acceso, corrección, eliminación o restricción. Los datos locales de Open pueden eliminarse desinstalando la app o borrando archivos de salida.
-
-Contacto: [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
-
-## Privacidad de menores
-
-El Servicio no está dirigido a menores de 13 años (o la edad mínima aplicable).
-
-## Cambios
-
-Podemos actualizar esta política y la fecha de vigencia anterior. Los cambios importantes pueden anunciarse en el sitio web o en la app.
+Bajo normativas como el RGPD, puedes solicitar acceso, rectificación, portabilidad o eliminación de tus datos de cuenta escribiendo a [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
 
 ## Contacto
 
-**MediaForge** — [mediaforgeapp.com](https://www.mediaforgeapp.com)  
-**Correo**: [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com)
+Para cualquier duda sobre privacidad, contáctanos en:
 
-Al usar el Servicio, reconoce esta Política de privacidad.
+**Correo:** [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com)  
+**Sitio web:** [https://www.mediaforgeapp.com](https://www.mediaforgeapp.com)

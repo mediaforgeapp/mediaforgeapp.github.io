@@ -263,11 +263,11 @@
   },
   "privacy_meta": {
     "title": "Privacy Policy",
-    "description": "How MediaForge handles privacy for the desktop app and website. Local-first processing; media files stay on your device."
+    "description": "How MediaForge handles privacy for the desktop app, website, user accounts, AI Forge, and Stripe billing."
   },
   "terms_meta": {
     "title": "Terms of Service",
-    "description": "Terms governing use of the MediaForge desktop app, website, and related services."
+    "description": "Terms governing use of the MediaForge desktop app, website, user accounts, AI Forge, and credit pack purchases."
   },
   "login": {
     "eyebrow": "MediaForge account",
@@ -311,5 +311,51 @@
   "account_meta": {
     "title": "Account",
     "description": "Your MediaForge account, credits, and billing."
+  },
+  "pricing": {
+    "eyebrow": "MediaForge credits",
+    "lead": "Buy credit packs for AI Forge and Pro features. Checkout runs through Stripe.",
+    "points": [
+      "1 credit covers one standard AI Forge run",
+      "Credits sync with your MediaForge account",
+      "Pay once — no subscription required"
+    ],
+    "card_title": "Credit packs",
+    "card_lead": "Choose a pack to top up this browser session.",
+    "check_balance": "Check your balance",
+    "sign_in": "Sign in",
+    "loading": "Loading packs…",
+    "empty": "No credit packs yet. Create products in the Builtly admin, then refresh.",
+    "error": "Could not load products. Is Builtly running and CORS origins configured?",
+    "credits_suffix": "credits",
+    "buy": "Buy",
+    "opening": "Opening Stripe Checkout…",
+    "stripe_missing": "Stripe price not linked",
+    "stripe_missing_hint": "Products need a Stripe Price ID (price_…) in Builtly admin before Buy works."
+  },
+  "pricing_meta": {
+    "title": "Pricing",
+    "description": "Buy MediaForge credit packs for AI Forge and Pro features."
+  },
+  "thanks": {
+    "eyebrow": "Payment complete",
+    "lead": "Stripe checkout finished. Credits are granted by webhook and usually appear within a few seconds.",
+    "points": [
+      "Balance refreshes automatically on this page",
+      "You can keep buying packs anytime",
+      "Account shows your latest credit total"
+    ],
+    "card_title": "You're all set",
+    "card_lead": "Here’s your current credit balance for this browser session.",
+    "balance_label": "Credits",
+    "account": "Account",
+    "buy_more": "Buy more",
+    "refreshing": "Refreshing balance…",
+    "updated": "Credits updated.",
+    "signed_out": "Signed out — balance will update after you sign in."
+  },
+  "thanks_meta": {
+    "title": "Thanks",
+    "description": "Payment received — credits will appear shortly."
   }
 }

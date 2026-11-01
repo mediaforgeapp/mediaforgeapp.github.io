@@ -151,11 +151,15 @@ function displayName(user) {
 function renderAccountProfile(profileEl, user) {
   if (!profileEl) return;
   const copy = accountCopy(profileEl);
+  const name = displayName(user);
+  const initial = String(name).trim().charAt(0).toUpperCase() || "?";
   const avatar = user.avatar_url
     ? '<img class="account-page__avatar" src="' +
       escapeAttr(user.avatar_url) +
       '" alt="" width="72" height="72">'
-    : '<div class="account-page__avatar account-page__avatar--empty" aria-hidden="true"></div>';
+    : '<div class="account-page__avatar account-page__avatar--empty" aria-hidden="true">' +
+      escapeHtml(initial) +
+      "</div>";
   profileEl.innerHTML =
     '<div class="account-page__avatar-row">' +
     avatar +
@@ -230,44 +234,105 @@ async function initAccount() {
   }
 }
 
+function pricingCopy(grid) {
+  const d = (grid && grid.dataset) || {};
+  return {
+    empty: d.i18nEmpty || "No credit packs yet.",
+    error: d.i18nError || "Could not load products.",
+    credits: d.i18nCredits || "credits",
+    buy: d.i18nBuy || "Buy",
+    opening: d.i18nOpening || "Opening Stripe Checkout…",
+    stripeMissing: d.i18nStripeMissing || "Stripe price not linked",
+    stripeMissingHint:
+      d.i18nStripeMissingHint ||
+      "Products need a Stripe Price ID (price_…) in Builtly admin before Buy works.",
+  };
+}
+
+function pricingPath() {
+  return (window.BUILTLY && window.BUILTLY.pricingPath) || "/pricing/";
+}
+
+function productCanBuy(p) {
+  if (!p) return false;
+  if (p.stripe_price_id) return true;
+  const ch = p.channels;
+  if (!ch) return false;
+  // Builtly public catalog: channels.stripe === true when stripe_price_id is set
+  return ch.stripe === true || ch.stripe === "true" || Boolean(ch.stripe_price_id);
+}
+
 async function initPricing() {
   const grid = $("#pricing-grid");
   const status = $("#pricing-status");
+  const wrap = $(".pricing-page__checkout-wrap");
+  const loading = $(".pricing-page__checkout-loading");
   if (!grid) return;
+  const copy = pricingCopy(grid);
+
+  function setCheckoutBusy(busy) {
+    wrap?.classList.toggle("is-busy", busy);
+    grid.querySelectorAll("[data-buy]").forEach((btn) => {
+      if (busy) {
+        btn.dataset.wasDisabled = btn.disabled ? "1" : "0";
+        btn.disabled = true;
+      } else if (btn.dataset.wasDisabled !== "1") {
+        btn.disabled = false;
+      }
+    });
+    if (loading) {
+      loading.hidden = !busy;
+      loading.setAttribute("aria-busy", busy ? "true" : "false");
+    }
+  }
 
   try {
     const data = await listProducts();
     const items = (data.items || data || []).filter((p) => p.active !== false);
     if (!items.length) {
-      grid.innerHTML =
-        '<p class="builtly-muted">No credit packs yet. Create products in the Builtly admin, then refresh.</p>';
+      grid.innerHTML = '<p class="builtly-muted">' + escapeHtml(copy.empty) + "</p>";
       return;
+    }
+    const buyable = items.filter(productCanBuy);
+    if (!buyable.length) {
+      setStatus(status, copy.stripeMissingHint, "info");
     }
     grid.innerHTML = items
       .map((p) => {
         const price = formatMoney(p.price_amount, p.currency);
-        const canBuy = Boolean(
-          p.stripe_price_id || (p.channels && p.channels.stripe)
-        );
+        const canBuy = productCanBuy(p);
+        const desc = p.description
+          ? '<p class="pricing-page__pack-desc">' +
+            escapeHtml(p.description) +
+            "</p>"
+          : "";
         return (
-          '<article class="builtly-card">' +
-          "<h2>" +
+          '<article class="pricing-page__pack">' +
+          '<div class="pricing-page__pack-top">' +
+          '<div class="pricing-page__pack-info">' +
+          '<h3 class="pricing-page__pack-name">' +
           escapeHtml(p.name) +
-          "</h2>" +
-          '<p class="builtly-muted">' +
-          escapeHtml(p.description || "") +
-          "</p>" +
-          '<div class="builtly-price">' +
+          "</h3>" +
+          desc +
+          "</div>" +
+          '<div class="pricing-page__pack-price">' +
           escapeHtml(price) +
           "</div>" +
-          '<div class="builtly-credits">' +
+          "</div>" +
+          '<div class="pricing-page__pack-bottom">' +
+          '<span class="pricing-page__pack-credits">' +
           Number(p.credits || 0).toLocaleString() +
-          " credits</div>" +
-          '<button type="button" class="builtly-btn" data-buy="' +
+          " " +
+          escapeHtml(copy.credits) +
+          "</span>" +
+          '<button type="button" class="builtly-btn pricing-page__buy" data-buy="' +
           escapeAttr(p.id) +
           '"' +
-          (canBuy ? "" : ' disabled title="Stripe price not linked"') +
-          ">Buy</button>" +
+          (canBuy ? "" : ' disabled title="' + escapeAttr(copy.stripeMissing) + '"') +
+          ">" +
+          escapeHtml(copy.buy) +
+          "</button>" +
+          "</div>" +
           "</article>"
         );
       })
@@ -277,40 +342,51 @@ async function initPricing() {
       btn.addEventListener("click", async () => {
         if (!isSignedIn()) {
           location.href =
-            loginPath() + "?next=" + encodeURIComponent("/pricing/");
+            loginPath() + "?next=" + encodeURIComponent(pricingPath());
           return;
         }
-        setStatus(status, "Opening Stripe Checkout…", "info");
-        btn.disabled = true;
+        setStatus(status, copy.opening, "info");
+        setCheckoutBusy(true);
         try {
           await buyProduct(btn.getAttribute("data-buy"));
         } catch (err) {
+          setCheckoutBusy(false);
           setStatus(status, errMessage(err));
-          btn.disabled = false;
         }
       });
     });
   } catch (err) {
-    setStatus(status, errMessage(err));
-    grid.innerHTML =
-      '<p class="builtly-muted">Could not load products. Is Builtly running and CORS origins configured?</p>';
+    setStatus(status, copy.error + " (" + errMessage(err) + ")");
+    grid.innerHTML = "";
   }
+}
+
+
+function thanksCopy() {
+  const card = $(".thanks-page__card");
+  const d = (card && card.dataset) || {};
+  return {
+    refreshing: d.i18nRefreshing || "Refreshing balance…",
+    updated: d.i18nUpdated || "Credits updated.",
+    signedOut: d.i18nSignedOut || "Signed out — balance will update after you sign in.",
+  };
 }
 
 async function initThanks() {
   const balanceEl = $("#thanks-balance");
   const status = $("#thanks-status");
+  const copy = thanksCopy();
   if (!isSignedIn()) {
-    setStatus(status, "Signed out — balance will update after you sign in.", "info");
+    setStatus(status, copy.signedOut, "info");
     return;
   }
-  setStatus(status, "Refreshing balance…", "info");
+  setStatus(status, copy.refreshing, "info");
   let tries = 0;
   const poll = async () => {
     try {
       const credits = await getCredits();
       if (balanceEl) balanceEl.textContent = String(credits.balance ?? 0);
-      setStatus(status, "Credits updated.", "ok");
+      setStatus(status, copy.updated, "ok");
     } catch (err) {
       setStatus(status, errMessage(err));
     }
@@ -420,7 +496,12 @@ async function syncHeaderAuth() {
     const me = await getMe();
     fillAuthChrome(me.user || me);
   } catch (err) {
-    if (err && err.code === "unauthorized") {
+    if (
+      err &&
+      (err.code === "unauthorized" ||
+        err.code === "invalid_token" ||
+        !isSignedIn())
+    ) {
       setAuthVisibility(false);
     }
   }
