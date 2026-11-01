@@ -22,6 +22,7 @@ support_email: "support@mediaforgeapp.com"
 builtly:
   api_base: "http://localhost:8080/api/v1"
   app_id: "01a187d6-b42f-7988-ade5-05a50543d2cf"
+  google_client_id: "970947979574-5pt63hnqmgl3bvehtk0dv1g9oegiqbu5.apps.googleusercontent.com" # Google OAuth Web Client ID for Google One Tap (e.g. 123456-xxx.apps.googleusercontent.com)
   auth_redirect: "/auth/callback/"
   checkout_success: "/billing/thanks/"
   checkout_cancel: "/pricing/"

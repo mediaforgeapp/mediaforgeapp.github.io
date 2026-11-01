@@ -226,6 +226,26 @@ export async function finishOAuth() {
   return data;
 }
 
+export async function loginWithGoogleIdToken(idToken, { rawNonce, referralCode, attribution } = {}) {
+  let ref = referralCode;
+  if (!ref && typeof location !== "undefined") {
+    try {
+      const p = new URLSearchParams(location.search);
+      ref = p.get("ref") || p.get("referral") || undefined;
+    } catch (_) {}
+  }
+  const data = await api("POST", "/auth/google", {
+    body: {
+      id_token: idToken,
+      raw_nonce: rawNonce || undefined,
+      referral_code: ref || undefined,
+      attribution: attribution || undefined,
+    },
+  });
+  saveTokens(data.tokens);
+  return data;
+}
+
 export async function getMe() {
   return api("GET", "/user/me", { auth: true });
 }

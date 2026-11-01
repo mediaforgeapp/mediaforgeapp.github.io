@@ -6,6 +6,7 @@ import {
   getMe,
   isSignedIn,
   listProducts,
+  loginWithGoogleIdToken,
   logout,
   startOAuth,
   uploadAvatar,
@@ -116,10 +117,25 @@ async function initLogin() {
     try {
       await getMe();
       location.replace(consumeNext());
+      return;
     } catch (_) {
       /* stay on login if session cannot be restored */
     }
   }
+
+  initGoogleOneTap({
+    onStart: () => {
+      setStatus(status, "");
+      setOAuthBusy(true);
+    },
+    onSuccess: () => {
+      location.replace(consumeNext());
+    },
+    onError: (err) => {
+      setOAuthBusy(false);
+      setStatus(status, errMessage(err));
+    },
+  });
 }
 
 async function initCallback() {
@@ -488,6 +504,9 @@ async function syncHeaderAuth() {
     btn.dataset.bound = "1";
     btn.addEventListener("click", async () => {
       await logout();
+      if (window.google?.accounts?.id?.disableAutoSelect) {
+        window.google.accounts.id.disableAutoSelect();
+      }
       location.href = loginPath();
     });
   });
@@ -511,6 +530,81 @@ document.addEventListener("click", () => {
   closeAuthMenus();
 });
 
+let googleGISPromise = null;
+let oneTapInitialized = false;
+
+function loadGoogleGIS() {
+  if (window.google?.accounts?.id) return Promise.resolve(window.google.accounts.id);
+  if (googleGISPromise) return googleGISPromise;
+  googleGISPromise = new Promise((resolve, reject) => {
+    const existing = document.querySelector('script[src*="accounts.google.com/gsi/client"]');
+    if (existing) {
+      if (window.google?.accounts?.id) return resolve(window.google.accounts.id);
+      existing.addEventListener("load", () => resolve(window.google?.accounts?.id));
+      existing.addEventListener("error", reject);
+      return;
+    }
+    const s = document.createElement("script");
+    s.src = "https://accounts.google.com/gsi/client";
+    s.async = true;
+    s.defer = true;
+    s.onload = () => resolve(window.google?.accounts?.id);
+    s.onerror = (e) => reject(new Error("Failed to load Google Identity Services SDK"));
+    document.head.appendChild(s);
+  });
+  return googleGISPromise;
+}
+
+export async function initGoogleOneTap({ onStart, onSuccess, onError } = {}) {
+  if (isSignedIn()) return;
+  const clientId = window.BUILTLY && window.BUILTLY.googleClientId;
+  if (!clientId) return;
+  if (oneTapInitialized) return;
+  oneTapInitialized = true;
+
+  try {
+    await loadGoogleGIS();
+    if (!window.google?.accounts?.id) return;
+
+    window.google.accounts.id.initialize({
+      client_id: clientId,
+      callback: async (response) => {
+        if (!response || !response.credential) return;
+        if (typeof onStart === "function") onStart();
+        try {
+          const res = await loginWithGoogleIdToken(response.credential);
+          if (typeof onSuccess === "function") {
+            onSuccess(res);
+          } else {
+            location.reload();
+          }
+        } catch (err) {
+          if (typeof onError === "function") {
+            onError(err);
+          } else {
+            console.error("Google One Tap login error:", err);
+          }
+        }
+      },
+      auto_select: false,
+      cancel_on_tap_outside: true,
+      itp_support: true,
+    });
+
+    window.google.accounts.id.prompt((notification) => {
+      if (notification.isNotDisplayed()) {
+        console.debug("One Tap not displayed:", notification.getNotDisplayedReason());
+      } else if (notification.isSkippedMoment()) {
+        console.debug("One Tap skipped:", notification.getSkippedReason());
+      } else if (notification.isDismissedMoment()) {
+        console.debug("One Tap dismissed:", notification.getDismissedReason());
+      }
+    });
+  } catch (err) {
+    console.debug("Google One Tap init failed:", err);
+  }
+}
+
 const page =
   document.body?.dataset?.builtlyPage ||
   document.querySelector("[data-builtly-boot]")?.getAttribute("data-builtly-boot");
@@ -520,3 +614,11 @@ else if (page === "callback") initCallback();
 else if (page === "account") initAccount();
 else if (page === "pricing") initPricing();
 else if (page === "thanks") initThanks();
+
+if (page !== "login" && page !== "callback" && !isSignedIn()) {
+  initGoogleOneTap({
+    onSuccess: () => {
+      location.reload();
+    },
+  });
+}
