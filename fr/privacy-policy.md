@@ -21,8 +21,8 @@ Notre principe directeur est le **traitement local par défaut (Local-First)** :
 Cette politique s'applique à :
 
 - **MediaForge Open** — l'application bureautique gratuite et open source pour macOS disponible sur [GitHub Releases](https://github.com/mediaforgeapp/mediaforge/releases).
-- **MediaForge Pro et AI Forge** — les fonctionnalités cloud avancées basées sur l'intelligence artificielle et les packs de crédits.
-- **Site web et gestion de compte** — la documentation, l'authentification des utilisateurs, le profil et le paiement sécurisé via Stripe.
+- **MediaForge Pro et AI Forge** — fonctionnalités cloud, packs de crédits, via le Mac App Store et le téléchargement direct.
+- **Site web et gestion de compte** — documentation, authentification, profil et paiement.
 
 ## Traitement local prioritaire (MediaForge Open)
 
@@ -35,36 +35,37 @@ Pour les flux de travail standards sur l'application de bureau :
 
 ## Confidentialité de MediaForge Pro et AI Forge
 
-MediaForge Pro met à disposition des fonctionnalités cloud optionnelles par crédits, notamment **AI Forge** (analyse intelligente, génération et amélioration audiovisuelle) :
+**AI Forge** planifie des commandes FFmpeg :
 
-- **Données transmises pour les tâches d'IA** — uniquement lorsque vous lancez une tâche AI Forge, le segment de média ou le prompt requis est transmis via un canal chiffré (TLS 1.3) à notre infrastructure.
-- **Traitement éphémère** — les données envoyées à AI Forge sont traitées uniquement en mémoire vive pour accomplir la tâche, puis immédiatement détruites. Aucun stockage persistant n'est conservé.
-- **Aucun entraînement de modèles IA** — vos fichiers et invites traités via AI Forge **ne sont jamais utilisés pour entraîner, affiner ou améliorer des modèles d'IA**.
-- **Contrôle absolu** — les fonctionnalités d'IA sont facultatives. Les opérations FFmpeg locales ne contactent aucun serveur d'IA.
+- Seuls le prompt et des métadonnées techniques (nom de fichier, résolution, codec, conteneur) sont envoyés en TLS 1.3. **La vidéo et l'audio sources ne sont pas téléversés.**
+- Le plan s'exécute en local. Les données ne servent pas à entraîner des modèles.
+- BYOK : un endpoint compatible OpenAI évite nos serveurs, ne dépense aucun crédit et la clé reste sur l'appareil.
+- Les fonctions d'IA sont facultatives.
 
-## Comptes et données d'authentification
+## Compte, authentification et mode invité
 
-Lorsque vous vous connectez pour gérer vos crédits ou vos options Pro via Builtly :
+- **Se connecter avec Apple**, y compris le relais d'e-mail privé.
+- **OAuth** Google ou GitHub (PKCE). Aucun mot de passe.
+- **Invité anonyme (directive 5.1.1(v))** — achat et usage sans compte (`guest_<deviceId>@guest.mediaforgeapp.com`). Le solde peut être transféré à la connexion.
+- Jetons stockés sur l'appareil.
 
-- **Connexion OAuth** — authentification sécurisée via Google ou GitHub (OAuth 2.0 PKCE). Nous ne recevons que les informations de profil public (e-mail, nom, avatar). Nous n'avons jamais accès à vos mots de passe.
-- **Gestion du profil** — vous pouvez modifier votre nom ou téléverser un avatar, conservé de façon sécurisée sur notre stockage cloud.
-- **Jetons de session** — vos jetons d'accès et de rafraîchissement sont stockés dans votre navigateur pour maintenir votre session en toute sécurité.
+## Paiements, achats intégrés et crédits
 
-## Paiements, facturation et crédits
+1. **Mac App Store** — uniquement **Apple In-App Purchase (StoreKit)**. Apple traite le paiement. Nous conservons des identifiants de transaction signés.
+2. **Téléchargement web** — **Stripe** ([politique Stripe](https://stripe.com/privacy)).
+3. Registre de crédits du compte ou de l'appareil invité.
 
-Les packs de crédits pour MediaForge Pro s'achètent via **Stripe** :
+## Analytique (PostHog)
 
-- **Paiements certifiés PCI-DSS** — Stripe traite l'intégralité des paiements. MediaForge ne collecte ni ne conserve aucun numéro de carte bancaire ni cryptogramme. Voir la [Politique de confidentialité de Stripe](https://stripe.com/privacy).
-- **Historique de facturation** — nous conservons les identifiants de transaction, montants, devises et horodatages pour créditer votre compte et répondre à nos obligations comptables.
-- **Registre des crédits** — nous tenons un registre sécurisé de vos crédits achetés et consommés.
+Événements anonymes, activés par défaut. **Aucun fichier média, chemin privé ni clé API.** Désactivation dans **Réglages > Général > Analyse d'utilisation**.
 
 ## Prestataires tiers
 
-Nous collaborons avec des partenaires de premier plan : Builtly (comptes et catalogue), Stripe (paiements sécurisés), fournisseurs d'inférence IA cloud et GitHub (code source et téléchargements).
+Apple (App Store, StoreKit, Se connecter avec Apple), Builtly, Stripe, PostHog, inférence IA et GitHub.
 
 ## Vos droits
 
-Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, de portabilité et de suppression de vos données personnelles en nous écrivant à [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
+Accès, rectification, portabilité et **suppression du compte dans l'app** (directive 5.1.1(v)). Contact : [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
 
 ## Contact
 

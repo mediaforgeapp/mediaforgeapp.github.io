@@ -20,11 +20,11 @@ MediaForge ofrece:
 
 1. **MediaForge Open** — interfaz visual de código abierto y local para FFmpeg (transcodificación, GIFs, extracción de audio sin conexión).
 2. **MediaForge Pro y AI Forge** — funciones avanzadas de IA en la nube mediante paquetes de créditos recargables.
-3. **Servicios de cuenta y facturación** — portal web para gestionar tu perfil y adquirir paquetes de créditos mediante Stripe.
+3. **Servicios de cuenta y facturación** — perfil y paquetes de créditos mediante Apple In-App Purchase o Stripe.
 
 ## Responsabilidades de la cuenta
 
-Debes tener la mayoría de edad legal para comprar créditos. Eres responsable de mantener la confidencialidad de tus credenciales y de cualquier actividad en tu cuenta. Ante accesos no autorizados, avísanos en [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
+Debes ser mayor de edad para comprar créditos. El modo invitado no exige cuenta; el saldo puede transferirse al iniciar sesión. Puedes eliminar la cuenta dentro de la app. Avisos de acceso no autorizado: [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
 
 ## MediaForge Pro, créditos y pagos
 
@@ -34,11 +34,11 @@ Debes tener la mayoría de edad legal para comprar créditos. Eres responsable d
 - **Consumo** — se deducen según la tarea realizada (por ejemplo, 1 crédito por ejecución estándar de AI Forge).
 - **Sincronización** — los créditos se vinculan a tu cuenta y se sincronizan entre tu navegador y la aplicación de escritorio.
 
-### Facturación con Stripe y reembolsos
+### Canales de pago y reembolsos
 
-- Los pagos se procesan con Stripe con los impuestos aplicables según tu ubicación.
-- **Créditos consumidos** — los créditos ya utilizados en tareas de IA no son reembolsables debido a los costes directos de cómputo incurridos.
-- **Paquetes no utilizados** — si compraste un paquete y no has consumido ningún crédito, puedes solicitar el reembolso íntegro en un plazo de 14 días escribiendo a [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
+1. **Mac App Store** — Apple cobra mediante StoreKit. Los reembolsos los gestiona Apple en [reportaproblem.apple.com](https://reportaproblem.apple.com). No podemos reembolsar compras de la App Store.
+2. **Sitio web (Stripe)** — si no has consumido ningún crédito, reembolso íntegro en 14 días escribiendo a [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
+- **Créditos ya usados** no son reembolsables en ningún canal.
 
 ## Uso aceptable de AI Forge
 

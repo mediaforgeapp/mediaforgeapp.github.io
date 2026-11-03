@@ -21,8 +21,8 @@ permalink: /ko/privacy-policy/
 본 방침은 다음에 적용됩니다:
 
 - **MediaForge Open** — [GitHub Releases](https://github.com/mediaforgeapp/mediaforge/releases)를 통해 제공되는 무료 오픈소스 데스크톱 앱.
-- **MediaForge Pro 및 AI Forge** — 클라우드 기반 스마트 영상 분석, AI 미디어 생성 및 크레딧 팩 서비스.
-- **웹사이트 및 계정 서비스** — 제품 안내, 사용자 인증, 프로필 관리 및 Stripe 결제 시스템.
+- **MediaForge Pro 및 AI Forge** — 클라우드 AI 기능 및 크레딧 팩. Mac App Store와 직접 다운로드로 제공.
+- **웹사이트 및 계정 서비스** — 제품 안내, 인증, 프로필 및 결제.
 
 ## 로컬 우선 처리 (MediaForge Open)
 
@@ -35,36 +35,37 @@ permalink: /ko/privacy-policy/
 
 ## MediaForge Pro 및 AI Forge 개인정보 보호
 
-MediaForge Pro는 크레딧 기반의 클라우드 기능인 **AI Forge**(인공지능 영상 분석, 신경망 오디오 노이즈 제거, 생성형 미디어 처리 등)를 제공합니다:
+**AI Forge**는 FFmpeg 명령 계획을 생성합니다.
 
-- **AI 작업 시 전송되는 데이터** — 사용자가 AI 작업을 능동적으로 실행할 때만 해당 처리에 필요한 특정 미디어 클립 또는 텍스트 프롬프트가 암호화된 채널(TLS 1.3)을 통해 클라우드 추론 인프라로 전송됩니다.
-- **휘발성 처리 (Ephemeral Processing)** — AI Forge에 전송된 미디어 데이터는 결과 생성을 위해 메모리 상에서만 즉각 추론되며, 작업 완료 후 영구 저장 없이 즉시 삭제됩니다.
-- **AI 모델 학습 절대 미사용** — 사용자가 AI Forge에서 처리한 비디오, 오디오, 텍스트 프롬프트는 **당사나 제3자 제공업체의 AI 기본 모델 학습에 절대로 사용되지 않습니다**.
-- **완전한 사용자 선택권** — AI 기능은 선택 사항이며, 표준 오프라인 FFmpeg 기능은 AI 서버와 통신하지 않습니다.
+- 텍스트 프롬프트와 기술 메타데이터(파일 이름, 해상도, 코덱, 컨테이너)만 TLS 1.3으로 전송됩니다. **원본 영상·음원 파일은 업로드되지 않습니다.**
+- 계획은 기기에서 실행되며, 학습에 사용되지 않습니다.
+- BYOK: OpenAI 호환 엔드포인트는 당사 서버를 거치지 않고 크레딧을 쓰지 않으며, API 키는 기기에만 저장됩니다.
+- AI 기능은 선택 사항입니다.
 
-## 계정 및 인증 정보
+## 계정, 인증 및 게스트 모드
 
-크레딧 관리 및 Pro 기능 이용을 위해 로그인하실 때 Builtly를 통해 제한된 계정 정보를 처리합니다:
+- **Apple로 로그인**. 비공개 이메일 중계 포함.
+- **OAuth** Google 또는 GitHub(PKCE). 비밀번호는 수집하지 않습니다.
+- **익명 기기 게스트(5.1.1(v))** — 계정 없이 구매·사용. `guest_<deviceId>@guest.mediaforgeapp.com`. 로그인 후 잔액 이전 가능.
+- 토큰은 기기에 저장됩니다.
 
-- **OAuth 간편 로그인** — Google 또는 GitHub 계정을 통한 OAuth 2.0(PKCE) 로그인을 지원합니다. 이메일 주소, 이름, 공개 프로필 사진 등 기본 공개 정보만 수신하며, 비밀번호는 절대 수집하지 않습니다.
-- **프로필 관리** — 사용자 이름을 변경하거나 프로필 사진을 업로드할 수 있으며, 업로드된 사진은 보안 클라우드 스토리지에 안전하게 보관됩니다.
-- **세션 토큰** — 안전한 로그인 유지를 위해 액세스 토큰 및 리프레시 토큰이 브라우저 로컬/세션 스토리지에 저장됩니다.
+## 결제, 인앱 구매 및 크레딧
 
-## 결제, 청구 및 크레딧 관리
+1. **Mac App Store** — **Apple In-App Purchase(StoreKit)**만 사용. 결제는 Apple이 처리합니다.
+2. **웹 직접 배포** — **Stripe**([Stripe 방침](https://stripe.com/privacy)).
+3. 계정 또는 게스트 기기 원장.
 
-MediaForge Pro 크레딧 팩 결제는 **Stripe**를 통해 안전하게 진행됩니다:
+## 사용 분석(PostHog)
 
-- **PCI-DSS 준수 보안 결제** — 모든 결제는 Stripe 보안 결제창에서 직접 처리됩니다. MediaForge는 카드 번호나 CVC 번호를 수집하거나 보관하지 않습니다. [Stripe 개인정보 처리방침](https://stripe.com/privacy)이 적용됩니다.
-- **거래 내역 보관** — 크레딧 충전 확인 및 세무/회계 법령 준수를 위해 거래 ID, 결제 금액, 통화, 시간 정보만 보관합니다.
-- **크레딧 원장** — 계정별 크레딧 구매, 소진 및 잔액을 안전하게 기록 및 관리합니다.
+익명 이벤트, 기본 켜짐. **미디어 파일, 개인 경로, API 키는 수집하지 않습니다.** **설정 > 일반 > 사용 분석**에서 끌 수 있습니다.
 
 ## 제3자 서비스 제공업체
 
-안정적인 서비스 운영을 위해 다음 파트너와 협력합니다: Builtly(인증 및 계정 원장), Stripe(안전 결제), 클라우드 AI 추론 파트너, GitHub(오픈소스 배포).
+Apple(App Store, StoreKit, Apple로 로그인), Builtly, Stripe, PostHog, AI 추론, GitHub.
 
 ## 이용자의 권리
 
-해당 법령(GDPR 등)에 따라 계정 정보의 열람, 수정, 삭제 및 이동을 요청할 수 있습니다. 문의사항은 [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com)으로 연락해 주시기 바랍니다.
+열람, 수정, 이전 및 **앱 내 계정 삭제**(5.1.1(v)). 문의: [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
 
 ## 문의처
 

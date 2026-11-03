@@ -21,8 +21,8 @@ Unser Leitprinzip lautet **Local-First**: Standardmäßige Medienkonvertierungen
 Diese Erklärung gilt für:
 
 - **MediaForge Open** — die kostenlose Open-Source-App für macOS (und künftige Plattformen) über [GitHub Releases](https://github.com/mediaforgeapp/mediaforge/releases).
-- **MediaForge Pro & AI Forge** — cloud-gestützte Funktionen, KI-unterstützte Medienverarbeitung und Credit-Pakete.
-- **Website & Kontodienste** — Website, Benutzerauthentifizierung, Profileinstellungen und Stripe-Checkout.
+- **MediaForge Pro & AI Forge** — cloud-gestützte Funktionen, KI-unterstützte Medienverarbeitung und Credit-Pakete, über den Mac App Store und Direkt-Downloads.
+- **Website & Kontodienste** — Website, Benutzerauthentifizierung, Profileinstellungen und Zahlungsabwicklung.
 
 ## Lokale Verarbeitung (MediaForge Open)
 
@@ -35,43 +35,44 @@ Bei allen regulären Workflows in der Desktop-App verbleiben Ihre Daten strikt a
 
 ## MediaForge Pro & AI Forge Datenschutz
 
-MediaForge Pro bietet optionale, guthabenbasierte Cloud-Funktionen wie **AI Forge** (intelligente Videoanalyse, KI-Generierung und neuronale Audio-/Videoverbesserung):
+MediaForge Pro bietet optionale, guthabenbasierte Cloud-Funktionen wie **AI Forge** (FFmpeg-Befehlsplanung):
 
-- **Für KI-Aufgaben übertragene Daten** — Nur wenn Sie eine AI-Forge-Aufgabe starten, werden die dafür erforderlichen Medienabschnitte oder Prompts über verschlüsselte Verbindungen (TLS 1.3) an unsere Backend-Infrastruktur übertragen.
-- **Flüchtige Verarbeitung (Ephemeral Processing)** — An AI Forge übermittelte Mediendaten werden ausschließlich im Arbeitsspeicher verarbeitet und nach Abschluss der Aufgabe umgehend verworfen. Es findet keine dauerhafte Speicherung statt.
-- **Kein KI-Training mit Nutzerdaten** — Ihre über AI Forge verarbeiteten Medien und Prompts werden **niemals zum Trainieren von KI-Basismodellen verwendet**.
-- **Volle Kontrolle** — KI-Funktionen sind vollständig optional. Lokale FFmpeg-Workflows stellen keinerlei Verbindung zu KI-Endpunkten her.
+- **Übertragene Daten** — Nur wenn Sie AI Forge starten, werden Ihr Text-Prompt und technische Metadaten der gewählten Segmente (Dateiname, Auflösung, Codec, Container) über TLS 1.3 übertragen. **Quellvideo und -audio werden nicht hochgeladen.**
+- **Lokale Ausführung** — Das Modell liefert einen FFmpeg-Plan, den die App lokal ausführt.
+- **Flüchtige Verarbeitung** — Prompts und Metadaten werden nur im Arbeitsspeicher verarbeitet und danach verworfen.
+- **Kein KI-Training** — Diese Daten werden **niemals zum Trainieren von Modellen verwendet**.
+- **BYOK** — Ein eigener OpenAI-kompatibler Endpunkt umgeht unsere Server, verbraucht 0 Credits und speichert den API-Schlüssel nur lokal.
+- **Volle Kontrolle** — KI-Funktionen sind optional. Lokale FFmpeg-Workflows kontaktieren keine KI-Endpunkte.
 
-## Konto- und Authentifizierungsdaten
+## Konto, Authentifizierung und Gastmodus
 
-Wenn Sie sich anmelden, um Credits zu verwalten oder Pro-Funktionen zu nutzen, verarbeiten wir begrenzte Kontodaten über Builtly:
+- **Mit Apple anmelden** — Auf Apple-Plattformen inklusive privater E-Mail-Weiterleitung (Hide My Email).
+- **OAuth** — Google oder GitHub via OAuth 2.0 (PKCE). Wir erhalten nur öffentliche Profildaten, niemals Passwörter.
+- **Anonymer Gerätegast (Richtlinie 5.1.1(v))** — Kauf und Nutzung ohne Konto. Ein pseudonymes Gerätekonto (z. B. `guest_<deviceId>@guest.mediaforgeapp.com`) bucht Credits. Nach der Anmeldung können Restguthaben übertragen werden.
+- **Sitzungs-Token** — werden lokal auf dem Gerät gespeichert.
 
-- **OAuth-Anmeldung** — Anmeldung über Google oder GitHub via OAuth 2.0 (PKCE). Wir erhalten grundlegende öffentliche Profildaten (E-Mail-Adresse, Name, Avatar-URL). Passwörter erhalten wir niemals.
-- **Profilverwaltung** — Sie können Ihren Namen anpassen oder ein Profilbild hochladen. Profilbilder werden sicher in der Cloud gespeichert.
-- **Sitzungs-Token** — Zugriffs- und Aktualisierungs-Token werden im lokalen Speicher Ihres Browsers abgelegt, um Ihre Sitzung aufrechtzuerhalten.
+## Zahlungen, In-App-Käufe und Credits
 
-## Zahlungen, Abrechnung und Credits
+1. **Mac App Store** — Credit-Pakete nur über **Apple In-App Purchase (StoreKit)**. Zahlungsdaten verarbeitet Apple. Wir speichern signierte Transaktions-IDs zur Gutschrift.
+2. **Website-Direktvertrieb** — Zahlung über **Stripe** ([Stripe-Datenschutzerklärung](https://stripe.com/privacy)). Wir speichern Sitzungs-ID, Betrag, Währung, Zeitstempel und Produkt-ID.
+3. **Credit-Buch** — für Konto oder Gastgerät.
 
-Credit-Pakete für MediaForge Pro werden über **Stripe** abgewickelt:
+## Nutzungsanalyse (PostHog)
 
-- **PCI-DSS-konforme Zahlungen** — Zahlungsdaten werden direkt von Stripe verarbeitet. MediaForge speichert keine Kreditkartennummern oder CVVs. Es gilt die [Stripe-Datenschutzerklärung](https://stripe.com/privacy).
-- **Abrechnungsbelege** — Wir speichern Transaktionsbelege (Stripe-Session-ID, Betrag, Währung, Zeitstempel, Produkt-ID) zur Gutschrift und für gesetzliche Buchhaltungspflichten.
-- **Credit-Guthabenbuch** — Wir führen ein sicheres Register über gekaufte und verbrauchte Credits Ihres Kontos.
+Optionale, standardmäßig aktive Produktanalyse: App-Version, Betriebssystem, Funktionsnutzung und anonyme Fehlercodes. **Keine Mediendateien, keine privaten Pfade, keine API-Schlüssel.** Abschaltbar unter **Einstellungen > Allgemein > Nutzungsanalyse**.
 
 ## Drittanbieter-Dienstleister
 
-Wir arbeiten mit vertrauenswürdigen Partnern zusammen:
-
-- **Builtly** — Authentifizierung und Credit-Verwaltung.
-- **Stripe** — Sichere Zahlungsabwicklung.
-- **Cloud-KI-Inferenz-Provider** — Sichere, flüchtige Ausführung von AI-Forge-Aufträgen.
-- **GitHub** — Quellcode-Hosting und Download-Bereitstellung.
+- **Apple** — App Store, StoreKit und Mit Apple anmelden.
+- **Builtly** — Authentifizierung, Gastsitzungen und Credit-Buch.
+- **Stripe** — Zahlung für Direktvertrieb.
+- **PostHog** — abschaltbare Nutzungsanalyse.
+- **Cloud-KI-Inferenz** — flüchtige FFmpeg-Planung.
+- **GitHub** — Quellcode und Downloads.
 
 ## Ihre Rechte
 
-Gemäß DSGVO haben Sie das Recht auf Auskunft, Berichtigung, Löschung und Datenübertragbarkeit Ihrer Kontodaten. Wenden Sie sich hierzu an [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
-
-Lokale Daten von MediaForge Open können Sie jederzeit durch Löschen des Anwendungsverzeichnisses oder Deinstallation entfernen.
+Auskunft, Berichtigung, Übertragbarkeit und **Löschung des Kontos in der App** (Richtlinie 5.1.1(v)). Lokale Daten durch Deinstallation entfernbar. Analyse jederzeit abschaltbar. Kontakt: [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
 
 ## Kontakt
 

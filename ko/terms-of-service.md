@@ -20,11 +20,11 @@ MediaForge는 다음과 같은 멀티미디어 도구를 제공합니다:
 
 1. **MediaForge Open** — 로컬 FFmpeg/FFprobe 기반의 무료 오픈소스 데스크톱 도구 (비디오 인코딩, GIF 생성, 오디오 추출).
 2. **MediaForge Pro 및 AI Forge** — 클라우드 AI 연산 기반의 멀티미디어 분석 및 고도화 기능 (크레딧 차감 방식).
-3. **계정 및 결제 서비스** — 프로필 관리, 크레딧 잔액 확인 및 Stripe를 통한 크레딧 팩 충전 포털.
+3. **계정 및 결제 서비스** — 프로필과 Apple 인앱 구매 또는 Stripe 크레딧 팩.
 
 ## 계정 관리 의무
 
-유료 크레딧을 구매하려면 거주 지역 법률상 성년이어야 합니다. 이용자는 인증 기기 및 로그인 토큰을 안전하게 관리할 책임이 있으며, 계정에서 발생하는 모든 행위에 대해 책임을 부담합니다. 무단 접근이 의심되는 경우 즉시 [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com)으로 통보해야 합니다.
+유료 크레딧 구매는 성년이어야 합니다. 게스트 모드는 계정 없이 사용할 수 있고, 로그인 후 잔액을 옮길 수 있습니다. 앱에서 계정을 삭제할 수 있습니다. 무단 접근은 [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com)으로 알려 주세요.
 
 ## MediaForge Pro, 크레딧 및 결제
 
@@ -34,11 +34,11 @@ MediaForge는 다음과 같은 멀티미디어 도구를 제공합니다:
 - **차감 방식** — 작업 난이도에 따라 크레딧이 차감됩니다 (예: 표준 AI Forge 작업 1회당 1크레딧 소진).
 - **계정 연동** — 구매한 크레딧은 계정에 귀속되어 브라우저와 데스크톱 앱 간에 실시간 동기화됩니다.
 
-### Stripe 결제 및 환불 정책
+### 결제 경로 및 환불 정책
 
-- 결제는 Stripe를 통해 안전하게 처리되며, 지역에 따라 부가가치세(VAT) 등이 부과될 수 있습니다.
-- **소진된 크레딧** — AI 클라우드 인프라 연산 비용이 즉각 발생하므로 이미 사용된 크레딧은 환불되지 않습니다.
-- **미사용 크레딧 팩** — 크레딧 팩을 구매한 후 **해당 팩의 크레딧을 전혀 사용하지 않은 경우**, 구매일로부터 14일 이내에 [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com)으로 요청 시 전액 환불받으실 수 있습니다.
+1. **Mac App Store** — Apple이 StoreKit으로 결제합니다. 환불은 Apple이 처리하며 [reportaproblem.apple.com](https://reportaproblem.apple.com)에서 신청합니다. 개발자는 App Store 구매를 환불할 수 없습니다.
+2. **웹사이트(Stripe)** — 크레딧을 전혀 쓰지 않았다면 14일 이내 [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com)으로 전액 환불을 요청할 수 있습니다.
+- **이미 사용한 크레딧**는 결제 경로와 관계없이 환불되지 않습니다.
 
 ## AI Forge 이용 수칙 및 콘텐츠 정책
 

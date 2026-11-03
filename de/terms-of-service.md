@@ -20,11 +20,11 @@ MediaForge umfasst:
 
 1. **MediaForge Open** — eine quelloffene, lokale Benutzeroberfläche für FFmpeg zur Offline-Transkodierung, GIF-Erstellung und Audio-Extraktion.
 2. **MediaForge Pro & AI Forge** — cloud-gestützte KI-Funktionen für Video-/Audioverbesserung und Generierung, abgerechnet über Credits.
-3. **Konto- und Bezahldienste** — Webportal zur Verwaltung von Profil und Credit-Paketen via Stripe.
+3. **Konto- und Bezahldienste** — Profil, Credit-Pakete über Apple In-App Purchase oder Stripe.
 
 ## Kontoführung und Pflichten
 
-Sie müssen volljährig sein, um kostenpflichtige Credits zu erwerben. Sie sind für die Vertraulichkeit Ihrer Zugangsdaten und alle Aktivitäten unter Ihrem Konto verantwortlich. Bei Verdacht auf Missbrauch informieren Sie uns umgehend unter [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
+Sie müssen volljährig sein, um Credits zu kaufen. Gastmodus ist ohne Konto möglich; Restguthaben kann nach der Anmeldung übertragen werden. Angemeldete Nutzer schützen ihre Token und können das Konto in der App löschen. Missbrauch bitte an [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com) melden.
 
 ## MediaForge Pro, Credits und Zahlungen
 
@@ -34,15 +34,16 @@ Sie müssen volljährig sein, um kostenpflichtige Credits zu erwerben. Sie sind 
 - **Verbrauch** — Credits werden je nach Rechenaufwand abgezogen (z. B. 1 Credit für einen regulären AI-Forge-Lauf).
 - **Synchronisation** — Credits sind an Ihr MediaForge-Konto gebunden und browser- sowie geräteübergreifend verfügbar.
 
-### Zahlungsabwicklung via Stripe
+### Zahlungswege
 
-- Preise verstehen sich in USD oder lokaler Währung zzgl. gesetzlicher Steuern.
-- Zahlungen werden sicher über Stripe abgewickelt.
+1. **Mac App Store** — Abrechnung durch Apple via StoreKit. Preise und Steuern legt Apple fest.
+2. **Website** — Zahlung über Stripe, Preise in USD oder lokaler Währung zzgl. Steuern.
 
 ### Rückerstattungsrichtlinie
 
-- **Verbrauchte Credits** — Bereits für KI-Berechnungen oder Pro-Aufgaben genutzte Credits sind von Rückerstattungen ausgeschlossen.
-- **Ungenutzte Pakete** — Wenn Sie ein Credit-Paket erworben und noch keinen Credit daraus verbraucht haben, können Sie innerhalb von 14 Tagen ab Kaufdatum eine vollständige Rückerstattung unter [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com) anfordern.
+- **Verbrauchte Credits** sind über alle Kanäle nicht erstattungsfähig.
+- **Mac App Store** — Erstattungen nur über Apple, z. B. [reportaproblem.apple.com](https://reportaproblem.apple.com). Wir können App-Store-Käufe nicht erstatten.
+- **Website (Stripe)** — ungenutzte Pakete innerhalb von 14 Tagen über [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
 - Gesetzliche Verbraucherrechte bleiben unberührt.
 
 ## Nutzungsregeln für AI Forge
