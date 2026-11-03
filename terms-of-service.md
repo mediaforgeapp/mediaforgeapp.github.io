@@ -26,11 +26,12 @@ MediaForge is a multimedia productivity suite offering both local open-core tool
 
 You must be at least 18 years old or the age of majority in your jurisdiction to purchase credits or enter into binding contracts.
 
-When creating an account or signing in via Google or GitHub OAuth:
+When creating an account, signing in via Sign in with Apple, Google, or GitHub OAuth, or using the app in Anonymous Guest Device mode:
 
-- You are responsible for maintaining the confidentiality of your account credentials and tokens.
+- You can use MediaForge without creating an account in Guest Device mode. Guest credits belong to your device until voluntarily merged into a permanent account upon sign-in.
+- When signed in, you are responsible for maintaining the confidentiality of your account credentials and tokens.
 - You agree to notify us immediately at [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com) of any suspected unauthorized access to your account.
-- You are responsible for all activities that occur under your account.
+- You can delete your permanent account and all associated cloud data at any time directly within the application settings or by contacting customer support.
 
 ## MediaForge Pro, Credits, and Payments
 
@@ -42,19 +43,27 @@ MediaForge Pro uses a flexible, pay-as-you-go credit system rather than a recurr
 - **Consumption Rate** — credits are deducted based on task requirements (for example, 1 credit covers one standard AI Forge run). Current credit costs are displayed prior to executing tasks.
 - **Account Synchronization** — purchased credits are linked to your MediaForge account and synchronize across your browser sessions and desktop app instances.
 
-### Payment Processing & Stripe
+### Payment Processing: Apple In-App Purchase and Stripe
 
-Payments for credit packs are processed securely by **Stripe** via our Builtly billing backend:
+Depending on where you acquire MediaForge Pro, payment processing is handled as follows:
 
-- All prices are quoted in USD or your local currency where applicable. Taxes (such as sales tax or VAT) may be added based on your billing location.
-- You represent and warrant that you have the legal right to use the payment method provided.
+1. **Mac App Store Purchases (Apple In-App Purchase)**:
+   - All credit pack purchases in the Mac App Store edition are billed by **Apple** via StoreKit In-App Purchases.
+   - Payments are charged to your Apple Account at confirmation of purchase.
+   - Pricing, currency, and local taxes are determined and collected directly by Apple.
+
+2. **Direct Website Purchases (Stripe)**:
+   - For versions distributed directly via our website, payments are processed securely by **Stripe** via our Builtly billing backend.
+   - Prices are quoted in USD or your local currency where applicable. Taxes may be added based on your billing location.
+   - You represent and warrant that you have the legal right to use the payment method provided.
 
 ### Refund Policy
 
 Due to the immediate operational computing and inference costs incurred when running cloud AI models:
 
-- **Consumed Credits** — credits that have already been used for AI Forge runs or other Pro processing tasks are strictly non-refundable.
-- **Unused Credit Packs** — if you have purchased a credit pack and have not consumed any credits from that pack, you may request a full refund within 14 calendar days of purchase by contacting [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
+- **Consumed Credits** — credits that have already been used for AI Forge runs or other Pro processing tasks are strictly non-refundable under all purchase channels.
+- **Mac App Store Purchases (Apple IAP)** — all refund requests for purchases made through the Mac App Store are governed by Apple's terms and conditions. Apple processes all refunds directly; developers do not have the technical or legal ability to issue refunds for App Store transactions. To request a refund from Apple, visit [reportaproblem.apple.com](https://reportaproblem.apple.com) or contact Apple Support.
+- **Direct Website Purchases (Stripe)** — if you purchased a credit pack on our website and have not consumed any credits from that pack, you may request a full refund within 14 calendar days of purchase by contacting [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
 - Nothing in this section affects any statutory rights you may hold under mandatory consumer protection laws in your jurisdiction.
 
 ## AI Forge Acceptable Use & Content Policy
@@ -63,8 +72,9 @@ When utilizing cloud-assisted AI Forge features, you agree to adhere to our cont
 
 ### Ownership of Input and Output
 
-- You retain full ownership of the source media, images, and text prompts you submit to AI Forge.
+- You retain full ownership of the source media, images, and text prompts you submit to AI Forge. Standard AI Forge usage transmits text prompts and technical metadata (such as file name, codecs, and resolution) to generate FFmpeg parameter plans; your source video and audio media files are processed locally on your device.
 - Subject to your compliance with these Terms, you own all rights in the output files generated by AI Forge for your personal or commercial use.
+- If you use Bring Your Own Key (BYOK) mode, your interaction with your third-party AI provider is governed by your agreement with that provider.
 
 ### Prohibited Conduct
 
