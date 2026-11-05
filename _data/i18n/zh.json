@@ -53,27 +53,31 @@
     "scenarios": {
       "eyebrow": "核心预设",
       "title": "用 FFmpeg 预设在 Mac 上转换视频、音频与图片",
-      "lead": "五个开箱即用的日常工作流——在 Mac 上将 MP4 转为 GIF、从视频提取音频，或批量把 PNG 转为 WebP，无需碰 argv 手册。",
+      "lead": "开箱即用的可视化工作流，覆盖日常任务——在 Mac 上将 MP4 转为 GIF、从视频提取音频，或批量把 PNG 转为 WebP，无需碰 argv 手册。",
       "items": [
         {
-          "title": "视频转高质量 GIF",
-          "desc": "在 Mac 上将 MP4 转为 GIF，底层使用 FFmpeg palettegen，可视化预设即可导出更顺滑的高质量 GIF。"
+          "title": "在 Mac 上导出与压缩视频",
+          "desc": "本地缩小或转换 MP4、MOV、MKV，使用合理码率与 H.264/HEVC 编码——在 macOS 上快速压缩视频，不必猜画质参数。"
         },
         {
-          "title": "从视频提取音频",
-          "desc": "在 macOS 上无损或重编码提取 MP4 到 MP3/AAC/WAV，无需打开终端。"
+          "title": "高质量视频转 GIF（palettegen）",
+          "desc": "在 Mac 上将片段转为清晰 GIF，底层使用 FFmpeg palettegen 与 paletteuse——锐利渐变，无需手写滤镜链。"
         },
         {
-          "title": "批量 PNG 转 WebP 与图片压缩",
-          "desc": "本地图片压缩与 WebP 转换，支持 PNG/JPEG 批量处理，文件始终留在本机。"
+          "title": "从视频无损提取音频",
+          "desc": "从 MP4、MKV 或 MOV 提取音轨到 MP3、AAC 或 WAV——可流复制即时无损提取，也可干净重编码。"
         },
         {
-          "title": "压缩 / 快速导出视频",
-          "desc": "在 Mac 上压缩视频，不必深陷 CRF 参数——Quick Export 提供偏重画质的默认配置。"
+          "title": "PNG 与 JPEG 转 WebP",
+          "desc": "在 macOS 上将大体积 PNG、JPEG 批量转为轻量 WebP——适合更快的网站、应用与文档。"
         },
         {
-          "title": "Apple Silicon 硬件加速",
-          "desc": "原生 Apple Silicon 构建，并在 M1/M2/M3/M4 可用时走 VideoToolbox 加速管线。"
+          "title": "本地图片压缩",
+          "desc": "在 Mac 上直接缩小 PNG、JPEG 体积，带可视化质量控制——不上云、不限文件数量。"
+        },
+        {
+          "title": "Apple Silicon 与 VideoToolbox 加速",
+          "desc": "为 M1、M2、M3、M4 Mac 打造，支持时启用硬件加速编码，并 100% 离线处理，保护隐私。"
         }
       ]
     },

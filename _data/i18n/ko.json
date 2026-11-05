@@ -53,27 +53,31 @@
     "scenarios": {
       "eyebrow": "핵심 프리셋",
       "title": "FFmpeg 프리셋으로 Mac에서 비디오·오디오·이미지 변환",
-      "lead": "일상 작업을 위한 다섯 가지 즉시 사용 워크플로—Mac에서 MP4를 GIF로 변환, 영상에서 오디오 추출, PNG를 WebP로 일괄 변환. argv 매뉴얼은 필요 없습니다.",
+      "lead": "일상 작업을 위한 즉시 사용 시각 워크플로—Mac에서 MP4를 GIF로 변환, 영상에서 오디오 추출, PNG를 WebP로 일괄 변환. argv 매뉴얼은 필요 없습니다.",
       "items": [
         {
-          "title": "비디오를 고품질 GIF로 변환",
-          "desc": "Mac에서 MP4→GIF. 하단에 FFmpeg palettegen—시각적 프리셋으로 부드러운 고품질 GIF 내보내기."
+          "title": "Mac에서 비디오 내보내기·압축",
+          "desc": "MP4, MOV, MKV를 로컬에서 축소·변환. 합리적인 비트레이트와 H.264/HEVC로 macOS에서 빠른 비디오 압축—품질을 추측할 필요 없음."
         },
         {
-          "title": "영상에서 오디오 추출",
-          "desc": "터미널 없이 macOS에서 MP4를 MP3/AAC/WAV로 무손실 또는 재인코딩 추출."
+          "title": "고품질 비디오→GIF (palettegen)",
+          "desc": "Mac에서 클립을 선명한 GIF로. 하단은 FFmpeg palettegen·paletteuse—터미널 필터 체인 없이 또렷한 그라데이션."
         },
         {
-          "title": "PNG→WebP 일괄 변환 및 이미지 압축",
-          "desc": "PNG/JPEG 배치용 로컬 이미지 압축기·WebP 변환기. 파일은 Mac에 남습니다."
+          "title": "영상에서 무손실 오디오 추출",
+          "desc": "MP4, MKV, MOV 오디오 트랙을 MP3, AAC, WAV로—스트림 복사로 즉시 무손실 추출 또는 깔끔한 재인코딩."
         },
         {
-          "title": "비디오 압축 / 빠른 내보내기",
-          "desc": "CRF 플래그에 빠지지 않고 Mac에서 비디오 압축—Quick Export가 품질 중심 기본값을 제공합니다."
+          "title": "PNG·JPEG를 WebP로 변환",
+          "desc": "무거운 PNG·JPEG를 macOS에서 가벼운 WebP로 일괄 변환—더 빠른 웹사이트, 앱, 문서에 적합."
         },
         {
-          "title": "Apple Silicon 하드웨어 가속",
-          "desc": "네이티브 Apple Silicon 빌드. M1/M2/M3/M4에서 가능하면 VideoToolbox 파이프라인 사용."
+          "title": "로컬 이미지 압축",
+          "desc": "Mac에서 PNG·JPEG 파일 크기를 시각적 품질 컨트롤로 바로 축소—클라우드 업로드 없음, 파일 수 제한 없음."
+        },
+        {
+          "title": "Apple Silicon & VideoToolbox 속도",
+          "desc": "M1, M2, M3, M4 Mac용. 지원 시 하드웨어 가속 인코딩, 그리고 100% 오프라인 처리로 완전한 프라이버시."
         }
       ]
     },

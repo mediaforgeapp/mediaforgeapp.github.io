@@ -53,27 +53,31 @@
     "scenarios": {
       "eyebrow": "Core presets",
       "title": "Convert video, audio & images on Mac with FFmpeg presets",
-      "lead": "Five ready-made workflows for everyday tasks—convert MP4 to GIF on Mac, extract audio from video, or batch convert PNG to WebP without touching argv manuals.",
+      "lead": "Ready-made visual workflows for everyday tasks—convert MP4 to GIF on Mac, extract audio from video, or batch convert PNG to WebP without touching argv manuals.",
       "items": [
         {
-          "title": "Convert video to GIF (high quality)",
-          "desc": "MP4 to GIF on Mac with FFmpeg palettegen under the hood—smooth, high-quality GIF export from a visual preset."
+          "title": "Export & compress video on Mac",
+          "desc": "Shrink or convert MP4, MOV, and MKV files locally with sensible bitrates and H.264/HEVC encoding—fast video compression on macOS without quality guesswork."
         },
         {
-          "title": "Extract audio from video",
-          "desc": "Lossless or re-encoded MP4 to MP3/AAC/WAV extraction on macOS without opening Terminal."
+          "title": "High-quality video to GIF (palettegen)",
+          "desc": "Turn clips into crisp GIFs on Mac using FFmpeg palettegen and paletteuse under the hood—sharp gradients without terminal filter chains."
         },
         {
-          "title": "Batch PNG to WebP & image compress",
-          "desc": "Local image compressor and WebP converter for PNG/JPEG batches. Files stay on your Mac."
+          "title": "Extract lossless audio from video",
+          "desc": "Pull audio tracks from MP4, MKV, or MOV to MP3, AAC, or WAV—stream copy for instant lossless extraction or clean re-encodes."
         },
         {
-          "title": "Compress / quick-export video",
-          "desc": "Compress video on Mac without drowning in CRF flags—Quick Export keeps quality-focused defaults close at hand."
+          "title": "Convert PNG & JPEG to WebP",
+          "desc": "Batch convert heavy PNG and JPEG assets into lightweight WebP images on macOS—ideal for faster websites, apps, and docs."
         },
         {
-          "title": "Apple Silicon hardware acceleration",
-          "desc": "Native Apple Silicon builds with VideoToolbox-aware pipelines when your M1/M2/M3/M4 Mac supports them."
+          "title": "Local image compression",
+          "desc": "Shrink PNG and JPEG file sizes directly on your Mac with visual quality controls—no cloud uploads, no file count limits."
+        },
+        {
+          "title": "Apple Silicon & VideoToolbox speed",
+          "desc": "Built for M1, M2, M3, and M4 Macs with hardware-accelerated encoding when supported, plus 100% offline processing for total privacy."
         }
       ]
     },

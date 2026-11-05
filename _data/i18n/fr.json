@@ -53,27 +53,31 @@
     "scenarios": {
       "eyebrow": "Presets principaux",
       "title": "Convertissez vidéo, audio & images sur Mac avec des presets FFmpeg",
-      "lead": "Cinq workflows prêts pour le quotidien—convertissez MP4 en GIF sur Mac, extrayez l’audio d’une vidéo ou convertissez des lots PNG en WebP sans toucher aux manuels argv.",
+      "lead": "Workflows visuels prêts pour le quotidien—convertissez MP4 en GIF sur Mac, extrayez l’audio d’une vidéo ou convertissez des lots PNG en WebP sans toucher aux manuels argv.",
       "items": [
         {
-          "title": "Convertir la vidéo en GIF (haute qualité)",
-          "desc": "MP4 vers GIF sur Mac avec FFmpeg palettegen—export GIF fluide et haute qualité depuis un preset visuel."
+          "title": "Exporter et compresser la vidéo sur Mac",
+          "desc": "Réduisez ou convertissez localement des fichiers MP4, MOV et MKV avec des débits raisonnables et un encodage H.264/HEVC—compression vidéo rapide sur macOS sans deviner la qualité."
         },
         {
-          "title": "Extraire l’audio d’une vidéo",
-          "desc": "Extraction MP4 vers MP3/AAC/WAV sans perte ou réencodée sur macOS sans ouvrir le Terminal."
+          "title": "Vidéo vers GIF haute qualité (palettegen)",
+          "desc": "Transformez des clips en GIF nets sur Mac avec FFmpeg palettegen et paletteuse—dégradés nets sans chaînes de filtres en terminal."
         },
         {
-          "title": "PNG vers WebP par lots & compression d’images",
-          "desc": "Compresseur d’images local et convertisseur WebP pour lots PNG/JPEG. Les fichiers restent sur votre Mac."
+          "title": "Extraire l’audio sans perte d’une vidéo",
+          "desc": "Extrayez les pistes audio de MP4, MKV ou MOV vers MP3, AAC ou WAV—copie de flux pour une extraction sans perte instantanée ou des réencodages propres."
         },
         {
-          "title": "Compresser / exporter rapidement la vidéo",
-          "desc": "Compressez la vidéo sur Mac sans vous noyer dans les flags CRF—Quick Export garde des défauts orientés qualité à portée de main."
+          "title": "Convertir PNG et JPEG en WebP",
+          "desc": "Convertissez par lots des PNG et JPEG lourds en images WebP légères sur macOS—idéal pour des sites, apps et docs plus rapides."
         },
         {
-          "title": "Accélération matérielle Apple Silicon",
-          "desc": "Builds Apple Silicon natives avec pipelines VideoToolbox sur Mac M1/M2/M3/M4 si disponibles."
+          "title": "Compression d’images locale",
+          "desc": "Réduisez la taille des PNG et JPEG directement sur votre Mac avec des contrôles de qualité visuels—pas d’uploads cloud, pas de limite de fichiers."
+        },
+        {
+          "title": "Vitesse Apple Silicon et VideoToolbox",
+          "desc": "Conçu pour les Macs M1, M2, M3 et M4 avec encodage accéléré matériel quand c’est pris en charge, plus un traitement 100 % hors ligne pour une confidentialité totale."
         }
       ]
     },

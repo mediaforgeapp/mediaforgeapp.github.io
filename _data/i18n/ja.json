@@ -53,27 +53,31 @@
     "scenarios": {
       "eyebrow": "コアプリセット",
       "title": "FFmpeg プリセットで Mac 上の動画・音声・画像を変換",
-      "lead": "日常向けの 5 つの即戦力ワークフロー—Mac で MP4 を GIF に変換、動画から音声を抽出、PNG を WebP に一括変換。argv マニュアルは不要です。",
+      "lead": "日常向けの即戦力ビジュアルワークフロー—Mac で MP4 を GIF に変換、動画から音声を抽出、PNG を WebP に一括変換。argv マニュアルは不要です。",
       "items": [
         {
-          "title": "動画を高品質 GIF に変換",
-          "desc": "Mac で MP4 を GIF に。下層は FFmpeg palettegen—ビジュアルプリセットからなめらかな高品質 GIF を書き出し。"
+          "title": "Mac で動画を書き出し・圧縮",
+          "desc": "MP4 / MOV / MKV をローカルで縮小・変換。妥当なビットレートと H.264/HEVC で、macOS 上の高速動画圧縮を画質の勘に頼らず実行。"
         },
         {
-          "title": "動画から音声を抽出",
-          "desc": "Terminal を開かずに、macOS で MP4 から MP3/AAC/WAV をロスレスまたは再エンコード抽出。"
+          "title": "高品質動画→GIF（palettegen）",
+          "desc": "Mac でクリップをくっきりした GIF に。下層は FFmpeg palettegen と paletteuse—ターミナルのフィルター連鎖なしでシャープなグラデーション。"
         },
         {
-          "title": "PNG 一括 WebP 変換と画像圧縮",
-          "desc": "PNG/JPEG バッチ向けのローカル画像圧縮と WebP 変換。ファイルは Mac に残ります。"
+          "title": "動画からロスレス音声を抽出",
+          "desc": "MP4 / MKV / MOV の音軌を MP3 / AAC / WAV へ—ストリームコピーで即ロスレス抽出、またはクリーンな再エンコード。"
         },
         {
-          "title": "動画圧縮 / クイック書き出し",
-          "desc": "CRF フラグに溺れず Mac で動画圧縮—Quick Export が画質寄りの既定値をすぐ使えます。"
+          "title": "PNG と JPEG を WebP に変換",
+          "desc": "重い PNG / JPEG を macOS 上で軽量 WebP に一括変換—より速いサイト・アプリ・ドキュメント向け。"
         },
         {
-          "title": "Apple Silicon ハードウェアアクセラレーション",
-          "desc": "ネイティブ Apple Silicon ビルド。M1/M2/M3/M4 で可能な場合は VideoToolbox パイプラインを使用。"
+          "title": "ローカル画像圧縮",
+          "desc": "Mac 上で PNG / JPEG のファイルサイズを視覚的な品質コントロールで縮小—クラウド不要、枚数制限なし。"
+        },
+        {
+          "title": "Apple Silicon と VideoToolbox の速度",
+          "desc": "M1 / M2 / M3 / M4 Mac 向け。対応時はハードウェア加速エンコード、加えて 100% オフライン処理でプライバシーを確保。"
         }
       ]
     },

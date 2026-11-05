@@ -53,27 +53,31 @@
     "scenarios": {
       "eyebrow": "Kern-Presets",
       "title": "Video, Audio & Bilder auf dem Mac mit FFmpeg-Presets konvertieren",
-      "lead": "Fünf fertige Workflows für den Alltag—MP4 auf dem Mac zu GIF konvertieren, Audio aus Video extrahieren oder PNG-Batches nach WebP wandeln, ohne argv-Handbücher anzufassen.",
+      "lead": "Fertige visuelle Workflows für den Alltag—MP4 auf dem Mac zu GIF konvertieren, Audio aus Video extrahieren oder PNG-Batches nach WebP wandeln, ohne argv-Handbücher anzufassen.",
       "items": [
         {
-          "title": "Video zu hochwertigem GIF",
-          "desc": "MP4 zu GIF auf dem Mac mit FFmpeg-palettegen—glatte, hochwertige GIF-Exports aus einem visuellen Preset."
+          "title": "Video auf dem Mac exportieren & komprimieren",
+          "desc": "MP4-, MOV- und MKV-Dateien lokal verkleinern oder konvertieren mit sinnvollen Bitraten und H.264/HEVC—schnelle Videokompression unter macOS ohne Qualitätsraten."
         },
         {
-          "title": "Audio aus Video extrahieren",
-          "desc": "Verlustfreie oder neu kodierte MP4-zu-MP3/AAC/WAV-Extraktion unter macOS ohne Terminal."
+          "title": "Hochwertiges Video zu GIF (palettegen)",
+          "desc": "Clips auf dem Mac zu knackigen GIFs machen mit FFmpeg palettegen und paletteuse—scharfe Verläufe ohne Terminal-Filterketten."
         },
         {
-          "title": "PNG-zu-WebP-Batch & Bildkompression",
-          "desc": "Lokaler Bildkompressor und WebP-Konverter für PNG/JPEG-Batches. Dateien bleiben auf dem Mac."
+          "title": "Verlustfreies Audio aus Video extrahieren",
+          "desc": "Audiospuren aus MP4, MKV oder MOV nach MP3, AAC oder WAV ziehen—Stream-Copy für sofortige verlustfreie Extraktion oder saubere Neuencodierung."
         },
         {
-          "title": "Video komprimieren / Quick Export",
-          "desc": "Video auf dem Mac komprimieren ohne in CRF-Flags zu versinken—Quick Export hält qualitätsnahe Defaults bereit."
+          "title": "PNG & JPEG zu WebP konvertieren",
+          "desc": "Schwere PNG- und JPEG-Assets auf macOS batchweise in leichte WebP-Bilder wandeln—ideal für schnellere Websites, Apps und Docs."
         },
         {
-          "title": "Apple-Silicon-Hardwarebeschleunigung",
-          "desc": "Native Apple-Silicon-Builds mit VideoToolbox-Pipelines auf M1/M2/M3/M4 wenn verfügbar."
+          "title": "Lokale Bildkompression",
+          "desc": "PNG- und JPEG-Dateigrößen direkt auf dem Mac mit visuellen Qualitätsreglern verkleinern—keine Cloud-Uploads, keine Dateianzahl-Limits."
+        },
+        {
+          "title": "Apple Silicon & VideoToolbox-Tempo",
+          "desc": "Für M1-, M2-, M3- und M4-Macs gebaut mit hardwarebeschleunigter Kodierung wenn unterstützt, plus 100 % Offline-Verarbeitung für volle Privatsphäre."
         }
       ]
     },
