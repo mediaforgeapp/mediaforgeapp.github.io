@@ -27,8 +27,8 @@
         "href": "https://github.com/mediaforgeapp/mediaforge"
       },
       "note": "オープンソース版。macOS は利用可能。Windows / Linux / モバイルは近日対応。",
-      "download_macos": "macOS をダウンロード · {version}",
-      "release_note": "最新 macOS ビルド · {version}。Windows、Linux、モバイルは開発中です。",
+      "download_macos": "macOS をダウンロード",
+      "release_note": "最新 macOS ビルドは GitHub Releases から。Windows、Linux、モバイルは開発中です。",
       "preview_alt": "macOS 上の MediaForge オープンソース FFmpeg GUI 画面。ドラッグ＆ドロップの動画コンバーターを表示"
     },
     "pillars": {
@@ -145,7 +145,7 @@
         "title": "GitHub で見る",
         "href": "https://github.com/mediaforgeapp/mediaforge"
       },
-      "download_macos": "macOS をダウンロード · {version}"
+      "download_macos": "macOS をダウンロード"
     },
     "screenshots": {
       "eyebrow": "実際の画面",
@@ -201,7 +201,7 @@
         "href": "https://github.com/mediaforgeapp/mediaforge/releases"
       },
       "note": "macOS DMG は GitHub Releases から入手可能。他プラットフォームは開発中。",
-      "release_note": "最新 macOS リリース · {version}。他プラットフォームは開発中です。"
+      "release_note": "最新 macOS リリースは GitHub Releases から。他プラットフォームは開発中です。"
     },
     "platforms": {
       "eyebrow": "プラットフォーム",
@@ -234,7 +234,7 @@
     },
     "macos": {
       "app_store": "Mac App Store",
-      "download_dmg": "DMG をダウンロード · {version}",
+      "download_dmg": "DMG をダウンロード",
       "download_dmg_fallback": "DMG をダウンロード"
     },
     "mobile": {

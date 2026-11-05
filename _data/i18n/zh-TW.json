@@ -27,8 +27,8 @@
         "href": "https://github.com/mediaforgeapp/mediaforge"
       },
       "note": "開源版本。macOS 現已可用；Windows、Linux 與行動版即將推出。",
-      "download_macos": "下載 macOS · {version}",
-      "release_note": "最新 macOS 版本 · {version}。Windows、Linux 與行動版仍在開發中。",
+      "download_macos": "下載 macOS",
+      "release_note": "最新 macOS 版本請從 GitHub Releases 取得。Windows、Linux 與行動版仍在開發中。",
       "preview_alt": "MediaForge 開源 FFmpeg GUI 在 macOS 上的介面，展示拖放式影片轉換"
     },
     "pillars": {
@@ -145,7 +145,7 @@
         "title": "在 GitHub 查看",
         "href": "https://github.com/mediaforgeapp/mediaforge"
       },
-      "download_macos": "下載 macOS · {version}"
+      "download_macos": "下載 macOS"
     },
     "screenshots": {
       "eyebrow": "一眼看懂",
@@ -201,7 +201,7 @@
         "href": "https://github.com/mediaforgeapp/mediaforge/releases"
       },
       "note": "macOS DMG 可從 GitHub Releases 取得，其它平台開發中。",
-      "release_note": "最新 macOS 版本 · {version}，其它平台仍在開發中。"
+      "release_note": "最新 macOS 版本請從 GitHub Releases 取得，其它平台仍在開發中。"
     },
     "platforms": {
       "eyebrow": "平台",
@@ -234,7 +234,7 @@
     },
     "macos": {
       "app_store": "Mac App Store",
-      "download_dmg": "下載 DMG · {version}",
+      "download_dmg": "下載 DMG",
       "download_dmg_fallback": "下載 DMG"
     },
     "mobile": {

@@ -27,8 +27,8 @@
         "href": "https://github.com/mediaforgeapp/mediaforge"
       },
       "note": "Edición open source. macOS disponible ahora; Windows, Linux y móvil pronto.",
-      "download_macos": "Descargar macOS · {version}",
-      "release_note": "Última build de macOS · {version}. Windows, Linux y móvil siguen en desarrollo.",
+      "download_macos": "Descargar macOS",
+      "release_note": "Última build de macOS en GitHub Releases. Windows, Linux y móvil siguen en desarrollo.",
       "preview_alt": "Interfaz de la GUI FFmpeg de código abierto MediaForge en macOS mostrando convertidor de vídeo por arrastrar y soltar"
     },
     "pillars": {
@@ -145,7 +145,7 @@
         "title": "Ver en GitHub",
         "href": "https://github.com/mediaforgeapp/mediaforge"
       },
-      "download_macos": "Descargar macOS · {version}"
+      "download_macos": "Descargar macOS"
     },
     "screenshots": {
       "eyebrow": "En acción",
@@ -201,7 +201,7 @@
         "href": "https://github.com/mediaforgeapp/mediaforge/releases"
       },
       "note": "El DMG de macOS está en GitHub Releases. Otras plataformas en desarrollo.",
-      "release_note": "Última versión de macOS · {version}. Otras plataformas siguen en desarrollo."
+      "release_note": "Última versión de macOS en GitHub Releases. Otras plataformas siguen en desarrollo."
     },
     "platforms": {
       "eyebrow": "Plataformas",
@@ -234,7 +234,7 @@
     },
     "macos": {
       "app_store": "Mac App Store",
-      "download_dmg": "Descargar DMG · {version}",
+      "download_dmg": "Descargar DMG",
       "download_dmg_fallback": "Descargar DMG"
     },
     "mobile": {

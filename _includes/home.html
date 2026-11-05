@@ -5,9 +5,9 @@
 {% assign compare = t.home.compare %}
 {% assign faq = t.home.faq %}
 {% assign final_cta = t.home.final_cta %}
-{% assign download_label = hero.download_macos | replace: '{version}', site.release.version %}
-{% assign release_note = hero.release_note | replace: '{version}', site.release.version %}
-{% assign cta_download_label = final_cta.download_macos | replace: '{version}', site.release.version %}
+{% assign download_label = hero.download_macos %}
+{% assign release_note = hero.release_note %}
+{% assign cta_download_label = final_cta.download_macos %}
 {% assign preview_alt = hero.preview_alt | default: 'MediaForge open-source FFmpeg GUI interface on macOS showing drag-and-drop video converter' %}
 
 <main>

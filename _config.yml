@@ -8,10 +8,9 @@ baseurl: ""
 
 permalink: pretty
 
-# Latest macOS release (update when publishing a new build)
+# macOS download points at GitHub's rolling latest release page
 release:
-  version: "0.0.2-beta"
-  macos_dmg: "https://github.com/mediaforgeapp/mediaforge/releases/download/v0.0.2-beta/MediaForge_macos_v0.0.2-beta.dmg"
+  macos_dmg: "https://github.com/mediaforgeapp/mediaforge/releases/latest"
 
 github_repo: "https://github.com/mediaforgeapp/mediaforge"
 github_releases: "https://github.com/mediaforgeapp/mediaforge/releases"

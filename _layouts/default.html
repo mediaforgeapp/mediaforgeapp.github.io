@@ -169,7 +169,6 @@
         "applicationCategory": "MultimediaApplication",
         "applicationSubCategory": {{ schema_subcategory | jsonify }},
         "operatingSystem": "macOS",
-        "softwareVersion": {{ site.release.version | jsonify }},
         "isAccessibleForFree": true,
         "image": {{ '/assets/images/preview.png' | absolute_url | jsonify }},
         "downloadUrl": {{ site.release.macos_dmg | jsonify }},
@@ -236,7 +235,6 @@
         "name": "MediaForge",
         "operatingSystem": "macOS",
         "applicationCategory": "MultimediaApplication",
-        "softwareVersion": {{ site.release.version | jsonify }},
         "downloadUrl": {{ site.release.macos_dmg | jsonify }},
         "offers": {
           "@type": "Offer",

@@ -27,8 +27,8 @@
         "href": "https://github.com/mediaforgeapp/mediaforge"
       },
       "note": "오픈소스 에디션. macOS는 지금 이용 가능하며 Windows, Linux, 모바일은 곧 제공됩니다.",
-      "download_macos": "macOS 다운로드 · {version}",
-      "release_note": "최신 macOS 빌드 · {version}. Windows, Linux, 모바일은 개발 중입니다.",
+      "download_macos": "macOS 다운로드",
+      "release_note": "최신 macOS 빌드는 GitHub Releases에서. Windows, Linux, 모바일은 개발 중입니다.",
       "preview_alt": "macOS의 MediaForge 오픈소스 FFmpeg GUI 화면—드래그 앤 드롭 비디오 변환기"
     },
     "pillars": {
@@ -145,7 +145,7 @@
         "title": "GitHub에서 보기",
         "href": "https://github.com/mediaforgeapp/mediaforge"
       },
-      "download_macos": "macOS 다운로드 · {version}"
+      "download_macos": "macOS 다운로드"
     },
     "screenshots": {
       "eyebrow": "실제 화면",
@@ -201,7 +201,7 @@
         "href": "https://github.com/mediaforgeapp/mediaforge/releases"
       },
       "note": "macOS DMG는 GitHub Releases에서 제공됩니다. 다른 플랫폼은 개발 중.",
-      "release_note": "최신 macOS 릴리스 · {version}. 다른 플랫폼은 개발 중입니다."
+      "release_note": "최신 macOS 릴리스는 GitHub Releases에서. 다른 플랫폼은 개발 중입니다."
     },
     "platforms": {
       "eyebrow": "플랫폼",
@@ -234,7 +234,7 @@
     },
     "macos": {
       "app_store": "Mac App Store",
-      "download_dmg": "DMG 다운로드 · {version}",
+      "download_dmg": "DMG 다운로드",
       "download_dmg_fallback": "DMG 다운로드"
     },
     "mobile": {
