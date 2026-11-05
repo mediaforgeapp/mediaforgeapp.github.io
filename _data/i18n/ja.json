@@ -53,7 +53,7 @@
     "scenarios": {
       "eyebrow": "コアプリセット",
       "title": "FFmpeg プリセットで Mac 上の動画・音声・画像を変換",
-      "lead": "「MP4 to GIF Mac」「動画から音声抽出」「PNG to WebP」などの実検索に応える 5 つの即戦力ワークフロー—argv マニュアルではありません。",
+      "lead": "日常向けの 5 つの即戦力ワークフロー—Mac で MP4 を GIF に変換、動画から音声を抽出、PNG を WebP に一括変換。argv マニュアルは不要です。",
       "items": [
         {
           "title": "動画を高品質 GIF に変換",
@@ -85,7 +85,7 @@
         {
           "vs": "オンライン変換との比較",
           "title": "100% ローカルファースト",
-          "desc": "ファイルは Mac から出ません。アップロードなし、クラウド待ちなし、サイズ制限なし。プライバシー設計。"
+          "desc": "ファイルは Mac から出ません。アップロードなし、クラウド待ちなし、ファイルサイズ制限なし。100% ローカル処理でプライバシーを守ります。"
         },
         {
           "vs": "HandBrake / Shutter Encoder との比較",
@@ -102,7 +102,7 @@
     "faq": {
       "eyebrow": "FAQ",
       "title": "よくある質問",
-      "lead": "FFmpeg GUI Mac、HandBrake 代替、ローカル動画変換を探す方向けの回答。",
+      "lead": "MediaForge をローカルな macOS 動画コンバーター兼 FFmpeg GUI として使うために知っておきたいこと。",
       "items": [
         {
           "q": "先に Homebrew で FFmpeg をインストールする必要がありますか？",

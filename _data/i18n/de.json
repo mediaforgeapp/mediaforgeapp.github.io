@@ -53,7 +53,7 @@
     "scenarios": {
       "eyebrow": "Kern-Presets",
       "title": "Video, Audio & Bilder auf dem Mac mit FFmpeg-Presets konvertieren",
-      "lead": "Fünf fertige Workflows für Suchanfragen wie „MP4 to GIF Mac“, „Audio aus Video extrahieren“ oder „PNG to WebP“—keine argv-Handbücher.",
+      "lead": "Fünf fertige Workflows für den Alltag—MP4 auf dem Mac zu GIF konvertieren, Audio aus Video extrahieren oder PNG-Batches nach WebP wandeln, ohne argv-Handbücher anzufassen.",
       "items": [
         {
           "title": "Video zu hochwertigem GIF",
@@ -85,7 +85,7 @@
         {
           "vs": "vs Online-Konverter",
           "title": "100 % Local-first",
-          "desc": "Dateien verlassen den Mac nie—keine Uploads, keine Cloud-Warteschlangen, keine Größenlimits. Privatsphäre by Design."
+          "desc": "Dateien verlassen deinen Mac nie—keine Uploads, keine Cloud-Warteschlangen, keine Dateigrößenlimits. 100 % lokale Verarbeitung mit Privatsphäre by Design."
         },
         {
           "vs": "vs HandBrake / Shutter Encoder",
@@ -102,7 +102,7 @@
     "faq": {
       "eyebrow": "FAQ",
       "title": "Häufig gestellte Fragen",
-      "lead": "Antworten für Suchen nach FFmpeg GUI Mac, HandBrake-Alternativen und lokalen Videokonvertern.",
+      "lead": "Alles, was du wissen musst, um MediaForge als lokalen macOS-Videokonverter und FFmpeg-GUI zu nutzen.",
       "items": [
         {
           "q": "Muss ich FFmpeg zuerst per Homebrew installieren?",

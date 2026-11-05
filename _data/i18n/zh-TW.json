@@ -53,7 +53,7 @@
     "scenarios": {
       "eyebrow": "核心預設",
       "title": "用 FFmpeg 預設在 Mac 上轉換影片、音訊與圖片",
-      "lead": "五個開箱即用的場景，對應「MP4 轉 GIF」「提取音訊」「PNG 轉 WebP」等真實搜尋需求——而不是 argv 手冊。",
+      "lead": "五個開箱即用的日常工作流——在 Mac 上將 MP4 轉為 GIF、從影片提取音訊，或批次把 PNG 轉為 WebP，無需碰 argv 手冊。",
       "items": [
         {
           "title": "影片轉高品質 GIF",
@@ -85,7 +85,7 @@
         {
           "vs": "對比線上轉換站",
           "title": "100% Local-first 本地處理",
-          "desc": "檔案絕不上傳雲端：無排隊、無大小限制，隱私預設受保護——這也是 FFmix 等本地工具強調的核心賣點。"
+          "desc": "檔案絕不離開你的 Mac——無上傳、無雲端排隊、無檔案大小限制。100% 本地處理，隱私預設受保護。"
         },
         {
           "vs": "對比 HandBrake / Shutter Encoder",
@@ -102,7 +102,7 @@
     "faq": {
       "eyebrow": "常見問題",
       "title": "高頻問答",
-      "lead": "面向搜尋「FFmpeg GUI Mac」「HandBrake 替代」「本地影片轉換」的使用者。",
+      "lead": "把 MediaForge 當作本地 macOS 影片轉換器與 FFmpeg GUI 時，你需要了解的一切。",
       "items": [
         {
           "q": "需要先透過 Homebrew 安裝 FFmpeg 嗎？",
