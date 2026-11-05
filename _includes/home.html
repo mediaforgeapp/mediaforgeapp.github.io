@@ -149,7 +149,9 @@
       <div class="border-foreground/10 bg-card/50 w-full rounded-2xl border p-1 shadow-sm backdrop-blur" data-accordion>
         {% for item in faq.items %}
         <details class="group rounded-xl px-6 py-1">
-          <summary class="cursor-pointer list-none py-4 text-base font-medium text-foreground">{{ item.q }}</summary>
+          <summary class="cursor-pointer list-none py-4 text-foreground">
+            <h3 class="faq-question text-base font-medium tracking-tight text-foreground">{{ item.q }}</h3>
+          </summary>
           <p class="text-muted-foreground pb-4 text-sm leading-relaxed">{{ item.a }}</p>
         </details>
         {% unless forloop.last %}<hr class="mx-6 border-dashed opacity-50" />{% endunless %}

@@ -336,7 +336,16 @@
   "home_meta": {
     "title": "MediaForge – Kostenlose Open-Source-FFmpeg-GUI für macOS | Lokaler Video- & GIF-Konverter",
     "description": "Nutze FFmpeg unter macOS ohne Kommandozeile. MediaForge ist eine kostenlose Open-Source-Desktop-FFmpeg-GUI mit visuellen Presets für Videoexport, hochwertige GIFs, Audioextraktion und lokales WebP.",
-    "keywords": "FFmpeg GUI Mac, macOS FFmpeg GUI, Open Source FFmpeg GUI, lokaler Videokonverter Mac, MP4 zu GIF Mac, Audio extrahieren Mac, PNG zu WebP, HandBrake Alternative, VideoToolbox, Apple Silicon"
+    "keywords": "FFmpeg GUI Mac, macOS FFmpeg GUI, Open Source FFmpeg GUI, lokaler Videokonverter Mac, MP4 zu GIF Mac, Audio extrahieren Mac, PNG zu WebP, HandBrake Alternative, VideoToolbox, Apple Silicon",
+    "headline": "Die Open-Source-FFmpeg-GUI für macOS",
+    "application_subcategory": "Videokonverter & FFmpeg-GUI",
+    "feature_list": [
+      "Visuelle FFmpeg-Presets für den Mac-Alltag",
+      "MP4 zu GIF auf dem Mac mit FFmpeg-palettegen",
+      "Verlustfreie oder neu kodierte MP4-zu-MP3/AAC/WAV-Audioextraktion",
+      "PNG/JPEG-zu-WebP-Batch-Konverter und lokaler Bildkompressor",
+      "Native Apple-Silicon-(M1/M2/M3/M4)- und VideoToolbox-Hardwarebeschleunigung"
+    ]
   },
   "download_meta": {
     "title": "MediaForge für macOS herunterladen",

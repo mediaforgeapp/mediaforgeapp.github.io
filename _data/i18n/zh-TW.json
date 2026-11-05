@@ -336,7 +336,16 @@
   "home_meta": {
     "title": "MediaForge – 免費開源 macOS FFmpeg GUI | 本地影片與 GIF 轉換器",
     "description": "不用命令列也能在 macOS 上使用 FFmpeg。MediaForge 是免費開源的桌面 FFmpeg GUI，提供視覺化預設：匯出影片、高品質 GIF、提取音訊、本地轉換 WebP。",
-    "keywords": "FFmpeg GUI Mac, macOS FFmpeg 圖形介面, 開源 FFmpeg GUI, 免費 FFmpeg 封裝, Mac 本地影片轉換, MP4 轉 GIF, 提取音訊, PNG 轉 WebP, HandBrake 替代, VideoToolbox, Apple Silicon"
+    "keywords": "FFmpeg GUI Mac, macOS FFmpeg 圖形介面, 開源 FFmpeg GUI, 免費 FFmpeg 封裝, Mac 本地影片轉換, MP4 轉 GIF, 提取音訊, PNG 轉 WebP, HandBrake 替代, VideoToolbox, Apple Silicon",
+    "headline": "面向 macOS 的開源 FFmpeg GUI",
+    "application_subcategory": "影片轉換器與 FFmpeg GUI",
+    "feature_list": [
+      "面向日常 Mac 媒體任務的視覺化 FFmpeg 預設",
+      "在 Mac 上將 MP4 轉為 GIF（FFmpeg palettegen）",
+      "無損或重編碼提取 MP4 音訊到 MP3/AAC/WAV",
+      "批次 PNG/JPEG 轉 WebP 與本地圖片壓縮",
+      "原生 Apple Silicon（M1/M2/M3/M4）與 VideoToolbox 硬體加速"
+    ]
   },
   "download_meta": {
     "title": "下載 MediaForge（macOS）",
