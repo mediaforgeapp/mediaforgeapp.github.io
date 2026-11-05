@@ -8,16 +8,16 @@
     "account": "账户"
   },
   "footer": {
-    "description": "用可视化 FFmpeg 工作流锻造你的媒体。桌面优先、本地处理、开源核心。",
+    "description": "面向 macOS 的免费开源 FFmpeg GUI。本地完成视频、GIF、音频与 WebP 转换——无需终端。",
     "privacy": "隐私政策",
     "terms": "服务条款",
     "copyright_suffix": "保留所有权利"
   },
   "home": {
     "hero": {
-      "eyebrow": "MediaForge Open",
-      "title": "不用记命令行，也能锻造媒体。",
-      "lead": "桌面端 FFmpeg 可视化应用：拖入文件、选择场景预设，即可完成导出、GIF、音频提取等操作。",
+      "eyebrow": "面向 macOS 的开源 FFmpeg GUI",
+      "title": "面向 macOS 的开源 FFmpeg GUI — 不用命令行，也能锻造媒体。",
+      "lead": "MediaForge 是免费、本地优先的 Mac 视频转换器，把 FFmpeg 包进可视化预设：导出/压缩 MP4 与 MKV、用 palettegen 生成高质量 GIF、无损提取音频到 MP3/AAC/WAV、批量把 PNG 转为 WebP，并在可用时启用 Apple Silicon 与 VideoToolbox 加速。拖入文件、选择场景即可锻造。",
       "primary": {
         "title": "下载 macOS 版",
         "href": "/download"
@@ -28,30 +28,111 @@
       },
       "note": "开源版本。macOS 现已可用；Windows、Linux 与移动端即将推出。",
       "download_macos": "下载 macOS · {version}",
-      "release_note": "最新 macOS 版本 · {version}。Windows、Linux 与移动端仍在开发中。"
+      "release_note": "最新 macOS 版本 · {version}。Windows、Linux 与移动端仍在开发中。",
+      "preview_alt": "MediaForge 开源 FFmpeg GUI 在 macOS 上的界面，展示拖放式视频转换"
     },
     "pillars": {
       "eyebrow": "为创作者打造",
-      "title": "锻造流程的三大支柱",
-      "lead": "可视化预设、专注的锻造体验，以及本地 FFmpeg 能力。",
+      "title": "由 FFmpeg 驱动的原生 macOS 视频、音频与图片工作流",
+      "lead": "开源的 macOS FFmpeg 图形界面：可视化预设、拖放本地处理、感知硬件加速——无需死记参数。",
       "items": [
         {
           "title": "可视化 FFmpeg 预设",
-          "desc": "快速导出、制作 GIF、提取音频、压缩图片、转换 WebP——无需终端。"
+          "desc": "快速导出、高质量 GIF（palettegen）、无损音频提取、图片压缩与 WebP 转换——覆盖日常 Mac 媒体任务的 FFmpeg GUI 工作流。"
         },
         {
-          "title": "Spark 锻造体验",
-          "desc": "拖放预览、实时进度、可控的输出路径，一气呵成。"
+          "title": "拖放式本地媒体处理",
+          "desc": "拖入 MP4、MKV 与图片，预览输入、查看实时进度，全程本地锻造。无上传、无云端排队。"
         },
         {
           "title": "开源核心，Pro 可扩展",
-          "desc": "核心免费开源；AI Forge、高级编解码与更广媒体支持将在 MediaForge Pro 提供。"
+          "desc": "今天即可使用免费开源 FFmpeg GUI；AI Forge、高级编解码与更广媒体支持将在 MediaForge Pro 提供。"
+        }
+      ]
+    },
+    "scenarios": {
+      "eyebrow": "核心预设",
+      "title": "用 FFmpeg 预设在 Mac 上转换视频、音频与图片",
+      "lead": "五个开箱即用的场景，对应「MP4 转 GIF」「提取音频」「PNG 转 WebP」等真实搜索需求——而不是 argv 手册。",
+      "items": [
+        {
+          "title": "视频转高质量 GIF",
+          "desc": "在 Mac 上将 MP4 转为 GIF，底层使用 FFmpeg palettegen，可视化预设即可导出更顺滑的高质量 GIF。"
+        },
+        {
+          "title": "从视频提取音频",
+          "desc": "在 macOS 上无损或重编码提取 MP4 到 MP3/AAC/WAV，无需打开终端。"
+        },
+        {
+          "title": "批量 PNG 转 WebP 与图片压缩",
+          "desc": "本地图片压缩与 WebP 转换，支持 PNG/JPEG 批量处理，文件始终留在本机。"
+        },
+        {
+          "title": "压缩 / 快速导出视频",
+          "desc": "在 Mac 上压缩视频，不必深陷 CRF 参数——Quick Export 提供偏重画质的默认配置。"
+        },
+        {
+          "title": "Apple Silicon 硬件加速",
+          "desc": "原生 Apple Silicon 构建，并在 M1/M2/M3/M4 可用时走 VideoToolbox 加速管线。"
+        }
+      ]
+    },
+    "compare": {
+      "eyebrow": "为什么选 MediaForge",
+      "title": "为什么选择 MediaForge，而不是在线转换站、HandBrake 或付费 FFmpeg GUI",
+      "lead": "免费开源的 macOS FFmpeg GUI——像桌面工具一样本地优先，比单独的 HandBrake 覆盖更多场景，比纯命令行或付费壳更简单。",
+      "items": [
+        {
+          "vs": "对比在线转换站",
+          "title": "100% Local-first 本地处理",
+          "desc": "文件绝不上传云端：无排队、无大小限制，隐私默认受保护——这也是 FFmix 等本地工具强调的核心卖点。"
+        },
+        {
+          "vs": "对比 HandBrake / Shutter Encoder",
+          "title": "不止视频转码",
+          "desc": "原生支持高质量 GIF、无损音频提取与 WebP 批量压缩，同时覆盖视频导出，减少在多个应用间切换。"
+        },
+        {
+          "vs": "对比命令行与付费 GUI",
+          "title": "不用终端也能用 FFmpeg",
+          "desc": "在 Mac 上无需终端即可使用 FFmpeg。免费开源的 ffWorks / Permute 风格替代：拖入文件、选择场景即可锻造。"
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "常见问题",
+      "title": "高频问答",
+      "lead": "面向搜索「FFmpeg GUI Mac」「HandBrake 替代」「本地视频转换」的用户。",
+      "items": [
+        {
+          "q": "需要先通过 Homebrew 安装 FFmpeg 吗？",
+          "a": "社区开源版需要本机安装 FFmpeg（macOS 上推荐 Homebrew）。商店版内置非 GPL 的 FFmpeg，无需额外安装。"
+        },
+        {
+          "q": "MediaForge 支持 Apple Silicon（M1/M2/M3/M4）硬件加速吗？",
+          "a": "支持。MediaForge 原生运行于 Apple Silicon，并在可用时使用 VideoToolbox 硬件加速。"
+        },
+        {
+          "q": "MediaForge 是否完全免费且开源？",
+          "a": "GitHub 上的 MediaForge Open 免费开源。MediaForge Pro 另提供 AI Forge、高级编解码等付费能力。"
+        },
+        {
+          "q": "如何在不使用终端的情况下在 Mac 上用 FFmpeg？",
+          "a": "安装 MediaForge，拖入媒体文件，选择可视化预设即可——快速导出、制作 GIF、提取音频、压缩图片或转换 WebP。MediaForge 在本地替你运行 FFmpeg。"
+        },
+        {
+          "q": "MediaForge 是免费开源的 ffWorks / Permute 替代吗？",
+          "a": "是的——MediaForge Open 是面向 macOS 的免费开源 FFmpeg GUI，聚焦视频、GIF、音频与图片的本地预设。付费 GUI（如 ffWorks、Permute）功能套件更完整；MediaForge 强调开源核心与本地优先。"
+        },
+        {
+          "q": "MediaForge 与 HandBrake、Shutter Encoder 相比如何？",
+          "a": "HandBrake 与 Shutter Encoder 擅长视频转码。MediaForge 作为 FFmpeg GUI，还把高质量 GIF、无损音频提取与 WebP/图片批量处理放进同一个本地 macOS 应用。"
         }
       ]
     },
     "final_cta": {
       "title": "准备好锻造第一个文件了吗？",
-      "lead": "在 macOS 上安装 MediaForge，几分钟内把 FFmpeg 变成可视化工作流。",
+      "lead": "下载面向 macOS 的免费开源 FFmpeg GUI，几分钟内把 MP4、GIF、音频与 WebP 任务变成可视化工作流。",
       "primary": {
         "title": "获取 MediaForge",
         "href": "/download"
@@ -253,9 +334,9 @@
     "description": "MediaForge 转码配方库 — 即将上线。"
   },
   "home_meta": {
-    "title": "MediaForge – 可视化 FFmpeg 桌面工具，轻松锻造你的媒体",
-    "description": "MediaForge 是一款桌面优先的 FFmpeg 可视化应用：拖放文件、选择场景预设，即可完成导出、GIF、音频提取与图片处理。开源核心免费可用，macOS 现已提供下载。",
-    "keywords": "mediaforge, ffmpeg, 视频转换, gif, 提取音频, 桌面应用, 开源, 媒体处理, macos, 可视化 ffmpeg"
+    "title": "MediaForge – 免费开源 macOS FFmpeg GUI | 本地视频与 GIF 转换器",
+    "description": "不用命令行也能在 macOS 上使用 FFmpeg。MediaForge 是免费开源的桌面 FFmpeg GUI，提供可视化预设：导出视频、高质量 GIF、提取音频、本地转换 WebP。",
+    "keywords": "FFmpeg GUI Mac, macOS FFmpeg 图形界面, 开源 FFmpeg GUI, 免费 FFmpeg 封装, Mac 本地视频转换, MP4 转 GIF, 提取音频, PNG 转 WebP, HandBrake 替代, VideoToolbox, Apple Silicon"
   },
   "download_meta": {
     "title": "下载 MediaForge（macOS）",

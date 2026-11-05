@@ -1,8 +1,8 @@
 title: MediaForge
 description: >-
-  MediaForge is a desktop-first visual FFmpeg app: drag and drop files, pick
-  scenario presets, then export video, make GIFs, extract audio, and process
-  images. Open core is free; macOS download is available now.
+  Use FFmpeg on macOS without the command line. MediaForge is a free,
+  open-source desktop FFmpeg GUI with visual presets to export video, make
+  high-quality GIFs, extract audio, and convert WebP locally.
 url: "https://www.mediaforgeapp.com"
 baseurl: ""
 

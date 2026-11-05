@@ -8,16 +8,16 @@
     "account": "Cuenta"
   },
   "footer": {
-    "description": "Forja tus medios con flujos FFmpeg visuales. Desktop-first, procesamiento local, open core.",
+    "description": "GUI FFmpeg gratuita y de código abierto para macOS. Conversión local de vídeo, GIF, audio y WebP—sin terminal.",
     "privacy": "Política de privacidad",
     "terms": "Términos de servicio",
     "copyright_suffix": "Todos los derechos reservados"
   },
   "home": {
     "hero": {
-      "eyebrow": "MediaForge Open",
-      "title": "Forja tus medios sin la línea de comandos.",
-      "lead": "Una app de escritorio que envuelve FFmpeg en presets visuales: exportar vídeo, crear GIFs, extraer audio y más. Suelta un archivo, elige un escenario y forja.",
+      "eyebrow": "GUI FFmpeg de código abierto para macOS",
+      "title": "La GUI FFmpeg de código abierto para macOS — forja medios sin la línea de comandos.",
+      "lead": "MediaForge es un convertidor de vídeo local y gratuito para Mac que envuelve FFmpeg en presets visuales. Exporta y comprime MP4/MKV, convierte vídeo a GIF de alta calidad con palettegen, extrae audio sin pérdida a MP3/AAC/WAV y convierte PNG a WebP por lotes—con aceleración Apple Silicon y VideoToolbox cuando esté disponible. Suelta un archivo, elige un escenario, forja.",
       "primary": {
         "title": "Descargar para macOS",
         "href": "/download"
@@ -28,30 +28,111 @@
       },
       "note": "Edición open source. macOS disponible ahora; Windows, Linux y móvil pronto.",
       "download_macos": "Descargar macOS · {version}",
-      "release_note": "Última build de macOS · {version}. Windows, Linux y móvil siguen en desarrollo."
+      "release_note": "Última build de macOS · {version}. Windows, Linux y móvil siguen en desarrollo.",
+      "preview_alt": "Interfaz de la GUI FFmpeg de código abierto MediaForge en macOS mostrando convertidor de vídeo por arrastrar y soltar"
     },
     "pillars": {
       "eyebrow": "Hecho para creadores",
-      "title": "Tres pilares detrás de cada forge",
-      "lead": "Presets visuales, un flujo de forge enfocado y FFmpeg local bajo el capó.",
+      "title": "Un flujo nativo de vídeo, audio e imagen en macOS impulsado por FFmpeg",
+      "lead": "Un wrapper FFmpeg de código abierto para macOS con presets visuales, procesamiento local por arrastrar y soltar y codificación consciente del hardware—sin memorizar flags.",
       "items": [
         {
-          "title": "Presets FFmpeg visuales",
-          "desc": "Quick Export, Make GIF, Extract Audio, comprimir imágenes y convertir WebP—sin terminal."
+          "title": "Presets visuales de FFmpeg",
+          "desc": "Quick Export, GIF de alta calidad (palettegen), extracción de audio sin pérdida, compresión de imágenes y conversión WebP—flujos de GUI FFmpeg para el día a día en Mac."
         },
         {
-          "title": "Flujo Spark forge",
-          "desc": "Arrastrar y soltar, previsualizar entradas, progreso en vivo y rutas de salida bajo tu control."
+          "title": "Procesamiento local por arrastrar y soltar",
+          "desc": "Suelta MP4, MKV e imágenes, previsualiza entradas, sigue el progreso en vivo y forja todo en el dispositivo. Sin subidas ni colas en la nube."
         },
         {
-          "title": "Open core, listo para Pro",
-          "desc": "Gratis y open source hoy. AI Forge y códecs avanzados llegan en MediaForge Pro."
+          "title": "Núcleo abierto, listo para Pro",
+          "desc": "GUI FFmpeg gratuita y de código abierto hoy. AI Forge, códecs avanzados y más formatos llegan en MediaForge Pro."
+        }
+      ]
+    },
+    "scenarios": {
+      "eyebrow": "Presets principales",
+      "title": "Convierte vídeo, audio e imágenes en Mac con presets FFmpeg",
+      "lead": "Cinco flujos listos para quien busca “MP4 to GIF Mac”, “extraer audio de vídeo” o “PNG a WebP”—no manuales de argv.",
+      "items": [
+        {
+          "title": "Convertir vídeo a GIF (alta calidad)",
+          "desc": "MP4 a GIF en Mac con FFmpeg palettegen—exportación GIF suave y de alta calidad desde un preset visual."
+        },
+        {
+          "title": "Extraer audio de vídeo",
+          "desc": "Extracción MP4 a MP3/AAC/WAV sin pérdida o recodificada en macOS sin abrir Terminal."
+        },
+        {
+          "title": "PNG a WebP por lotes y compresor de imágenes",
+          "desc": "Compresor de imágenes local y convertidor WebP para lotes PNG/JPEG. Los archivos permanecen en tu Mac."
+        },
+        {
+          "title": "Comprimir / exportar vídeo rápido",
+          "desc": "Comprime vídeo en Mac sin ahogarte en flags CRF—Quick Export acerca valores por defecto orientados a calidad."
+        },
+        {
+          "title": "Aceleración por hardware Apple Silicon",
+          "desc": "Builds nativos Apple Silicon con pipelines VideoToolbox en Mac M1/M2/M3/M4 cuando estén disponibles."
+        }
+      ]
+    },
+    "compare": {
+      "eyebrow": "Por qué MediaForge",
+      "title": "Por qué elegir MediaForge frente a conversiones online, HandBrake y GUIs FFmpeg de pago",
+      "lead": "Una GUI FFmpeg gratuita y de código abierto para macOS—local-first como una herramienta de escritorio seria, más amplia que HandBrake solo, más simple que FFmpeg crudo o wrappers de pago.",
+      "items": [
+        {
+          "vs": "vs Convertidores online",
+          "title": "100% local-first",
+          "desc": "Tus archivos no salen del Mac: sin subidas, sin colas en la nube ni límites de tamaño. Privacidad por diseño."
+        },
+        {
+          "vs": "vs HandBrake / Shutter Encoder",
+          "title": "Más que conversión de vídeo",
+          "desc": "GIF de alta calidad nativo, extracción de audio sin pérdida y compresión WebP por lotes—además de exportar vídeo."
+        },
+        {
+          "vs": "vs Línea de comandos y GUIs de pago",
+          "title": "Potencia FFmpeg sin Terminal",
+          "desc": "Usa FFmpeg en Mac sin terminal. Una alternativa gratuita y open source al estilo ffWorks / Permute: suelta un archivo, elige un escenario, forja."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Preguntas frecuentes",
+      "lead": "Respuestas para quien busca FFmpeg GUI Mac, alternativas a HandBrake y convertidores locales.",
+      "items": [
+        {
+          "q": "¿Necesito instalar FFmpeg con Homebrew primero?",
+          "a": "La edición comunitaria espera un FFmpeg del sistema; Homebrew es el camino más fácil en macOS. Las builds de tienda incluyen un FFmpeg no GPL embebido."
+        },
+        {
+          "q": "¿MediaForge admite aceleración por hardware en Apple Silicon (M1/M2/M3/M4)?",
+          "a": "Sí. MediaForge corre de forma nativa en Apple Silicon y puede usar VideoToolbox cuando está disponible."
+        },
+        {
+          "q": "¿MediaForge es completamente gratuito y de código abierto?",
+          "a": "MediaForge Open en GitHub es gratuito y de código abierto. MediaForge Pro añade funciones de pago como AI Forge."
+        },
+        {
+          "q": "¿Cómo uso FFmpeg en Mac sin la terminal?",
+          "a": "Instala MediaForge, suelta un archivo y elige un preset visual—Quick Export, Make GIF, Extract Audio, comprimir imagen o WebP. MediaForge ejecuta FFmpeg localmente."
+        },
+        {
+          "q": "¿Es MediaForge una alternativa gratuita y open source a ffWorks o Permute?",
+          "a": "Sí—MediaForge Open es una GUI FFmpeg gratuita y de código abierto para macOS centrada en presets locales de vídeo, GIF, audio e imágenes."
+        },
+        {
+          "q": "¿Cómo se compara MediaForge con HandBrake y Shutter Encoder?",
+          "a": "HandBrake y Shutter Encoder destacan en transcodificación de vídeo. MediaForge, como GUI FFmpeg, también cubre GIF de alta calidad, extracción de audio sin pérdida y lotes WebP/imagen en una sola app local de macOS."
         }
       ]
     },
     "final_cta": {
       "title": "¿Listo para forjar tu primer archivo?",
-      "lead": "Instala MediaForge en macOS y convierte FFmpeg en un flujo visual en minutos.",
+      "lead": "Descarga la GUI FFmpeg gratuita y de código abierto para macOS y convierte tareas de MP4, GIF, audio y WebP en flujos visuales en minutos.",
       "primary": {
         "title": "Obtener MediaForge",
         "href": "/download"
@@ -253,9 +334,9 @@
     "description": "Galería de presets de MediaForge — próximamente."
   },
   "home_meta": {
-    "title": "MediaForge – Herramienta de escritorio FFmpeg visual para forjar tus medios",
-    "description": "MediaForge es una app FFmpeg visual pensada para escritorio: arrastra y suelta archivos, elige presets de escenarios y exporta vídeo, crea GIFs, extrae audio y procesa imágenes. El núcleo open source es gratis; la descarga para macOS ya está disponible.",
-    "keywords": "mediaforge, ffmpeg, convertidor de video, crear gif, extraer audio, app de escritorio, codigo abierto, procesamiento de medios, macos, ffmpeg visual"
+    "title": "MediaForge – GUI FFmpeg gratuita y open source para macOS | Convertidor local de vídeo y GIF",
+    "description": "Usa FFmpeg en macOS sin la línea de comandos. MediaForge es una GUI FFmpeg de escritorio gratuita y de código abierto con presets visuales para exportar vídeo, crear GIF de alta calidad, extraer audio y convertir WebP en local.",
+    "keywords": "FFmpeg GUI Mac, macOS FFmpeg GUI, open source FFmpeg GUI, convertidor de vídeo local Mac, MP4 a GIF Mac, extraer audio Mac, PNG a WebP, alternativa HandBrake, VideoToolbox, Apple Silicon"
   },
   "download_meta": {
     "title": "Descargar MediaForge para macOS",
