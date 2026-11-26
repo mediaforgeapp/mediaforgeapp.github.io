@@ -6,7 +6,7 @@ lang: es
 page_id: privacy-policy
 permalink: /es/privacy-policy/
 ---
-**Fecha de entrada en vigor: 1 de noviembre de 2026**
+**Fecha de entrada en vigor: 26 de noviembre de 2026**
 
 ## Introducción
 
@@ -40,14 +40,15 @@ En los flujos de trabajo habituales de la aplicación de escritorio:
 - Solo se transmiten el texto del prompt y metadatos técnicos (nombre de archivo, resolución, códec, contenedor) por TLS 1.3. **No se suben el vídeo ni el audio de origen.**
 - El plan se ejecuta en local. Los datos se procesan en memoria y no se usan para entrenar modelos.
 - BYOK: un endpoint OpenAI compatible no pasa por nuestros servidores, no gasta créditos y la clave queda en el dispositivo.
+- La primera vez que usas AI Forge, la app pide tu permiso antes de enviar el prompt o detalles del archivo, e indica que la solicitud la procesa un servicio en la nube que usa proveedores de modelos de IA de terceros. Si lo rechazas, no se envía nada. Se pide un permiso aparte para un endpoint propio.
 - Las funciones de IA son opcionales.
 
 ## Cuenta, autenticación y modo invitado
 
 - **Iniciar sesión con Apple**, incluido el reenvío de correo privado.
 - **OAuth** con Google o GitHub (PKCE). No recibimos contraseñas.
-- **Invitado anónimo (directriz 5.1.1(v))** — compra y uso sin cuenta. Identificador `guest_<deviceId>@guest.mediaforgeapp.com`. Al iniciar sesión se puede transferir el saldo.
-- Tokens guardados en el dispositivo.
+- **Invitado anónimo** — compra y uso sin cuenta. Identificador `guest_<deviceId>@guest.mediaforgeapp.com`. Al iniciar sesión se puede transferir el saldo.
+- La app guarda los tokens en las preferencias locales del dispositivo y los elimina al cerrar sesión.
 
 ## Pagos, compras dentro de la app y créditos
 
@@ -57,7 +58,7 @@ En los flujos de trabajo habituales de la aplicación de escritorio:
 
 ## Analítica (PostHog)
 
-Eventos anónimos de uso, activados por defecto. **Sin archivos multimedia, rutas privadas ni claves API.** Se desactiva en **Ajustes > General > Analítica de uso**.
+Eventos anónimos de uso, activados por defecto. **Sin archivos multimedia, rutas privadas ni claves API.** Se desactiva en **Ajustes > General > Datos de uso anónimos** (activado por defecto).
 
 ## Proveedores externos
 
@@ -65,9 +66,11 @@ Apple (App Store, StoreKit, Iniciar sesión con Apple), Builtly, Stripe, PostHog
 
 ## Tus derechos
 
-Acceso, rectificación, portabilidad y **eliminación de la cuenta dentro de la app** (directriz 5.1.1(v)). Contacto: [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
+Acceso, rectificación, portabilidad y **eliminación de la cuenta dentro de la app** (**Ajustes > AI Forge > Delete account**). Contacto: [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
 
 ## Contacto
+
+**Operador:** Aime Tech Media Limited, Room 1021, Beverley Commercial Centre, 87-105 Chatham Road South, Tsim Sha Tsui, Hong Kong. MediaForge Pro lo opera este operador. MediaForge Open es un proyecto de código abierto comunitario independiente.
 
 Para cualquier duda sobre privacidad, contáctanos en:
 

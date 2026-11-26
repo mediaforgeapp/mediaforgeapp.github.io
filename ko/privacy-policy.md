@@ -6,7 +6,7 @@ lang: ko
 page_id: privacy-policy
 permalink: /ko/privacy-policy/
 ---
-**시행일: 2026년 11월 1일**
+**시행일: 2026년 11월 26일**
 
 ## 개요
 
@@ -40,14 +40,15 @@ permalink: /ko/privacy-policy/
 - 텍스트 프롬프트와 기술 메타데이터(파일 이름, 해상도, 코덱, 컨테이너)만 TLS 1.3으로 전송됩니다. **원본 영상·음원 파일은 업로드되지 않습니다.**
 - 계획은 기기에서 실행되며, 학습에 사용되지 않습니다.
 - BYOK: OpenAI 호환 엔드포인트는 당사 서버를 거치지 않고 크레딧을 쓰지 않으며, API 키는 기기에만 저장됩니다.
+- AI Forge를 처음 사용할 때 프롬프트나 파일 정보를 보내기 전에 앱이 동의를 요청하며, 요청이 제3자 AI 모델 제공업체를 사용하는 클라우드 서비스에서 처리된다고 안내합니다. 거부하면 아무것도 전송되지 않으며, 자체 엔드포인트를 쓸 때도 별도로 동의를 요청합니다.
 - AI 기능은 선택 사항입니다.
 
 ## 계정, 인증 및 게스트 모드
 
 - **Apple로 로그인**. 비공개 이메일 중계 포함.
 - **OAuth** Google 또는 GitHub(PKCE). 비밀번호는 수집하지 않습니다.
-- **익명 기기 게스트(5.1.1(v))** — 계정 없이 구매·사용. `guest_<deviceId>@guest.mediaforgeapp.com`. 로그인 후 잔액 이전 가능.
-- 토큰은 기기에 저장됩니다.
+- **익명 기기 게스트** — 계정 없이 구매·사용. `guest_<deviceId>@guest.mediaforgeapp.com`. 로그인 후 잔액 이전 가능.
+- 토큰은 앱이 기기의 로컬 설정에 저장하며, 로그아웃하면 삭제됩니다.
 
 ## 결제, 인앱 구매 및 크레딧
 
@@ -57,7 +58,7 @@ permalink: /ko/privacy-policy/
 
 ## 사용 분석(PostHog)
 
-익명 이벤트, 기본 켜짐. **미디어 파일, 개인 경로, API 키는 수집하지 않습니다.** **설정 > 일반 > 사용 분석**에서 끌 수 있습니다.
+익명 이벤트, 기본 켜짐. **미디어 파일, 개인 경로, API 키는 수집하지 않습니다.** **설정 > 일반 > 익명 사용 통계**에서 끌 수 있습니다.
 
 ## 제3자 서비스 제공업체
 
@@ -65,9 +66,11 @@ Apple(App Store, StoreKit, Apple로 로그인), Builtly, Stripe, PostHog, AI 추
 
 ## 이용자의 권리
 
-열람, 수정, 이전 및 **앱 내 계정 삭제**(5.1.1(v)). 문의: [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
+열람, 수정, 이전 및 **앱 내 계정 삭제**(**설정 > AI Forge > Delete account**). 문의: [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
 
 ## 문의처
+
+**운영자:** Aime Tech Media Limited (홍콩 침사추이 Chatham Road South 87-105, Beverley Commercial Centre 1021호). MediaForge Pro는 이 운영자가 제공합니다. MediaForge Open은 별도의 커뮤니티 오픈소스 프로젝트입니다.
 
 개인정보 처리방침과 관련된 문의는 아래로 연락해 주십시오:
 

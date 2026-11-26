@@ -6,21 +6,21 @@ lang: en
 page_id: terms-of-service
 permalink: /terms-of-service/
 ---
-**Effective Date: November 1, 2026**
+**Effective Date: November 26, 2026**
 
 ## Introduction and Acceptance
 
 Welcome to **MediaForge**. These Terms of Service ("Terms") govern your use of the MediaForge desktop application, our website at [mediaforgeapp.com](https://www.mediaforgeapp.com), downloads, documentation, user accounts, AI Forge, and related services (collectively, the "Service").
 
-MediaForge is operated by the MediaForge project team ("MediaForge", "we", "us", or "our"). By accessing the website, downloading the software, creating an account, or purchasing credits, you agree to be bound by these Terms. If you do not agree, do not access or use the Service.
+MediaForge Pro and related services are operated by Aime Tech Media Limited ("MediaForge", "we", "us", or "our"). By accessing the website, downloading the software, creating an account, or purchasing credits, you agree to be bound by these Terms. If you do not agree, do not access or use the Service.
 
 ## What MediaForge Provides
 
 MediaForge is a multimedia productivity suite offering both local open-core tools and cloud-enhanced professional capabilities:
 
 1. **MediaForge Open** — an open-source, local-first visual wrapper around FFmpeg for transcoding video, generating GIFs, extracting audio, and inspecting streams locally on your device.
-2. **MediaForge Pro & AI Forge** — cloud-assisted intelligence features, including automated AI processing, neural audio/video enhancements, and workflow automation powered by consumable credits.
-3. **Accounts & Credit Services** — secure web portal for managing your account identity, profile avatar, and purchasing one-time credit packs via Stripe.
+2. **MediaForge Pro & AI Forge** — cloud-assisted AI Forge, which turns a text request into an FFmpeg command plan that runs locally on your device, powered by optional consumable credits.
+3. **Accounts & Credit Services** — account management and one-time credit packs, purchased through Apple In-App Purchase in the Mac App Store edition or through Stripe on our website.
 
 ## Eligibility and Account Responsibilities
 
@@ -41,6 +41,7 @@ MediaForge Pro uses a flexible, pay-as-you-go credit system rather than a recurr
 
 - **One-Time Purchase** — credit packs are purchased as one-time payments. They do not auto-renew, and there are no recurring subscription commitments.
 - **Consumption Rate** — credits are deducted based on task requirements (for example, 1 credit covers one standard AI Forge run). Current credit costs are displayed prior to executing tasks.
+- **No Expiry** — purchased credits do not expire and do not auto-renew. Deleting your account permanently deletes any remaining credits.
 - **Account Synchronization** — purchased credits are linked to your MediaForge account and synchronize across your browser sessions and desktop app instances.
 
 ### Payment Processing: Apple In-App Purchase and Stripe
@@ -65,6 +66,16 @@ Due to the immediate operational computing and inference costs incurred when run
 - **Mac App Store Purchases (Apple IAP)** — all refund requests for purchases made through the Mac App Store are governed by Apple's terms and conditions. Apple processes all refunds directly; developers do not have the technical or legal ability to issue refunds for App Store transactions. To request a refund from Apple, visit [reportaproblem.apple.com](https://reportaproblem.apple.com) or contact Apple Support.
 - **Direct Website Purchases (Stripe)** — if you purchased a credit pack on our website and have not consumed any credits from that pack, you may request a full refund within 14 calendar days of purchase by contacting [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
 - Nothing in this section affects any statutory rights you may hold under mandatory consumer protection laws in your jurisdiction.
+
+## Mac App Store Edition (Apple Terms)
+
+If you obtain MediaForge Pro from the Mac App Store:
+
+- Your use of the app is also governed by Apple's Standard License Agreement (Licensed Application End User License Agreement). If these Terms conflict with Apple's agreement on the license to use the app, Apple's agreement prevails.
+- These Terms are between you and MediaForge, not Apple. MediaForge, not Apple, is responsible for the app, its content, maintenance, support, and any warranty or claim relating to it.
+- Apple has no obligation to provide maintenance or support for the app, and is not responsible for addressing claims relating to it. Apple and its subsidiaries are third-party beneficiaries of these Terms and may enforce them against you.
+- You represent that you are not located in a country subject to a U.S. Government embargo, and that you are not on any U.S. Government list of prohibited or restricted parties.
+- Questions, complaints, or claims can be sent to [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
 
 ## AI Forge Acceptable Use & Content Policy
 
@@ -100,7 +111,7 @@ For standard, offline MediaForge Open workflows:
 
 ### Open Source Components
 
-Portions of the MediaForge desktop software are open source and distributed under the [Apache License 2.0 / MIT License](https://github.com/mediaforgeapp/mediaforge/blob/main/LICENSE). Your rights to inspect, fork, and modify open-source components are governed by those licenses.
+Portions of the MediaForge desktop software are open source and distributed under the [MIT License](https://github.com/mediaforgeapp/mediaforge/blob/main/LICENSE). Your rights to inspect, fork, and modify open-source components are governed by those licenses.
 
 ### Proprietary Assets
 
@@ -140,6 +151,8 @@ These Terms shall be governed by and construed in accordance with the laws of th
 We reserve the right to modify these Terms at any time. When modifications are made, we will revise the Effective Date at the top of this document. Continued use of the Service following published updates constitutes acceptance of the revised Terms.
 
 ## Contact Information
+
+**Operator:** Aime Tech Media Limited, Room 1021, Beverley Commercial Centre, 87-105 Chatham Road South, Tsim Sha Tsui, Hong Kong. MediaForge Pro is provided by this operator. MediaForge Open is a separate community open-source project.
 
 For inquiries, support, or legal questions concerning these Terms, please contact:
 

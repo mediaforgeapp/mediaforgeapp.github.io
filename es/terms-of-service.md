@@ -6,7 +6,7 @@ lang: es
 page_id: terms-of-service
 permalink: /es/terms-of-service/
 ---
-**Fecha de entrada en vigor: 1 de noviembre de 2026**
+**Fecha de entrada en vigor: 26 de noviembre de 2026**
 
 ## Introducción y aceptación
 
@@ -19,7 +19,7 @@ Al acceder al sitio web, descargar la aplicación o comprar paquetes de crédito
 MediaForge ofrece:
 
 1. **MediaForge Open** — interfaz visual de código abierto y local para FFmpeg (transcodificación, GIFs, extracción de audio sin conexión).
-2. **MediaForge Pro y AI Forge** — funciones avanzadas de IA en la nube mediante paquetes de créditos recargables.
+2. **MediaForge Pro y AI Forge** — AI Forge en la nube, que convierte una petición de texto en un plan de comandos FFmpeg (se ejecuta localmente en tu dispositivo), mediante paquetes de créditos opcionales.
 3. **Servicios de cuenta y facturación** — perfil y paquetes de créditos mediante Apple In-App Purchase o Stripe.
 
 ## Responsabilidades de la cuenta
@@ -32,6 +32,7 @@ Debes ser mayor de edad para comprar créditos. El modo invitado no exige cuenta
 
 - **Pago único sin suscripción** — los créditos se compran en paquetes únicos. No hay cobros recurrentes ni renovaciones automáticas.
 - **Consumo** — se deducen según la tarea realizada (por ejemplo, 1 crédito por ejecución estándar de AI Forge).
+- **Sin caducidad** — los créditos comprados no caducan ni se renuevan automáticamente. Al eliminar tu cuenta, los créditos restantes se eliminan de forma permanente.
 - **Sincronización** — los créditos se vinculan a tu cuenta y se sincronizan entre tu navegador y la aplicación de escritorio.
 
 ### Canales de pago y reembolsos
@@ -39,6 +40,16 @@ Debes ser mayor de edad para comprar créditos. El modo invitado no exige cuenta
 1. **Mac App Store** — Apple cobra mediante StoreKit. Los reembolsos los gestiona Apple en [reportaproblem.apple.com](https://reportaproblem.apple.com). No podemos reembolsar compras de la App Store.
 2. **Sitio web (Stripe)** — si no has consumido ningún crédito, reembolso íntegro en 14 días escribiendo a [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
 - **Créditos ya usados** no son reembolsables en ningún canal.
+
+## Edición de Mac App Store (condiciones de Apple)
+
+Si obtienes MediaForge Pro en la Mac App Store:
+
+- El uso de la app también se rige por el Contrato de licencia estándar de Apple (Licensed Application End User License Agreement). Si estas condiciones chocan con el contrato de Apple sobre la licencia de uso, prevalece el contrato de Apple.
+- Estas condiciones son entre tú y MediaForge, no con Apple. MediaForge, y no Apple, es responsable de la app, su contenido, mantenimiento, soporte y de cualquier garantía o reclamación relacionada.
+- Apple no tiene obligación de ofrecer mantenimiento ni soporte, ni responde de las reclamaciones sobre la app. Apple y sus filiales son terceros beneficiarios de estas condiciones y pueden hacerlas valer contra ti.
+- Declaras que no te encuentras en un país sujeto a embargo del Gobierno de EE. UU. ni figuras en ninguna lista de partes prohibidas o restringidas de EE. UU.
+- Consultas, quejas o reclamaciones: [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
 
 ## Uso aceptable de AI Forge
 
@@ -61,6 +72,8 @@ Queda terminantemente prohibido utilizar AI Forge para:
 EL SERVICIO SE PROPORCIONA "TAL CUAL" (AS IS). MEDIAFORGE NO GARANTIZA RESULTADOS INFALIBLES EN LA CONVERSIÓN DE MEDIOS. LA RESPONSABILIDAD TOTAL DE MEDIAFORGE ESTÁ LIMITADA A LA CANTIDAD PAGADA POR EL USUARIO EN LOS ÚLTIMOS 12 MESES O A UN MÁXIMO DE 50 USD.
 
 ## Contacto
+
+**Operador:** Aime Tech Media Limited, Room 1021, Beverley Commercial Centre, 87-105 Chatham Road South, Tsim Sha Tsui, Hong Kong. MediaForge Pro lo opera este operador. MediaForge Open es un proyecto de código abierto comunitario independiente.
 
 Si tienes preguntas sobre estos Términos, contáctanos en:
 

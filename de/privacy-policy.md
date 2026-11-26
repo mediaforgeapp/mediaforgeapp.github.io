@@ -6,7 +6,7 @@ lang: de
 page_id: privacy-policy
 permalink: /de/privacy-policy/
 ---
-**Gültig ab: 1. November 2026**
+**Gültig ab: 26. November 2026**
 
 ## Einführung
 
@@ -39,17 +39,18 @@ MediaForge Pro bietet optionale, guthabenbasierte Cloud-Funktionen wie **AI Forg
 
 - **Übertragene Daten** — Nur wenn Sie AI Forge starten, werden Ihr Text-Prompt und technische Metadaten der gewählten Segmente (Dateiname, Auflösung, Codec, Container) über TLS 1.3 übertragen. **Quellvideo und -audio werden nicht hochgeladen.**
 - **Lokale Ausführung** — Das Modell liefert einen FFmpeg-Plan, den die App lokal ausführt.
-- **Flüchtige Verarbeitung** — Prompts und Metadaten werden nur im Arbeitsspeicher verarbeitet und danach verworfen.
+- **Nur Weiterleitung, keine Speicherung** — AI-Forge-Anfragen (Prompt und technische Metadaten) werden über unsere API an den KI-Modellanbieter weitergeleitet, um den FFmpeg-Plan zu erzeugen. Nach Rückgabe der Antwort speichert MediaForge weder Prompt-Inhalte noch Dateimetadaten.
 - **Kein KI-Training** — Diese Daten werden **niemals zum Trainieren von Modellen verwendet**.
 - **BYOK** — Ein eigener OpenAI-kompatibler Endpunkt umgeht unsere Server, verbraucht 0 Credits und speichert den API-Schlüssel nur lokal.
+- **Zustimmung vor dem Senden** — Bei der ersten Nutzung von AI Forge fragt die App um Erlaubnis, bevor Prompt oder Dateidetails gesendet werden, und weist darauf hin, dass ein Cloud-Dienst mit KI-Modellanbietern Dritter die Anfrage verarbeitet. Bei Ablehnung wird nichts gesendet. Für einen eigenen Endpunkt wird separat gefragt.
 - **Volle Kontrolle** — KI-Funktionen sind optional. Lokale FFmpeg-Workflows kontaktieren keine KI-Endpunkte.
 
 ## Konto, Authentifizierung und Gastmodus
 
 - **Mit Apple anmelden** — Auf Apple-Plattformen inklusive privater E-Mail-Weiterleitung (Hide My Email).
 - **OAuth** — Google oder GitHub via OAuth 2.0 (PKCE). Wir erhalten nur öffentliche Profildaten, niemals Passwörter.
-- **Anonymer Gerätegast (Richtlinie 5.1.1(v))** — Kauf und Nutzung ohne Konto. Ein pseudonymes Gerätekonto (z. B. `guest_<deviceId>@guest.mediaforgeapp.com`) bucht Credits. Nach der Anmeldung können Restguthaben übertragen werden.
-- **Sitzungs-Token** — werden lokal auf dem Gerät gespeichert.
+- **Anonymer Gerätegast** — Kauf und Nutzung ohne Konto. Ein pseudonymes Gerätekonto (z. B. `guest_<deviceId>@guest.mediaforgeapp.com`) bucht Credits. Nach der Anmeldung können Restguthaben übertragen werden.
+- **Sitzungs-Token** — werden von der App in den lokalen Einstellungen auf dem Gerät gespeichert und beim Abmelden entfernt.
 
 ## Zahlungen, In-App-Käufe und Credits
 
@@ -59,7 +60,7 @@ MediaForge Pro bietet optionale, guthabenbasierte Cloud-Funktionen wie **AI Forg
 
 ## Nutzungsanalyse (PostHog)
 
-Optionale, standardmäßig aktive Produktanalyse: App-Version, Betriebssystem, Funktionsnutzung und anonyme Fehlercodes. **Keine Mediendateien, keine privaten Pfade, keine API-Schlüssel.** Abschaltbar unter **Einstellungen > Allgemein > Nutzungsanalyse**.
+Optionale, standardmäßig aktive Produktanalyse: App-Version, Betriebssystem, Funktionsnutzung und anonyme Fehlercodes. **Keine Mediendateien, keine privaten Pfade, keine API-Schlüssel.** Abschaltbar unter **Einstellungen > Allgemein > Anonyme Nutzungsdaten** (standardmäßig aktiv).
 
 ## Drittanbieter-Dienstleister
 
@@ -67,14 +68,16 @@ Optionale, standardmäßig aktive Produktanalyse: App-Version, Betriebssystem, F
 - **Builtly** — Authentifizierung, Gastsitzungen und Credit-Buch.
 - **Stripe** — Zahlung für Direktvertrieb.
 - **PostHog** — abschaltbare Nutzungsanalyse.
-- **Cloud-KI-Inferenz** — flüchtige FFmpeg-Planung.
+- **Cloud-KI-Modellanbieter** — verarbeiten weitergeleitete AI-Forge-Anfragen zur Erstellung von FFmpeg-Plänen.
 - **GitHub** — Quellcode und Downloads.
 
 ## Ihre Rechte
 
-Auskunft, Berichtigung, Übertragbarkeit und **Löschung des Kontos in der App** (Richtlinie 5.1.1(v)). Lokale Daten durch Deinstallation entfernbar. Analyse jederzeit abschaltbar. Kontakt: [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
+Auskunft, Berichtigung, Übertragbarkeit und **Löschung des Kontos in der App** (**Einstellungen > AI Forge > Delete account**). Lokale Daten durch Deinstallation entfernbar. Analyse jederzeit abschaltbar. Kontakt: [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
 
 ## Kontakt
+
+**Betreiber:** Aime Tech Media Limited, Room 1021, Beverley Commercial Centre, 87-105 Chatham Road South, Tsim Sha Tsui, Hong Kong. MediaForge Pro wird von diesem Betreiber bereitgestellt. MediaForge Open ist ein separates quelloffenes Community-Projekt.
 
 Bei Fragen zum Datenschutz kontaktieren Sie uns unter:
 

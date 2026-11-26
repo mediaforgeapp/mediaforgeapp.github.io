@@ -6,11 +6,11 @@ lang: zh-TW
 page_id: terms-of-service
 permalink: /zh-TW/terms-of-service/
 ---
-**生效日期：2026 年 11 月 1 日**
+**生效日期：2026 年 11 月 26 日**
 
 ## 導言與接受條款
 
-歡迎使用 **MediaForge**。本服務條款（下稱「本條款」）構成您與 MediaForge 專案團隊（下稱「MediaForge」或「我們」）之間的法律協議，規範您對 MediaForge 桌面用戶端、官方網站 [mediaforgeapp.com](https://www.mediaforgeapp.com)、安裝檔下載、說明文件、使用者帳戶、AI Forge 及相關服務（合稱「本服務」）的存取與使用。
+歡迎使用 **MediaForge**。本服務條款（下稱「本條款」）構成您與 Aime Tech Media Limited（下稱「MediaForge」或「我們」，為 MediaForge Pro 的營運主體）之間的法律協議，規範您對 MediaForge 桌面用戶端、官方網站 [mediaforgeapp.com](https://www.mediaforgeapp.com)、安裝檔下載、說明文件、使用者帳戶、AI Forge 及相關服務（合稱「本服務」）的存取與使用。
 
 透過造訪網站、下載軟體、註冊登入或購買點數包，即表示您已閱讀、理解並同意受本條款約束。若您不同意本條款，請勿使用本服務。
 
@@ -19,8 +19,8 @@ permalink: /zh-TW/terms-of-service/
 MediaForge 是一套兼具本機開源與雲端增強的多媒體生產力套裝軟體：
 
 1. **MediaForge Open** — 基於本機 FFmpeg 與 FFprobe 的開源視覺化桌面用戶端，免費提供離線影片轉檔、GIF 動圖製作、音訊擷取與串流偵測。
-2. **MediaForge Pro 與 AI Forge** — 藉由雲端算力實現的智慧化多媒體增強功能（如神經網路分析、AI 媒體生成、音訊智慧修復等），按點數消耗計費。
-3. **帳戶與點數服務** — 提供安全網頁工作階段，供使用者管理個人資料、檢視點數帳單並透過 Stripe 購買儲值點數包。
+2. **MediaForge Pro 與 AI Forge** — 藉由雲端 AI 將您的文字描述轉換為 FFmpeg 命令規劃（命令在您的裝置本機執行），按可選的消耗型點數計費。
+3. **帳戶與點數服務** — 提供帳戶管理與一次性點數包：Mac App Store 版本透過 Apple 應用程式內購買，官網版本透過 Stripe。
 
 ## 資格與帳戶安全責任
 
@@ -41,6 +41,7 @@ MediaForge Pro 採用彈性的按量付費點數包模式，而非強制性自�
 
 - **單次購買，無續訂綁定** — 點數包均為單次付款，不設自動續約，無隱藏循環扣款。
 - **點數扣抵規則** — 點數依任務類型扣減（例如一次標準 AI Forge 任務消耗 1 點數）。具體所需點數會在執行任務前向您清楚展示。
+- **永不過期** — 已購買的點數不會過期，也不會自動續約。刪除帳號時，剩餘點數將一併被永久刪除。
 - **跨平台即時同步** — 購買之點數歸屬於您的 MediaForge 帳戶，支援在瀏覽器端與桌面應用程式間即時同步。
 
 ### 付款管道：Apple 應用程式內購買與 Stripe 結算
@@ -65,6 +66,16 @@ MediaForge Pro 採用彈性的按量付費點數包模式，而非強制性自�
 - **Mac App Store 購買（Apple 內購）** — 所有透過 Mac App Store 購買的訂單退款均受 Apple 官方條款約束，由 Apple 獨立管轄與處理。開發者無權直接發起或處理 App Store 退款。如需申請 Apple 內購退款，請造訪 Apple 官方爭議處理平台 [reportaproblem.apple.com](https://reportaproblem.apple.com) 或直接聯繫 Apple 支援。
 - **官網獨立版本購買（Stripe）** — 若您在官網上購買了點數包且**從未消耗其中任何點數**，您可於購買日起 14 個日曆天內聯繫 [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com) 申請全額退款。
 - 本條款不限制您所在國家或地區法律保障的任何法定消費者權利。
+
+## Mac App Store 版本（Apple 條款）
+
+若您透過 Mac App Store 取得 MediaForge Pro：
+
+- 您對本應用程式的使用同時受 Apple 標準授權協議（Licensed Application End User License Agreement）約束。若本條款與 Apple 協議中關於應用程式使用授權的內容衝突，以 Apple 協議為準。
+- 本條款的當事人為您與 MediaForge，而非 Apple。MediaForge（而非 Apple）對應用程式、其內容、維護、支援以及與之相關的任何保證或索賠負責。
+- Apple 無義務為本應用程式提供維護或支援，亦不負責處理與本應用程式相關的索賠。Apple 及其子公司為本條款的第三方受益人，有權向您主張本條款。
+- 您聲明自己不位於受美國政府禁運的國家或地區，也不在美國政府任何禁止或限制交易方名單上。
+- 問題、投訴或索賠請寄至 [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com)。
 
 ## AI Forge 內容規範與使用限制
 
@@ -100,11 +111,11 @@ MediaForge Pro 採用彈性的按量付費點數包模式，而非強制性自�
 
 ### 開源元件
 
-MediaForge 桌面端基礎軟體遵循開源授權（Apache 2.0 / MIT License），原始碼託管於 [GitHub](https://github.com/mediaforgeapp/mediaforge)。您可以依相應授權規定審閱、修改與散布開源模組。
+MediaForge 桌面端基礎軟體遵循開源授權（MIT License），原始碼託管於 [GitHub](https://github.com/mediaforgeapp/mediaforge)。您可以依相應授權規定審閱、修改與散布開源模組。
 
 ### 專有資產與商標
 
-MediaForge 的品牌名稱、Logo 圖示、官方網站、雲端 AI Forge 架構及 Builtly 商業套件皆屬 MediaForge 專案團隊之專有智慧財產。除本條款明確授權外，未經書面許可，任何人不得擅自使用我們的商標或專有雲端服務。
+MediaForge 的品牌名稱、Logo 圖示、官方網站、雲端 AI Forge 架構及 Builtly 商業套件皆屬 Aime Tech Media Limited（MediaForge）之專有智慧財產。除本條款明確授權外，未經書面許可，任何人不得擅自使用我們的商標或專有雲端服務。
 
 ## 免責聲明
 
@@ -138,6 +149,8 @@ MEDIAFORGE 明確排除任何關於適銷性、特定用途適用性及未侵權
 我們保留隨時修訂本條款之權利。條款修改後，頁面頂部生效日期將隨之更新。您在條款發布更新後繼續使用本服務，即代表您同意接受最新條款之規範。
 
 ## 聯絡資訊
+
+**營運主體：** Aime Tech Media Limited，香港尖沙咀漆咸道南 87-105 號 Beverley Commercial Centre 1021 室。MediaForge Pro 由該主體營運；MediaForge Open 為獨立的社群開源專案。
 
 如對本服務條款有任何法律疑問，請聯絡：
 

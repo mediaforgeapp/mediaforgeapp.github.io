@@ -6,7 +6,7 @@ lang: en
 page_id: privacy-policy
 permalink: /privacy-policy/
 ---
-**Effective Date: November 1, 2026**
+**Effective Date: November 26, 2026**
 
 ## Introduction
 
@@ -39,20 +39,21 @@ MediaForge Pro provides optional, credit-based cloud features such as **AI Forge
 
 - **What Is Transmitted for AI Tasks** — when you explicitly run an AI Forge request, only your text prompt and technical metadata about your selected media segments (such as file name, video resolution label, video codec, and container format) are securely transmitted over encrypted channels (TLS 1.3) to our backend inference service. **Your source media video and audio files are never uploaded to the cloud.**
 - **Local Command Execution** — the AI model returns a structured FFmpeg command plan (arguments and output extension), which your local MediaForge client then reviews and executes entirely on your device.
-- **Ephemeral Processing** — prompts and technical metadata submitted to AI Forge are processed transiently in memory solely to generate the requested FFmpeg plan. We do not retain prompt contents or file metadata after the response is delivered.
+- **Forward-Only Processing** — AI Forge requests (prompt and technical metadata) are forwarded through our API to the AI model provider to generate the requested FFmpeg plan. After the response is returned, MediaForge does not store prompt contents or file metadata.
 - **No Model Training on User Data** — your text prompts and media metadata submitted to AI Forge are **never used to train, retrain, or improve** our foundation models or those of our inference providers.
 - **BYOK (Bring Your Own Key) Option** — in MediaForge Pro Settings, you can configure your own OpenAI-compatible endpoint (OpenAI, DeepSeek, Ollama, etc.). When BYOK is enabled, requests bypass our cloud entirely, spend 0 MediaForge credits, and communicate directly with your configured provider. Your custom API key is stored locally in your operating system's preferences and never transmitted to our servers.
+- **Permission Before Sending** — the first time you use AI Forge, the app asks for your permission before any prompt or file detail is sent, and tells you that the request is processed by a cloud service that uses third-party AI model providers. You can decline, and AI Forge will not send anything. A separate permission is asked before using your own endpoint.
 - **Strict User Control** — AI features are entirely optional. Standard offline FFmpeg conversions never contact AI endpoints.
 
 ## Account, Authentication, and Guest Mode Data
 
 When you use MediaForge Pro, authentication and credit balances are handled through our Builtly infrastructure:
 
-- **Sign in with Apple** — on Apple platforms, you can sign in using **Sign in with Apple** (Guideline 4.8 compliant). You can choose to share your real email or use Apple's private email relay service ("Hide My Email"). We receive your verified user identifier, email (real or relay), and display name provided by Apple.
+- **Sign in with Apple** — on Apple platforms, you can sign in using **Sign in with Apple**. You can choose to share your real email or use Apple's private email relay service ("Hide My Email"). We receive your verified user identifier, email (real or relay), and display name provided by Apple.
 - **OAuth Authentication** — you can also sign in using Google or GitHub via OAuth 2.0 with PKCE. We receive basic public profile information (email address, display name, and avatar URL). We never receive or store your third-party passwords.
-- **Anonymous Guest Device Mode (Guideline 5.1.1(v) Compliant)** — you are not required to create an account or sign in to purchase credits or use AI Forge. When you use the app without signing in, a pseudonymous device guest identifier is generated locally (e.g. `guest_<deviceId>@guest.mediaforgeapp.com`) to track purchased credits and allow immediate feature usage. If you later choose to sign in with Apple, Google, or GitHub, remaining guest credits on the device can be seamlessly transferred to your permanent cloud account.
+- **Anonymous Guest Device Mode** — you are not required to create an account or sign in to purchase credits or use AI Forge. When you use the app without signing in, a pseudonymous device guest identifier is generated locally (e.g. `guest_<deviceId>@guest.mediaforgeapp.com`) to track purchased credits and allow immediate feature usage. If you later choose to sign in with Apple, Google, or GitHub, remaining guest credits on the device can be seamlessly transferred to your permanent cloud account.
 - **Profile Management** — you may customize your display name or avatar.
-- **Session Tokens** — authentication tokens (access and refresh tokens) are stored in secure local preferences on your device to maintain your session.
+- **Session Tokens** — authentication tokens (access and refresh tokens) are stored in the app's local preferences on your device to maintain your session. They are removed when you sign out.
 
 ## Payments, In-App Purchases, and Credits
 
@@ -79,7 +80,7 @@ MediaForge Pro includes an optional product analytics integration powered by **P
 
 - **What Is Collected** — anonymous operational events (such as app version, operating system version, feature navigation, format selection, and anonymized error codes).
 - **What Is NEVER Collected** — we **never** collect, log, or transmit your media file contents, file paths containing sensitive personal paths, file previews, clipboard data, custom API keys, or full audio/video streams.
-- **User Control & Opt-Out** — you can disable usage analytics at any time directly within the application: open **Settings > General > Usage analytics** and toggle it off. When toggled off, no analytical telemetry is transmitted.
+- **User Control & Opt-Out** — you can disable usage analytics at any time directly within the application: open **Settings > General > Anonymous usage data** and toggle it off. Analytics is on by default. When toggled off, no analytical telemetry is transmitted.
 
 ## Website and Cookie Usage
 
@@ -97,7 +98,7 @@ We partner with reputable service providers to deliver parts of our online servi
 - **Builtly** — authentication, identity routing, guest sessions, and credit ledger infrastructure.
 - **Stripe** — payment processing for direct website distribution.
 - **PostHog** — privacy-first, opt-outable product usage analytics.
-- **Cloud AI Inference Providers** — transient, confidential generation of FFmpeg command plans for AI Forge.
+- **Cloud AI Model Providers** — receive forwarded AI Forge requests to generate FFmpeg command plans.
 - **GitHub** — open-source code hosting, issue tracking, and software download releases.
 
 Each service provider processes information under strict contractual obligations of confidentiality and security, consistent with this policy.
@@ -113,10 +114,10 @@ Because standard MediaForge workflows run locally, you retain ultimate control o
 Depending on your jurisdiction (such as under GDPR, UK GDPR, or CCPA), you have rights regarding your personal information:
 
 - **Access and Portability** — you may request a copy of the account information and credit transaction history we hold about you.
-- **In-App Account Deletion (Guideline 5.1.1(v) Compliant)** — if you have created a permanent account, you can initiate immediate and permanent deletion of your account and all associated cloud data directly within the application settings or by contacting [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com). Deletion irrevocably removes your profile, email, authentication credentials, and remaining cloud credits from our active databases.
+- **In-App Account Deletion** — if you have created a permanent account, you can initiate immediate and permanent deletion of your account and all associated cloud data directly in the app (**Settings > AI Forge > Delete account**) or by contacting [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com). Deletion irrevocably removes your profile, email, authentication credentials, and remaining cloud credits from our active databases.
 - **Correction** — you may update your profile display name or avatar.
 - **Local Data Removal** — you can delete all locally stored presets, task history, and outputs at any time by clearing the application directory or uninstalling the app.
-- **Analytics Opt-Out** — you can toggle off "Usage analytics" in Settings at any time.
+- **Analytics Opt-Out** — you can toggle off "Anonymous usage data" in Settings at any time.
 
 To exercise your privacy rights, please contact us at [support@mediaforgeapp.com](mailto:support@mediaforgeapp.com).
 
@@ -129,6 +130,8 @@ The Service is not intended for children under 13 (or under 16 in certain jurisd
 We may update this Privacy Policy from time to time to reflect new features, improvements, or legal requirements. The updated date at the top of this page indicates when changes take effect.
 
 ## Contact Us
+
+**Operator:** Aime Tech Media Limited, Room 1021, Beverley Commercial Centre, 87-105 Chatham Road South, Tsim Sha Tsui, Hong Kong. MediaForge Pro is provided by this operator. MediaForge Open is a separate community open-source project.
 
 If you have questions, concerns, or requests regarding this Privacy Policy or your data, please contact us at:
 
